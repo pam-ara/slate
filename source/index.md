@@ -1,5 +1,5 @@
 ---
-title: API Reference Hello
+title: API Reference
 
 language_tabs:
   - shell
@@ -17,15 +17,6 @@ search: true
 ---
 
 # Introduction
-## Introdution 2
-### Hello
-
-
-This is a test.
-
-This is the final test!!!
-
-Lie, this is a final teste :)
 
 Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
 
