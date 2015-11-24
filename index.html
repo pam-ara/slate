@@ -13,7 +13,7 @@
 
       <script>
         $(function() {
-          setupLanguages(["shell","ruby","python"]);
+          setupLanguages(["python"]);
         });
       </script>
   </head>
@@ -28,8 +28,6 @@
     <div class="tocify-wrapper">
       <img src="images/logo.png" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
               <a href="#" data-language-name="python">python</a>
         </div>
         <div class="search">
@@ -46,229 +44,679 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id="introduction">Introduction</h1>
+        <h1 id="introdução">Introdução</h1>
 
-<h2 id="introduction-2">Introduction 2</h2>
+<p>Essa é a API LiveCapital. Nela estão descritos todos os recursos disponíves e a forma de acessá-los utitlizando os principais métodos do protocolo HTTP.</p>
 
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<h1 id="instituições">Instituições</h1>
 
-<p>We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<h2 id="recursos">Recursos</h2>
 
-<p>This example API documentation page was created with <a href="http://github.com/tripit/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&rsquo;s documentation.</p>
+<p>Esses são todos os recursos de instituições disponíveis.</p>
 
-<h1 id="authentication">Authentication</h1>
+<table><thead>
+<tr>
+<th>Recurso</th>
+<th>Método</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>/institutions/official</td>
+<td>GET</td>
+<td>Lista todas as instituinções oficiais</td>
+</tr>
+<tr>
+<td>/institutions/official/{id}</td>
+<td>GET</td>
+<td>Retorna uma instituição oficial específica</td>
+</tr>
+<tr>
+<td>/institutions/custom</td>
+<td>GET</td>
+<td>Lista todas as instituições de um usuário autenticado</td>
+</tr>
+<tr>
+<td>/institutions/custom</td>
+<td>POST</td>
+<td>Cria uma instituição para um usuário</td>
+</tr>
+<tr>
+<td>/institutions/custom/{id}</td>
+<td>GET</td>
+<td>Retorna uma determinada instituição de um usuário</td>
+</tr>
+<tr>
+<td>/institutions/custom/{id}</td>
+<td>PUT</td>
+<td>Atualiza/Altera dados de uma instituição</td>
+</tr>
+<tr>
+<td>/institutions/custom/{id}</td>
+<td>DELETE</td>
+<td>Apaga uma instituição</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-official">GET /official</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/official'</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
 
 <blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-
-<blockquote>
-<p>Make sure to replace <code class="prettyprint">meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code class="prettyprint">Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-<h1 id="kittens">Kittens</h1>
-
-<h2 id="get-all-kittens">Get All Kittens</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Essa requisição ira retornar um JSON como este:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC BANK BRASIL S.A. - BANCO MULTIPLO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BROKER"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Isis"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BROKER"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C.S.MENDES AGENTE AUTÔNOMO DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUTONOMOUS_AGENT"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUTONOMOUS_AGENT"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PREFEITURA DO MUNICÍPIO DE SÃO PAULO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BROKER"</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint retrieves all kittens.</p>
+<p>Esse recurso retorna uma lista de todas as instituições oficiais.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://example.com/api/kittens</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/institutions/official</code></p>
 
-<h3 id="query-parameters">Query Parameters</h3>
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
+<th>Parâmetro</th>
+<th>Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>id</td>
+<td>Id da instituição</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
 </tr>
 </tbody></table>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
+<h2 id="get-official-id">GET /official/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
 
-<h2 id="get-a-specific-kitten">Get a Specific Kitten</h2>
-<pre class="highlight ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/official/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre>
-<pre class="highlight shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
+<span class="k">print</span> <span class="n">response</span>
 </code></pre>
 
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Essa requisição ira retornar um JSON como este:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Isis"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(11) 35535533"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(11) 35535533"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BROKER"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90400888000142"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"juridsocietario@santander.com.br"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4543011"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VL OLIMPIA"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV PRESIDENTE JUSC KUBITSCHEK"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2041 E 2235"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SÃO PAULO"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"ddd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">If you&rsquo;re not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
+<p>Esse recurso retorna a instituição que tenha o id passado na URL.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://example.com/kittens/&lt;ID&gt;</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/institutions/official/{id}</code></p>
 
-<h3 id="url-parameters">URL Parameters</h3>
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
 <table><thead>
 <tr>
-<th>Parameter</th>
-<th>Description</th>
+<th>Parâmetro</th>
+<th>Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td>id</td>
+<td>Id da instituição que será retornada</td>
 </tr>
 </tbody></table>
 
-          <h1 id="errors">Errors</h1>
-
-<aside class="notice">This error section is stored in a separate file in `includes/_errors.md`. Slate allows you to optionally separate out your docs into many files&hellip;just save them to the `includes` folder and add them to the top of your `index.md`&rsquo;s frontmatter. Files are included in the order listed.</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
 
 <table><thead>
 <tr>
-<th>Error Code</th>
-<th>Meaning</th>
+<th>Parâmetro</th>
+<th>Descrição</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>400</td>
-<td>Bad Request &ndash; Your request sucks</td>
+<td>id</td>
+<td>Id da instituição</td>
 </tr>
 <tr>
-<td>401</td>
-<td>Unauthorized &ndash; Your API key is wrong</td>
+<td>name</td>
+<td>Nome da instituição</td>
 </tr>
 <tr>
-<td>403</td>
-<td>Forbidden &ndash; The kitten requested is hidden for administrators only</td>
+<td>address</td>
+<td>Endereço da instutição</td>
 </tr>
 <tr>
-<td>404</td>
-<td>Not Found &ndash; The specified kitten could not be found</td>
+<td>zip_code</td>
+<td>CEP da instituição</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed &ndash; You tried to access a kitten with an invalid method</td>
+<td>district</td>
+<td>Distrito da instituição</td>
 </tr>
 <tr>
-<td>406</td>
-<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
+<td>street</td>
+<td>Rua da instituição</td>
 </tr>
 <tr>
-<td>410</td>
-<td>Gone &ndash; The kitten requested has been removed from our servers</td>
+<td>complement</td>
+<td>Complemento do endereço</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&rsquo;m a teapot</td>
+<td>city</td>
+<td>Cidade da instituição</td>
 </tr>
 <tr>
-<td>429</td>
-<td>Too Many Requests &ndash; You&rsquo;re requesting too many kittens! Slow down!</td>
+<td>uf</td>
+<td>Código do Estado - Unidade Federativa</td>
 </tr>
 <tr>
-<td>500</td>
-<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
+<td>ddd</td>
+<td>DDD da institutição</td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+<td>phone</td>
+<td>Telefone da instituição</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>Fax da instituição</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Email da instituição</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Categoria a qual a instituição pertence</td>
+</tr>
+<tr>
+<td>person_type</td>
+<td>Tipo de pessoa</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador</td>
+</tr>
+<tr>
+<td>social_denomination</td>
+<td>Denominação social</td>
+</tr>
+<tr>
+<td>commercial_denomination</td>
+<td>Denominação comercial</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-custom">GET /custom</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{username}institutions/custom'</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição ira retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC BANK BRASIL S.A. - BANCO MULTIPLO"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C.S.MENDES AGENTE AUTÔNOMO DE INVESTIMENTOS LTDA"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PREFEITURA DO MUNICÍPIO DE SÃO PAULO"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<p>Este recurso lista todas as instituições de um usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/users/{username}/institutions/custom</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>Nome de um usuário autenticado</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da instituição do usuário</td>
+</tr>
+<tr>
+<td>broker</td>
+<td></td>
+</tr>
+<tr>
+<td>autonomous_agent</td>
+<td></td>
+</tr>
+<tr>
+<td>trading_accounts</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da instutuição do usuário</td>
+</tr>
+</tbody></table>
+
+<h2 id="post-custom">POST /custom</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="s">"""
+  {
+    "id": 1,
+    "name": "BANCO SANTANDER (BRASIL) S.A.",
+    "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
+    "phone": "(11) 35535533",
+    "fax": "(11) 35535533",
+    "category": "BROKER",
+    "person_type": "LEGAL_PERSON",
+    "identifier": "90400888000142",
+    "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "email": "juridsocietario@santander.com.br",
+    "zip_code": "4543011",
+    "district": "VL OLIMPIA",
+    "street": "AV PRESIDENTE JUSC KUBITSCHEK",
+    "complement": "2041 E 2235",
+    "city": "SÃO PAULO",
+    "uf": "SP",
+    "ddd": "11"
+  }
+"""</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span>
+<span class="p">}</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{username}/institutions/custom'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição ira retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Este recurso cria uma instituição para um determinado usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://api.livecapital.com/users/{username}/institutions/custom</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>Nome de um usuário autenticado</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da instituição do usuário</td>
+</tr>
+<tr>
+<td>broker</td>
+<td></td>
+</tr>
+<tr>
+<td>autonomous_agent</td>
+<td></td>
+</tr>
+<tr>
+<td>trading_accounts</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da instutuição do usuário</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-custom-id">GET /custom/{id}</h2>
+<pre class="highlight python"><code><span class="kn">from</span> <span class="nn">urllib2</span> <span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+
+<span class="n">response_body</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span> <span class="n">response_body</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição ira retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Este recurso retorna uma determinada instituição de um usuário autenticado.
+Será retornada a instituição com o id igual ao parâmetro passado na url.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://api.livecapital.com/users/{username}/institutions/custom/{id}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>Nome de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma instituição de usuário</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da instituição do usuário</td>
+</tr>
+<tr>
+<td>broker</td>
+<td></td>
+</tr>
+<tr>
+<td>autonomous_agent</td>
+<td></td>
+</tr>
+<tr>
+<td>trading_accounts</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da instutuição do usuário</td>
+</tr>
+</tbody></table>
+
+<h2 id="put-custom-id">PUT /custom/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="s">"""
+  {
+    "id": 1,
+    "name": "BANCO SANTANDER (BRASIL) S.A.",
+    "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
+    "phone": "(11) 35535533",
+    "fax": "(11) 35535533",
+    "category": "BROKER",
+    "person_type": "LEGAL_PERSON",
+    "identifier": "90400888000142",
+    "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "email": "juridsocietario@santander.com.br",
+    "zip_code": "4543011",
+    "district": "VL OLIMPIA",
+    "street": "AV PRESIDENTE JUSC KUBITSCHEK",
+    "complement": "2041 E 2235",
+    "city": "SÃO PAULO",
+    "uf": "SP",
+    "ddd": "11"
+  }
+"""</span>
+
+<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/custom/{id}'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">'application/json'</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">get_method</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s">'PUT'</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição ira retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Este recurso altera/atualiza uma determinada instituição de um usuário autenticado.
+Será alterada/atualizada a instituição com o id igual ao parâmetro passado na url.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PUT http://api.livecapital.com/users/{username}/institutions/custom/{id}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>Nome de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma instituição de usuário</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da instituição do usuário</td>
+</tr>
+<tr>
+<td>broker</td>
+<td></td>
+</tr>
+<tr>
+<td>autonomous_agent</td>
+<td></td>
+</tr>
+<tr>
+<td>trading_accounts</td>
+<td></td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da instutuição do usuário</td>
+</tr>
+</tbody></table>
+
+<h2 id="delete-custom-id">DELETE /custom/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="s">"""
+  {
+    "id": 1,
+    "broker": null,
+    "autonomous_agent": null,
+    "trading_accounts": [],
+    "name": "BANCO SANTANDER (BRASIL) S.A."
+  }
+"""</span>
+
+<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://www.mocky.io/v2/5654ad7f0f00004c3160c1bc'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">'application/json'</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">get_method</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s">'DELETE'</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+</code></pre>
+
+<p>Este recurso apaga uma determinada instituição de um usuário autenticado.
+Será apagada a instituição com o id igual ao parâmetro passado na url.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">DELETE http://api.livecapital.com/users/{username}/institutions/custom/{id}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>Nome de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma instituição de usuário</td>
 </tr>
 </tbody></table>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
                 <a href="#" data-language-name="python">python</a>
           </div>
       </div>
