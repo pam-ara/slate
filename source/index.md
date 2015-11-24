@@ -2,169 +2,452 @@
 title: API Reference
 
 language_tabs:
-  - shell
-  - ruby
   - python
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='http://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
-includes:
-  - errors
-
 search: true
 ---
 
-# Introduction
+# Introdução
 
-## Introduction 2
+Essa é a API LiveCapital. Nela estão descritos todos os recursos disponíves e a forma de acessá-los utitlizando os principais métodos do protocolo HTTP.
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+#Instituições
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+## Recursos
 
-This example API documentation page was created with [Slate](http://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Esses são todos os recursos de instituições disponíveis.
 
-# Authentication
+Recurso | Método | Descrição
+------- | ------ | ---------
+/institutions/official | GET | Lista todas as instituinções oficiais
+/institutions/official/{id} | GET | Retorna uma instituição oficial específica
+/institutions/custom | GET | Lista todas as instituições de um usuário autenticado
+/institutions/custom | POST | Cria uma instituição para um usuário
+/institutions/custom/{id} | GET | Retorna uma determinada instituição de um usuário
+/institutions/custom/{id} | PUT | Atualiza/Altera dados de uma instituição
+/institutions/custom/{id} | DELETE | Apaga uma instituição
 
-> To authorize, use this code:
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
+##GET /official
 
 ```python
-import kittn
+import urllib2
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
+request = urllib2.Request('http://api.livecapital.com/institutions/official')
+response = urllib2.urlopen(request).read()
+
+print response
 ```
 
-```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
-```
-
-> The above command returns JSON structured like this:
+> Essa requisição ira retornar um JSON como este:
 
 ```json
 [
   {
     "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
+    "name": "HSBC BANK BRASIL S.A. - BANCO MULTIPLO",
+    "category": "BROKER"
   },
   {
     "id": 2,
-    "name": "Isis",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
+    "name": "BANCO SANTANDER (BRASIL) S.A.",
+    "category": "BROKER"
+  },
+  {
+    "id": 3,
+    "name": "C.S.MENDES AGENTE AUTÔNOMO DE INVESTIMENTOS LTDA",
+    "category": "AUTONOMOUS_AGENT"
+  },
+  {
+    "id": 4,
+    "name": "LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+    "category": "AUTONOMOUS_AGENT"
+  },
+  {
+    "id": 5,
+    "name": "PREFEITURA DO MUNICÍPIO DE SÃO PAULO",
+    "category": "BROKER"
   }
 ]
 ```
 
-This endpoint retrieves all kittens.
+Esse recurso retorna uma lista de todas as instituições oficiais.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://api.livecapital.com/institutions/official`
 
-### Query Parameters
+### Parâmetros de resposta
 
-Parameter | Default | Description
---------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição
+name | Nome da instituição
+category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-
-## Get a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
+##GET /official/{id}
 
 ```python
-import kittn
+import urllib2
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
+request = urllib2.Request('http://api.livecapital.com/institutions/official/{}'.format(id))
+response = urllib2.urlopen(request).read()
+
+print response
 ```
 
-```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
-```
-
-> The above command returns JSON structured like this:
+> Essa requisição ira retornar um JSON como este:
 
 ```json
 {
   "id": 2,
-  "name": "Isis",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+  "name": "BANCO SANTANDER (BRASIL) S.A.",
+  "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
+  "phone": "(11) 35535533",
+  "fax": "(11) 35535533",
+  "category": "BROKER",
+  "person_type": "LEGAL_PERSON",
+  "identifier": "90400888000142",
+  "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+  "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+  "email": "juridsocietario@santander.com.br",
+  "zip_code": "4543011",
+  "district": "VL OLIMPIA",
+  "street": "AV PRESIDENTE JUSC KUBITSCHEK",
+  "complement": "2041 E 2235",
+  "city": "SÃO PAULO",
+  "uf": "SP",
+  "ddd": "11"
 }
 ```
 
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">If you're not using an administrator API key, note that some kittens will return 403 Forbidden if they are hidden for admins only.</aside>
+Esse recurso retorna a instituição que tenha o id passado na URL.
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://api.livecapital.com/institutions/official/{id}`
 
-### URL Parameters
+### Parâmetros de URL
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição que será retornada
 
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição
+name | Nome da instituição
+address | Endereço da instutição
+zip_code | CEP da instituição
+district | Distrito da instituição
+street | Rua da instituição
+complement | Complemento do endereço
+city | Cidade da instituição
+uf | Código do Estado - Unidade Federativa
+ddd | DDD da institutição
+phone | Telefone da instituição
+fax | Fax da instituição
+email | Email da instituição
+category | Categoria a qual a instituição pertence
+person_type | Tipo de pessoa
+identifier | Número identificador
+social_denomination | Denominação social
+commercial_denomination | Denominação comercial
+
+##GET /custom
+
+```python
+import urllib2
+
+request = urllib2.Request('http://api.livecapital.com/users/{username}institutions/custom')
+response = urllib2.urlopen(request).read()
+
+print response
+```
+
+> Essa requisição ira retornar um JSON como este:
+
+```json
+[
+  {
+    "id": 1,
+    "broker": null,
+    "autonomous_agent": null,
+    "trading_accounts": [],
+    "name": "HSBC BANK BRASIL S.A. - BANCO MULTIPLO"
+  },
+  {
+    "id": 2,
+    "broker": null,
+    "autonomous_agent": null,
+    "trading_accounts": [],
+    "name": "C.S.MENDES AGENTE AUTÔNOMO DE INVESTIMENTOS LTDA"
+  },
+  {
+    "id": 3,
+    "broker": null,
+    "autonomous_agent": null,
+    "trading_accounts": [],
+    "name": "PREFEITURA DO MUNICÍPIO DE SÃO PAULO"
+  }
+]
+```
+
+Este recurso lista todas as instituições de um usuário autenticado.
+
+### HTTP Request
+
+`GET http://api.livecapital.com/users/{username}/institutions/custom`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+username | Nome de um usuário autenticado
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição do usuário
+broker |
+autonomous_agent |
+trading_accounts |
+name | Nome da instutuição do usuário
+
+##POST /custom
+
+```python
+import urllib2
+
+values = """
+  {
+    "id": 1,
+    "name": "BANCO SANTANDER (BRASIL) S.A.",
+    "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
+    "phone": "(11) 35535533",
+    "fax": "(11) 35535533",
+    "category": "BROKER",
+    "person_type": "LEGAL_PERSON",
+    "identifier": "90400888000142",
+    "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "email": "juridsocietario@santander.com.br",
+    "zip_code": "4543011",
+    "district": "VL OLIMPIA",
+    "street": "AV PRESIDENTE JUSC KUBITSCHEK",
+    "complement": "2041 E 2235",
+    "city": "SÃO PAULO",
+    "uf": "SP",
+    "ddd": "11"
+  }
+"""
+
+headers = {
+  'Content-Type': 'application/json'
+}
+request = urllib2.Request('http://api.livecapital.com/users/{username}/institutions/custom'.format(username), data=values, headers=headers)
+
+response = urllib2.urlopen(request).read()
+
+print response
+```
+
+> Essa requisição ira retornar um JSON como este:
+
+```json
+{
+  "id": 1,
+  "broker": null,
+  "autonomous_agent": null,
+  "trading_accounts": [],
+  "name": "BANCO SANTANDER (BRASIL) S.A."
+}
+```
+
+Este recurso cria uma instituição para um determinado usuário autenticado.
+
+### HTTP Request
+
+`POST http://api.livecapital.com/users/{username}/institutions/custom`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+username | Nome de um usuário autenticado
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição do usuário
+broker |
+autonomous_agent |
+trading_accounts |
+name | Nome da instutuição do usuário
+
+##GET /custom/{id}
+
+```python
+from urllib2 import Request, urlopen
+
+request = Request('http://api.livecapital.com/users/{}/institutions/custom/{}'.format(username, id))
+
+response_body = urlopen(request).read()
+print response_body
+```
+
+> Essa requisição ira retornar um JSON como este:
+
+```json
+{
+  "id": 1,
+  "broker": null,
+  "autonomous_agent": null,
+  "trading_accounts": [],
+  "name": "BANCO SANTANDER (BRASIL) S.A."
+}
+```
+
+Este recurso retorna uma determinada instituição de um usuário autenticado.
+Será retornada a instituição com o id igual ao parâmetro passado na url.
+
+### HTTP Request
+
+`POST http://api.livecapital.com/users/{username}/institutions/custom/{id}`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+username | Nome de um usuário autenticado
+id | Id de uma instituição de usuário
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição do usuário
+broker |
+autonomous_agent |
+trading_accounts |
+name | Nome da instutuição do usuário
+
+##PUT /custom/{id}
+
+```python
+import urllib2
+
+values = """
+  {
+    "id": 1,
+    "name": "BANCO SANTANDER (BRASIL) S.A.",
+    "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
+    "phone": "(11) 35535533",
+    "fax": "(11) 35535533",
+    "category": "BROKER",
+    "person_type": "LEGAL_PERSON",
+    "identifier": "90400888000142",
+    "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "email": "juridsocietario@santander.com.br",
+    "zip_code": "4543011",
+    "district": "VL OLIMPIA",
+    "street": "AV PRESIDENTE JUSC KUBITSCHEK",
+    "complement": "2041 E 2235",
+    "city": "SÃO PAULO",
+    "uf": "SP",
+    "ddd": "11"
+  }
+"""
+
+opener = urllib2.build_opener(urllib2.HTTPHandler)
+request = urllib2.Request('http://api.livecapital.com/institutions/custom/{id}', data=values)
+request.add_header('Content-Type', 'application/json')
+request.get_method = lambda: 'PUT'
+response = opener.open(request)
+
+print response.read()
+```
+
+> Essa requisição ira retornar um JSON como este:
+
+```json
+{
+  "id": 1,
+  "broker": null,
+  "autonomous_agent": null,
+  "trading_accounts": [],
+  "name": "BANCO SANTANDER (BRASIL) S.A."
+}
+```
+
+Este recurso altera/atualiza uma determinada instituição de um usuário autenticado.
+Será alterada/atualizada a instituição com o id igual ao parâmetro passado na url.
+
+### HTTP Request
+
+`PUT http://api.livecapital.com/users/{username}/institutions/custom/{id}`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+username | Nome de um usuário autenticado
+id | Id de uma instituição de usuário
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição do usuário
+broker |
+autonomous_agent |
+trading_accounts |
+name | Nome da instutuição do usuário
+
+##DELETE /custom/{id}
+
+```python
+import urllib2
+
+values = """
+  {
+    "id": 1,
+    "broker": null,
+    "autonomous_agent": null,
+    "trading_accounts": [],
+    "name": "BANCO SANTANDER (BRASIL) S.A."
+  }
+"""
+
+opener = urllib2.build_opener(urllib2.HTTPHandler)
+request = urllib2.Request('http://www.mocky.io/v2/5654ad7f0f00004c3160c1bc', data=values)
+request.add_header('Content-Type', 'application/json')
+request.get_method = lambda: 'DELETE'
+response = opener.open(request)
+
+print response.read()
+
+```
+
+Este recurso apaga uma determinada instituição de um usuário autenticado.
+Será apagada a instituição com o id igual ao parâmetro passado na url.
+
+### HTTP Request
+
+`DELETE http://api.livecapital.com/users/{username}/institutions/custom/{id}`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+username | Nome de um usuário autenticado
+id | Id de uma instituição de usuário
