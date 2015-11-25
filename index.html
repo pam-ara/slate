@@ -1452,6 +1452,8 @@
 
 <h1 id="bovespa">Bovespa</h1>
 
+<h2 id="recursos">Recursos</h2>
+
 <p>Esses são todos os recursos de Bovespa disponíveis.</p>
 
 <table><thead>
@@ -1512,22 +1514,22 @@
 <td>Retorna a posição da conta na data informada sem termos</td>
 </tr>
 <tr>
-<td><a href="#get-trading-account-date">/bovespa/events/{trading-account}/{date}</a></td>
+<td><a href="#get-events-trading-account-date">/bovespa/events/{trading-account}/{date}</a></td>
 <td>GET</td>
 <td>Lista todos os eventos de uma conta filtrados por data</td>
 </tr>
 <tr>
-<td><a href="#get-event-type-id">/bovespa/{event_type}/{id}</a></td>
+<td><a href="#get-event-type-id">/bovespa/{event-type}/{id}</a></td>
 <td>GET</td>
 <td>Exibe dados de um evento</td>
 </tr>
 <tr>
-<td><a href="#put-event-type-id">/bovespa/{event_type}/{id}</a></td>
+<td><a href="#put-event-type-id">/bovespa/{event-type}/{id}</a></td>
 <td>PUT</td>
 <td>Altera dados de um evento</td>
 </tr>
 <tr>
-<td><a href="#delete-event-type-id">/bovespa/{event_type}/{id}</a></td>
+<td><a href="#delete-event-type-id">/bovespa/{event-type}/{id}</a></td>
 <td>DELETE</td>
 <td>Apaga um evento</td>
 </tr>
@@ -2109,7 +2111,7 @@
 </tr>
 </tbody></table>
 
-<h2 id="get-event_type-id">GET /{event_type}/{id}</h2>
+<h2 id="get-event-type-id">GET /{event-type}/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
 
 <span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
@@ -2169,7 +2171,7 @@
 </tr>
 </tbody></table>
 
-<h2 id="put-event_type-id">PUT /{event_type}/{id}</h2>
+<h2 id="put-event-type-id">PUT /{event-type}/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
 
 <span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
@@ -2229,7 +2231,7 @@
 </tr>
 </tbody></table>
 
-<h2 id="delete-event_type-id">DELETE /{event_type}/{id}</h2>
+<h2 id="delete-event-type-id">DELETE /{event-type}/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
 
 <span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
