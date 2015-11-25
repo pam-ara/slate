@@ -48,6 +48,600 @@
 
 <p>Essa é a API LiveCapital. Nela estão descritos todos os recursos disponíves e a forma de acessá-los utitlizando os principais métodos do protocolo HTTP.</p>
 
+<h1 id="clientes">Clientes</h1>
+
+<h2 id="recursos">Recursos</h2>
+
+<p>Esses são todos os recursos de Clientes disponíveis.</p>
+
+<table><thead>
+<tr>
+<th>Recurso</th>
+<th>Método</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#get-clients-menu">/clients/menu</a></td>
+<td>GET</td>
+<td>Lista instituições e suas contas</td>
+</tr>
+<tr>
+<td><a href="#get-accordions-name-year">/accordions/{name}/{year}</a></td>
+<td>GET</td>
+<td>Lista</td>
+</tr>
+<tr>
+<td><a href="#get-accordions-name-year-month">/accordions/{name}/{year}-{month}</a></td>
+<td>GET</td>
+<td>Lista</td>
+</tr>
+<tr>
+<td><a href="#get-operations-name-year">/operations/{name}/{year}</a></td>
+<td>GET</td>
+<td>Lista</td>
+</tr>
+<tr>
+<td><a href="#get-operations-name-year-month">/operations/{name}/{year}-{month}</a></td>
+<td>GET</td>
+<td>Lista</td>
+</tr>
+<tr>
+<td><a href="#get-portfolios-name-year">/portfolios/{name}/{year}</a></td>
+<td>GET</td>
+<td>Lista</td>
+</tr>
+<tr>
+<td><a href="#get-portfolios-name-year-month">/portfolios/{name}/{year}-{month}</a></td>
+<td>GET</td>
+<td>Lista</td>
+</tr>
+<tr>
+<td><a href="#get-returns-name-year">/returns/{name}/{year}</a></td>
+<td>GET</td>
+<td>Lista</td>
+</tr>
+<tr>
+<td><a href="#get-returns-name-year-month">/returns/{name}/{year}-{month}</a></td>
+<td>GET</td>
+<td>Lista</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-clients-menu">GET /clients/menu</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/menu'</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de todas as instituições e suas contas.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/menu</code></p>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-accordions-name-year">GET /accordions/{name}/{year}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/accordions/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/accordions/{name}/{year}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-accordions-name-year-month">GET /accordions/{name}/{year}-{month}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/accordions/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/accordions/{name}/{year}-{month}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-operations-name-year">GET /operations/{name}/{year}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/operations/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/operations/{name}/{year}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-operations-name-year-month">GET /operations/{name}/{year}-{month}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/operations/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/operations/{name}/{year}-{month}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-portfolios-name-year">GET /portfolios/{name}/{year}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/portfolios/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/portfolios/{name}/{year}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-portfolios-name-year-month">GET /portfolios/{name}/{year}-{month}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/portfolios/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/portfolios/{name}/{year}-{month}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-returns-name-year">GET /returns/{name}/{year}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/returns/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/returns/{name}/{year}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-returns-name-year-month">GET /returns/{name}/{year}-{month}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/returns/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/returns/{name}/{year}-{month}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
 <h1 id="instituições">Instituições</h1>
 
 <h2 id="recursos">Recursos</h2>
@@ -62,37 +656,37 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>/institutions/official</td>
+<td><a href="#get-official">/institutions/official</a></td>
 <td>GET</td>
 <td>Lista todas as instituinções oficiais</td>
 </tr>
 <tr>
-<td>/institutions/official/{id}</td>
+<td><a href="#get-official-id">/institutions/official/{id}</a></td>
 <td>GET</td>
 <td>Retorna uma instituição oficial específica</td>
 </tr>
 <tr>
-<td>/institutions/custom</td>
+<td><a href="#get-custom">/institutions/custom</a></td>
 <td>GET</td>
 <td>Lista todas as instituições de um usuário autenticado</td>
 </tr>
 <tr>
-<td>/institutions/custom</td>
+<td><a href="#post-custom">/institutions/custom</a></td>
 <td>POST</td>
 <td>Cria uma instituição para um usuário</td>
 </tr>
 <tr>
-<td>/institutions/custom/{id}</td>
+<td><a href="#get-custom-id">/institutions/custom/{id}</a></td>
 <td>GET</td>
 <td>Retorna uma determinada instituição de um usuário</td>
 </tr>
 <tr>
-<td>/institutions/custom/{id}</td>
+<td><a href="#put-custom-id">/institutions/custom/{id}</a></td>
 <td>PUT</td>
 <td>Atualiza/Altera dados de uma instituição</td>
 </tr>
 <tr>
-<td>/institutions/custom/{id}</td>
+<td><a href="#delete-custom-id">/institutions/custom/{id}</a></td>
 <td>DELETE</td>
 <td>Apaga uma instituição</td>
 </tr>
@@ -108,7 +702,7 @@
 </code></pre>
 
 <blockquote>
-<p>Essa requisição ira retornar um JSON como este:</p>
+<p>Essa requisição irá retornar um JSON como este:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -139,7 +733,7 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 
-<p>Esse recurso retorna uma lista de todas as instituições oficiais.</p>
+<p>Esse recurso retorna uma lista com todas as instituições oficiais.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -177,7 +771,7 @@
 </code></pre>
 
 <blockquote>
-<p>Essa requisição ira retornar um JSON como este:</p>
+<p>Essa requisição irá retornar um JSON como este:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
@@ -201,7 +795,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Esse recurso retorna a instituição que tenha o id passado na URL.</p>
+<p>Esse recurso retorna uma instituição específica.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -283,7 +877,7 @@
 </tr>
 <tr>
 <td>category</td>
-<td>Categoria a qual a instituição pertence</td>
+<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
 </tr>
 <tr>
 <td>person_type</td>
@@ -306,14 +900,14 @@
 <h2 id="get-custom">GET /custom</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{username}institutions/custom'</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">))</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
 <span class="k">print</span> <span class="n">response</span>
 </code></pre>
 
 <blockquote>
-<p>Essa requisição ira retornar um JSON como este:</p>
+<p>Essa requisição irá retornar um JSON como este:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
@@ -419,7 +1013,7 @@
 <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span>
 <span class="p">}</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{username}/institutions/custom'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
@@ -427,7 +1021,7 @@
 </code></pre>
 
 <blockquote>
-<p>Essa requisição ira retornar um JSON como este:</p>
+<p>Essa requisição irá retornar um JSON como este:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -489,16 +1083,16 @@
 </tbody></table>
 
 <h2 id="get-custom-id">GET /custom/{id}</h2>
-<pre class="highlight python"><code><span class="kn">from</span> <span class="nn">urllib2</span> <span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="n">response_body</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="k">print</span> <span class="n">response_body</span>
+<span class="k">print</span> <span class="n">response</span>
 </code></pre>
 
 <blockquote>
-<p>Essa requisição ira retornar um JSON como este:</p>
+<p>Essa requisição irá retornar um JSON como este:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -509,8 +1103,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Este recurso retorna uma determinada instituição de um usuário autenticado.
-Será retornada a instituição com o id igual ao parâmetro passado na url.</p>
+<p>Este recurso retorna uma determinada instituição de um usuário autenticado.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -591,7 +1184,7 @@ Será retornada a instituição com o id igual ao parâmetro passado na url.</p>
 """</span>
 
 <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">)</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/custom/{id}'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 <span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">'application/json'</span><span class="p">)</span>
 <span class="n">request</span><span class="o">.</span><span class="n">get_method</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s">'PUT'</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
@@ -600,7 +1193,7 @@ Será retornada a instituição com o id igual ao parâmetro passado na url.</p>
 </code></pre>
 
 <blockquote>
-<p>Essa requisição ira retornar um JSON como este:</p>
+<p>Essa requisição irá retornar um JSON como este:</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -611,8 +1204,7 @@ Será retornada a instituição com o id igual ao parâmetro passado na url.</p>
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Este recurso altera/atualiza uma determinada instituição de um usuário autenticado.
-Será alterada/atualizada a instituição com o id igual ao parâmetro passado na url.</p>
+<p>Este recurso altera uma determinada instituição de um usuário autenticado.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -680,7 +1272,7 @@ Será alterada/atualizada a instituição com o id igual ao parâmetro passado n
 """</span>
 
 <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">)</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://www.mocky.io/v2/5654ad7f0f00004c3160c1bc'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}instittutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 <span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">'application/json'</span><span class="p">)</span>
 <span class="n">request</span><span class="o">.</span><span class="n">get_method</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s">'DELETE'</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
@@ -689,8 +1281,7 @@ Será alterada/atualizada a instituição com o id igual ao parâmetro passado n
 
 </code></pre>
 
-<p>Este recurso apaga uma determinada instituição de um usuário autenticado.
-Será apagada a instituição com o id igual ao parâmetro passado na url.</p>
+<p>Este recurso apaga uma determinada instituição de um usuário autenticado.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -711,6 +1302,1809 @@ Será apagada a instituição com o id igual ao parâmetro passado na url.</p>
 <tr>
 <td>id</td>
 <td>Id de uma instituição de usuário</td>
+</tr>
+</tbody></table>
+
+<h1 id="darf">DARF</h1>
+
+<h2 id="recursos">Recursos</h2>
+
+<p>Esses são todos os recursos de DARF disponíveis.</p>
+
+<table><thead>
+<tr>
+<th>Recurso</th>
+<th>Método</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#get-year-month-reports">/darf/{year}-{month}/reports</a></td>
+<td>GET</td>
+<td>Exibe o relatório</td>
+</tr>
+<tr>
+<td><a href="#get-year-month-print">/darf/{year}-{month}/print</a></td>
+<td>GET</td>
+<td>Exibe DARF</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-year-month-reports">GET /{year}-{month}/reports</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/darf/{}-{}/reports'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso exibe um relatório filtrado por mês e ano.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/darf/{year}-{month}/reports</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-year-month-print">GET /{year}-{month}/print</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/darf/{}-{}/print'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso exibe uma DARF filtrada por mês e ano.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/darf/{year}-{month}/print</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h1 id="bovespa">Bovespa</h1>
+
+<p>Esses são todos os recursos de Bovespa disponíveis.</p>
+
+<table><thead>
+<tr>
+<th>Recurso</th>
+<th>Método</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#get-trading-account">/bovespa/trading-account</a></td>
+<td>GET</td>
+<td>Lista todas as contas de um usuário autenticado</td>
+</tr>
+<tr>
+<td><a href="#post-trading-account">/bovespa/trading-account</a></td>
+<td>POST</td>
+<td>Cria uma conta de Bovesta para um usuário autenticado</td>
+</tr>
+<tr>
+<td><a href="#get-trading-account-id">/bovespa/trading-account/{id}</a></td>
+<td>GET</td>
+<td>Exibe os dados de uma conta</td>
+</tr>
+<tr>
+<td><a href="#get-assets">/bovespa/assets</a></td>
+<td>GET</td>
+<td>Retorna uma lista de ativos</td>
+</tr>
+<tr>
+<td><a href="#post-brokerage-notes">/bovespa/brokerage-notes</a></td>
+<td>POST</td>
+<td>Cria uma nota de corretagem</td>
+</tr>
+<tr>
+<td><a href="#get-brokerage-notes-id">/bovespa/brokerage-notes/{id}</a></td>
+<td>GET</td>
+<td>Exibe dados da nota de corretagem</td>
+</tr>
+<tr>
+<td><a href="#put-brokerage-notes-id">/bovespa/brokerage-notes/{id}</a></td>
+<td>PUT</td>
+<td>Altera dados da nota de corretagem</td>
+</tr>
+<tr>
+<td><a href="#delete-brokerage-notes-id">/bovespa/brokerage-notes/{id}</a></td>
+<td>DELETE</td>
+<td>Apaga uma nota de corretagem</td>
+</tr>
+<tr>
+<td><a href="#get-positions-date-terms">/bovespa/positions/{date}/terms</a></td>
+<td>GET</td>
+<td>Retorna a posição da conta na data informada apenas por termos</td>
+</tr>
+<tr>
+<td><a href="#get-positions-date-non-terms">/bovespa/positions/{date}/non-terms</a></td>
+<td>GET</td>
+<td>Retorna a posição da conta na data informada sem termos</td>
+</tr>
+<tr>
+<td><a href="#get-trading-account-date">/bovespa/events/{trading-account}/{date}</a></td>
+<td>GET</td>
+<td>Lista todos os eventos de uma conta filtrados por data</td>
+</tr>
+<tr>
+<td><a href="#get-event-type-id">/bovespa/{event_type}/{id}</a></td>
+<td>GET</td>
+<td>Exibe dados de um evento</td>
+</tr>
+<tr>
+<td><a href="#put-event-type-id">/bovespa/{event_type}/{id}</a></td>
+<td>PUT</td>
+<td>Altera dados de um evento</td>
+</tr>
+<tr>
+<td><a href="#delete-event-type-id">/bovespa/{event_type}/{id}</a></td>
+<td>DELETE</td>
+<td>Apaga um evento</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-trading-account">GET /trading-account</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account'</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso lista todas as contas de um usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/trading-account</code></p>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="post-trading-account">POST /trading-account</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="s">"""
+  {
+  }
+"""</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span>
+<span class="p">}</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso cria uma conta Bovespa para um usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://api.livecapital.com/bovespa/trading-account</code></p>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-trading-account-id">GET /trading-account/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna dados de uma conta bovespa.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/trading-account/{id}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id de uma conta</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-assets">GET /assets</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/assets'</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de ativos.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/assets</code></p>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="post-brokerage-notes">POST /brokerage-notes</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes'</span><span class="p">)</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso cria uma nota de corretagem.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://api.livecapital.com/bovespa/brokerage-notes</code></p>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-brokerage-notes-id">GET /brokerage-notes/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna os dados de uma nota de corretagem.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/brokerage-notes/{id}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da nota de corretagem</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="put-brokerage-notes-id">PUT /brokerage-notes/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="s">"""
+  {
+  }
+"""</span>
+
+<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">'application/json'</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">get_method</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s">'PUT'</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso altera dados de uma nota de corretagem.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PUT http://api.livecapital.com/bovespa/brokerage-notes/{id}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da nota de corretagem</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="delete-brokerage-notes-id">DELETE /brokerage-notes/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerege-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">'application/json'</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">get_method</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s">'DELETE'</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+
+<span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+</code></pre>
+
+<p>Esse recurso apaga uma nota de corretagem.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">DELETE http://api.livecapital.com/bovespa/brokerage-notes/{id}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da nota de corretagem</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-positions-date-terms">GET /positions/{date}/terms</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/positions/{}/terms'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna a posição da conta na data informada exibindo apenas os termos.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/positions/{date}/terms</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>Data na qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-positions-date-non-terms">GET /positions/{date}/non-terms</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/positions/{}/non-terms'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna a posição da conta na data informada, mas não exibe os termos.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/positions/{date}/non-terms</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>Data na qual deseja realizar o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-events-trading-account-date">GET /events/{trading-account}/{date}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/events/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trading</span><span class="o">-</span><span class="n">account</span><span class="p">,</span> <span class="n">date</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso lista todos os eventos de uma conta filtrando por data.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/events/{trading-account}/{date}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>date</td>
+<td>Data na qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-event_type-id">GET /{event_type}/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna dados de um evento.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/{event-type}/{id}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>event-type</td>
+<td>Tipo de evento que se deseja consultar.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id do evento</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="put-event_type-id">PUT /{event_type}/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso altera dados de um evento.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PUT http://api.livecapital.com/bovespa/{event-type}/{id}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>event-type</td>
+<td>Tipo de evento que se deseja consultar.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id do evento</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="delete-event_type-id">DELETE /{event_type}/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso apaga um evento.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/{event-type}/{id}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>event-type</td>
+<td>Tipo de evento que se deseja consultar.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id do evento</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h1 id="widgets">Widgets</h1>
+
+<h2 id="recursos">Recursos</h2>
+
+<p>Esses são todos os recursos de widgets disponíveis.</p>
+
+<table><thead>
+<tr>
+<th>Recurso</th>
+<th>Método</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#get-name-market-year">/widgets/{name}/{market}/{year}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets filtrados por um ano</td>
+</tr>
+<tr>
+<td><a href="#get-name-market-year-month">/widgets/{name}/{market}/{year}-{month}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets filtrados por um mês e ano</td>
+</tr>
+<tr>
+<td><a href="#get-name-market-year-month-day">/widgets/{name}/{market}/{year}-{month}-{day}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets filtrados por uma data</td>
+</tr>
+<tr>
+<td><a href="#get-portfolios-name-market-year47">/widgets/portfolios/{year}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets portfolios filtrados por ano</td>
+</tr>
+<tr>
+<td><a href="#get-portfolios-year-month">/widgets/portfolios/{year}-{month}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets portfolios filtrados por mês e ano</td>
+</tr>
+<tr>
+<td><a href="#get-portfolios-year-month-day">/widgets/portfolios/{year}-{month}-{day}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets portfolios filtrados por uma data</td>
+</tr>
+<tr>
+<td><a href="#get-capital-gain-year">/widgets/capital-gain/{year}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets capital-gain filtrados por um ano</td>
+</tr>
+<tr>
+<td><a href="#get-capital-gain-year-month">/widgets/capital-gain/{year}-{month}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets capital-gain filtrados por um mês e ano</td>
+</tr>
+<tr>
+<td><a href="#get-capital-gain-year-month-day">/widgets/capital-gain/{year}-{month}-{day}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets capital-gain filtrados por uma data</td>
+</tr>
+<tr>
+<td><a href="#get-taxes-year">/widgets/taxes/{year}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets taxes filtrados por um ano</td>
+</tr>
+<tr>
+<td><a href="#get-taxes-year-month">/widgets/taxes/{year}-{month}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets taxes filtrados por um mês e ano</td>
+</tr>
+<tr>
+<td><a href="#get-taxes-year-month-day">/widgets/taxes/{year}-{month}-{day}</a></td>
+<td>GET</td>
+<td>Retorna uma lista de widgets taxes filtrados por uma data</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-name-market-year">GET /{name}/{market}/{year}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets de determinado nome filtrados por um ano.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/{name}/{market}/{year}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Nome do widget</td>
+</tr>
+<tr>
+<td>market</td>
+<td>Tipo de mercado (Bovespa, BMF, etc)</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-name-market-year-month">GET /{name}/{market}/{year}-{month}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets de determinado nome filtrados por mês e ano.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/{name}/{market}/{year}-{month}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Nome do widget</td>
+</tr>
+<tr>
+<td>market</td>
+<td>Tipo de mercado (Bovespa, BMF, etc)</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-name-market-year-month-day">GET /{name}/{market}/{year}-{month}-{day}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets de determinado nome filtrados por uma data.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/{name}/{market}/{year}-{month}-{day}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Nome do widget</td>
+</tr>
+<tr>
+<td>market</td>
+<td>Tipo de mercado (Bovespa, BMF, etc)</td>
+</tr>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>day</td>
+<td>Dia no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-portfolios-year">GET /portfolios/{year}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/portfolios/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets portfolio filtrados por um ano.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/portfolios/{year}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-portfolios-year-month">GET /portfolios/{year}-{month}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/portfolios/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets portfolio filtrados por um mês e ano.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/portfolios/{year}-{month}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-portfolios-year-month-day">GET /portfolios/{year}-{month}-{day}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/portfolios/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets portfolio filtrados por uma data.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/portfolios/{year}-{month}-{day}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>day</td>
+<td>Dia no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-capital-gain-year">GET /capital-gain/{year}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets capital-gain filtrados por um ano.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/wigets/capital-gain/{year}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-capital-gain-year-month">GET /capital-gain/{year}-{month}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets capital-gain filtrados por um mês e ano.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/capital-gain/{year}-{month}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-capital-gain-year-month-day">GET /capital-gain/{year}-{month}-{day}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets capital-gain filtrados por uma data.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/capital-gain/{year}-{month}-{day}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>day</td>
+<td>Dia no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-taxes-year">GET /taxes/{year}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets taxes filtrados por um ano.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/taxes/{year}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-taxes-year-month">GET /taxes/{year}-{month}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets taxes filtrados por um mês e ano.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/taxes/{year}-{month}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<h2 id="get-taxes-year-month-day">GET /taxes/{year}-{month}-{day}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="k">print</span> <span class="n">response</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code></code></pre>
+
+<p>Esse recurso retorna uma lista de widgets taxes filtrados por uma data.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/taxes/{year}-{month}-{day}</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>year</td>
+<td>Ano no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>month</td>
+<td>Mês no qual deseja fazer o filtro</td>
+</tr>
+<tr>
+<td>day</td>
+<td>Dia no qual deseja fazer o filtro</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
 </tr>
 </tbody></table>
 
