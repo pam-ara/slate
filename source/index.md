@@ -883,6 +883,8 @@ Parâmetro | Descrição
 
 #Bovespa
 
+##Recursos
+
 Esses são todos os recursos de Bovespa disponíveis.
 
 Recurso | Método | Descrição
@@ -897,10 +899,10 @@ Recurso | Método | Descrição
 [/bovespa/brokerage-notes/{id}](#delete-brokerage-notes-id) | DELETE | Apaga uma nota de corretagem
 [/bovespa/positions/{date}/terms](#get-positions-date-terms) | GET | Retorna a posição da conta na data informada apenas por termos
 [/bovespa/positions/{date}/non-terms](#get-positions-date-non-terms) | GET | Retorna a posição da conta na data informada sem termos
-[/bovespa/events/{trading-account}/{date}](#get-trading-account-date) | GET | Lista todos os eventos de uma conta filtrados por data
-[/bovespa/{event_type}/{id}](#get-event-type-id) | GET | Exibe dados de um evento
-[/bovespa/{event_type}/{id}](#put-event-type-id) | PUT | Altera dados de um evento
-[/bovespa/{event_type}/{id}](#delete-event-type-id) | DELETE | Apaga um evento
+[/bovespa/events/{trading-account}/{date}](#get-events-trading-account-date) | GET | Lista todos os eventos de uma conta filtrados por data
+[/bovespa/{event-type}/{id}](#get-event-type-id) | GET | Exibe dados de um evento
+[/bovespa/{event-type}/{id}](#put-event-type-id) | PUT | Altera dados de um evento
+[/bovespa/{event-type}/{id}](#delete-event-type-id) | DELETE | Apaga um evento
 
 ##GET /trading-account
 
@@ -1290,7 +1292,7 @@ Parâmetro | Descrição
  |
  |
 
-##GET /{event_type}/{id}
+##GET /{event-type}/{id}
 
 ```python
 import urllib2
@@ -1327,7 +1329,7 @@ Parâmetro | Descrição
  |
  |
 
-##PUT /{event_type}/{id}
+##PUT /{event-type}/{id}
 
 ```python
 import urllib2
@@ -1364,7 +1366,7 @@ Parâmetro | Descrição
  |
  |
 
-##DELETE /{event_type}/{id}
+##DELETE /{event-type}/{id}
 
 ```python
 import urllib2
