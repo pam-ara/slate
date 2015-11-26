@@ -1338,7 +1338,7 @@ Recurso | Método | Descrição
 [/widgets/{name}/{market}/{year}](#get-name-market-year) | GET | Retorna uma lista de widgets filtrados por um ano
 [/widgets/{name}/{market}/{year}-{month}](#get-name-market-year-month) | GET | Retorna uma lista de widgets filtrados por um mês e ano
 [/widgets/{name}/{market}/{year}-{month}-{day}](#get-name-market-year-month-day) | GET | Retorna uma lista de widgets filtrados por uma data
-[/widgets/portfolios/{year}](#get-portfolios-name-market-year) | GET | Retorna uma lista de widgets portfolios filtrados por ano
+[/widgets/portfolios/{year}](#get-portfolios-year) | GET | Retorna uma lista de widgets portfolios filtrados por ano
 [/widgets/portfolios/{year}-{month}](#get-portfolios-year-month) | GET | Retorna uma lista de widgets portfolios filtrados por mês e ano
 [/widgets/portfolios/{year}-{month}-{day}](#get-portfolios-year-month-day) | GET | Retorna uma lista de widgets portfolios filtrados por uma data
 [/widgets/capital-gain/{year}](#get-capital-gain-year) | GET | Retorna uma lista de widgets capital-gain filtrados por um ano
