@@ -109,12 +109,11 @@
 </tbody></table>
 
 <h2 id="get-clients-menu">GET /clients/menu</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/menu'</span><span class="p">)</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/menu'</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -151,12 +150,11 @@
 </tbody></table>
 
 <h2 id="get-accordions-name-year">GET /accordions/{name}/{year}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/accordions/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/accordions/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -211,12 +209,11 @@
 </tbody></table>
 
 <h2 id="get-accordions-name-year-month">GET /accordions/{name}/{year}-{month}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/accordions/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/accordions/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -275,12 +272,11 @@
 </tbody></table>
 
 <h2 id="get-operations-name-year">GET /operations/{name}/{year}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/operations/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/operations/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -335,12 +331,11 @@
 </tbody></table>
 
 <h2 id="get-operations-name-year-month">GET /operations/{name}/{year}-{month}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/operations/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/operations/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -399,12 +394,11 @@
 </tbody></table>
 
 <h2 id="get-portfolios-name-year">GET /portfolios/{name}/{year}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/portfolios/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/portfolios/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -459,12 +453,11 @@
 </tbody></table>
 
 <h2 id="get-portfolios-name-year-month">GET /portfolios/{name}/{year}-{month}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/portfolios/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/portfolios/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -519,12 +512,11 @@
 </tbody></table>
 
 <h2 id="get-returns-name-year">GET /returns/{name}/{year}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/returns/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/returns/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -579,12 +571,11 @@
 </tbody></table>
 
 <h2 id="get-returns-name-year-month">GET /returns/{name}/{year}-{month}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/returns/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/returns/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -693,12 +684,11 @@
 </tbody></table>
 
 <h2 id="get-official">GET /official</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/official'</span><span class="p">)</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/official'</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -762,12 +752,11 @@
 </tbody></table>
 
 <h2 id="get-official-id">GET /official/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/official/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/official/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -898,12 +887,11 @@
 </tbody></table>
 
 <h2 id="get-custom">GET /custom</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -985,39 +973,32 @@
 </tbody></table>
 
 <h2 id="post-custom">POST /custom</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">values</span> <span class="o">=</span> <span class="s">"""
-  {
-    "id": 1,
-    "name": "BANCO SANTANDER (BRASIL) S.A.",
-    "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
-    "phone": "(11) 35535533",
-    "fax": "(11) 35535533",
-    "category": "BROKER",
-    "person_type": "LEGAL_PERSON",
-    "identifier": "90400888000142",
-    "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-    "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-    "email": "juridsocietario@santander.com.br",
-    "zip_code": "4543011",
-    "district": "VL OLIMPIA",
-    "street": "AV PRESIDENTE JUSC KUBITSCHEK",
-    "complement": "2041 E 2235",
-    "city": "SÃO PAULO",
-    "uf": "SP",
-    "ddd": "11"
-  }
-"""</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="s">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s">"name"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
+          <span class="s">"address"</span><span class="p">:</span> <span class="s">"AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011"</span><span class="p">,</span>
+          <span class="s">"phone"</span><span class="p">:</span> <span class="s">"(11) 35535533"</span><span class="p">,</span>
+          <span class="s">"fax"</span><span class="p">:</span> <span class="s">"(11) 35535533"</span><span class="p">,</span>
+          <span class="s">"category"</span><span class="p">:</span> <span class="s">"BROKER"</span><span class="p">,</span>
+          <span class="s">"person_type"</span><span class="p">:</span> <span class="s">"LEGAL_PERSON"</span><span class="p">,</span>
+          <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"90400888000142"</span><span class="p">,</span>
+          <span class="s">"social_denomination"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
+          <span class="s">"commercial_denomination"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
+          <span class="s">"email"</span><span class="p">:</span> <span class="s">"juridsocietario@santander.com.br"</span><span class="p">,</span>
+          <span class="s">"zip_code"</span><span class="p">:</span> <span class="s">"4543011"</span><span class="p">,</span>
+          <span class="s">"district"</span><span class="p">:</span> <span class="s">"VL OLIMPIA"</span><span class="p">,</span>
+          <span class="s">"street"</span><span class="p">:</span> <span class="s">"AV PRESIDENTE JUSC KUBITSCHEK"</span><span class="p">,</span>
+          <span class="s">"complement"</span><span class="p">:</span> <span class="s">"2041 E 2235"</span><span class="p">,</span>
+          <span class="s">"city"</span><span class="p">:</span> <span class="s">"SÃO PAULO"</span><span class="p">,</span>
+          <span class="s">"uf"</span><span class="p">:</span> <span class="s">"SP"</span><span class="p">,</span>
+          <span class="s">"ddd"</span><span class="p">:</span> <span class="s">"11"</span>
+        <span class="p">}</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-<span class="p">}</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1083,12 +1064,11 @@
 </tbody></table>
 
 <h2 id="get-custom-id">GET /custom/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1107,7 +1087,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://api.livecapital.com/users/{username}/institutions/custom/{id}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/users/{username}/institutions/custom/{id}</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -1158,38 +1138,32 @@
 </tbody></table>
 
 <h2 id="put-custom-id">PUT /custom/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">values</span> <span class="o">=</span> <span class="s">"""
-  {
-    "id": 1,
-    "name": "BANCO SANTANDER (BRASIL) S.A.",
-    "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
-    "phone": "(11) 35535533",
-    "fax": "(11) 35535533",
-    "category": "BROKER",
-    "person_type": "LEGAL_PERSON",
-    "identifier": "90400888000142",
-    "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-    "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-    "email": "juridsocietario@santander.com.br",
-    "zip_code": "4543011",
-    "district": "VL OLIMPIA",
-    "street": "AV PRESIDENTE JUSC KUBITSCHEK",
-    "complement": "2041 E 2235",
-    "city": "SÃO PAULO",
-    "uf": "SP",
-    "ddd": "11"
-  }
-"""</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="s">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s">"name"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
+          <span class="s">"address"</span><span class="p">:</span> <span class="s">"AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011"</span><span class="p">,</span>
+          <span class="s">"phone"</span><span class="p">:</span> <span class="s">"(11) 35535533"</span><span class="p">,</span>
+          <span class="s">"fax"</span><span class="p">:</span> <span class="s">"(11) 35535533"</span><span class="p">,</span>
+          <span class="s">"category"</span><span class="p">:</span> <span class="s">"BROKER"</span><span class="p">,</span>
+          <span class="s">"person_type"</span><span class="p">:</span> <span class="s">"LEGAL_PERSON"</span><span class="p">,</span>
+          <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"90400888000142"</span><span class="p">,</span>
+          <span class="s">"social_denomination"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
+          <span class="s">"commercial_denomination"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
+          <span class="s">"email"</span><span class="p">:</span> <span class="s">"juridsocietario@santander.com.br"</span><span class="p">,</span>
+          <span class="s">"zip_code"</span><span class="p">:</span> <span class="s">"4543011"</span><span class="p">,</span>
+          <span class="s">"district"</span><span class="p">:</span> <span class="s">"VL OLIMPIA"</span><span class="p">,</span>
+          <span class="s">"street"</span><span class="p">:</span> <span class="s">"AV PRESIDENTE JUSC KUBITSCHEK"</span><span class="p">,</span>
+          <span class="s">"complement"</span><span class="p">:</span> <span class="s">"2041 E 2235"</span><span class="p">,</span>
+          <span class="s">"city"</span><span class="p">:</span> <span class="s">"SÃO PAULO"</span><span class="p">,</span>
+          <span class="s">"uf"</span><span class="p">:</span> <span class="s">"SP"</span><span class="p">,</span>
+          <span class="s">"ddd"</span><span class="p">:</span> <span class="s">"11"</span>
+        <span class="p">}</span>
 
-<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">)</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
-<span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">'application/json'</span><span class="p">)</span>
-<span class="n">request</span><span class="o">.</span><span class="n">get_method</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s">'PUT'</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1259,26 +1233,9 @@
 </tbody></table>
 
 <h2 id="delete-custom-id">DELETE /custom/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">values</span> <span class="o">=</span> <span class="s">"""
-  {
-    "id": 1,
-    "broker": null,
-    "autonomous_agent": null,
-    "trading_accounts": [],
-    "name": "BANCO SANTANDER (BRASIL) S.A."
-  }
-"""</span>
-
-<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">)</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}instittutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
-<span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">'application/json'</span><span class="p">)</span>
-<span class="n">request</span><span class="o">.</span><span class="n">get_method</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s">'DELETE'</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-
-<span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}instittutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
 </code></pre>
 
 <p>Este recurso apaga uma determinada instituição de um usuário autenticado.</p>
@@ -1331,12 +1288,11 @@
 </tbody></table>
 
 <h2 id="get-year-month-reports">GET /{year}-{month}/reports</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/darf/{}-{}/reports'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/darf/{}-{}/reports'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1391,12 +1347,11 @@
 </tbody></table>
 
 <h2 id="get-year-month-print">GET /{year}-{month}/print</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/darf/{}-{}/print'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/darf/{}-{}/print'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1536,12 +1491,11 @@
 </tbody></table>
 
 <h2 id="get-trading-account">GET /trading-account</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account'</span><span class="p">)</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account'</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1578,21 +1532,13 @@
 </tbody></table>
 
 <h2 id="post-trading-account">POST /trading-account</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">values</span> <span class="o">=</span> <span class="s">"""
-  {
-  }
-"""</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">{}</span>
 
-<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s">'Content-Type'</span><span class="p">:</span> <span class="s">'application/json'</span>
-<span class="p">}</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1629,12 +1575,11 @@
 </tbody></table>
 
 <h2 id="get-trading-account-id">GET /trading-account/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1685,12 +1630,11 @@
 </tbody></table>
 
 <h2 id="get-assets">GET /assets</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/assets'</span><span class="p">)</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/assets'</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1727,12 +1671,13 @@
 </tbody></table>
 
 <h2 id="post-brokerage-notes">POST /brokerage-notes</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes'</span><span class="p">)</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">{}</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1769,12 +1714,11 @@
 </tbody></table>
 
 <h2 id="get-brokerage-notes-id">GET /brokerage-notes/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1825,20 +1769,13 @@
 </tbody></table>
 
 <h2 id="put-brokerage-notes-id">PUT /brokerage-notes/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">values</span> <span class="o">=</span> <span class="s">"""
-  {
-  }
-"""</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">{}</span>
 
-<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">)</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
-<span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">'application/json'</span><span class="p">)</span>
-<span class="n">request</span><span class="o">.</span><span class="n">get_method</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s">'PUT'</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 
-<span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -1889,16 +1826,9 @@
 </tbody></table>
 
 <h2 id="delete-brokerage-notes-id">DELETE /brokerage-notes/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">opener</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">HTTPHandler</span><span class="p">)</span>
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerege-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
-<span class="n">request</span><span class="o">.</span><span class="n">add_header</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">'application/json'</span><span class="p">)</span>
-<span class="n">request</span><span class="o">.</span><span class="n">get_method</span> <span class="o">=</span> <span class="k">lambda</span><span class="p">:</span> <span class="s">'DELETE'</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">opener</span><span class="o">.</span><span class="nb">open</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-
-<span class="k">print</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerege-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
 </code></pre>
 
 <p>Esse recurso apaga uma nota de corretagem.</p>
@@ -1944,12 +1874,11 @@
 </tbody></table>
 
 <h2 id="get-positions-date-terms">GET /positions/{date}/terms</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/positions/{}/terms'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/positions/{}/terms'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span>
 </code></pre>
 
 <blockquote>
@@ -2000,12 +1929,11 @@
 </tbody></table>
 
 <h2 id="get-positions-date-non-terms">GET /positions/{date}/non-terms</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/positions/{}/non-terms'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/positions/{}/non-terms'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2056,12 +1984,11 @@
 </tbody></table>
 
 <h2 id="get-events-trading-account-date">GET /events/{trading-account}/{date}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/events/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trading</span><span class="o">-</span><span class="n">account</span><span class="p">,</span> <span class="n">date</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/events/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trading</span><span class="o">-</span><span class="n">account</span><span class="p">,</span> <span class="n">date</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2112,12 +2039,11 @@
 </tbody></table>
 
 <h2 id="get-event-type-id">GET /{event-type}/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2172,12 +2098,13 @@
 </tbody></table>
 
 <h2 id="put-event-type-id">PUT /{event-type}/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">{}</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2232,12 +2159,9 @@
 </tbody></table>
 
 <h2 id="delete-event-type-id">DELETE /{event-type}/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
 </code></pre>
 
 <blockquote>
@@ -2249,7 +2173,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/{event-type}/{id}</code></p>
+<p><code class="prettyprint">DELETE http://api.livecapital.com/bovespa/{event-type}/{id}</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2320,7 +2244,7 @@
 <td>Retorna uma lista de widgets filtrados por uma data</td>
 </tr>
 <tr>
-<td><a href="#get-portfolios-name-market-year47">/widgets/portfolios/{year}</a></td>
+<td><a href="#get-portfolios-name-market-year">/widgets/portfolios/{year}</a></td>
 <td>GET</td>
 <td>Retorna uma lista de widgets portfolios filtrados por ano</td>
 </tr>
@@ -2367,12 +2291,11 @@
 </tbody></table>
 
 <h2 id="get-name-market-year">GET /{name}/{market}/{year}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2431,12 +2354,11 @@
 </tbody></table>
 
 <h2 id="get-name-market-year-month">GET /{name}/{market}/{year}-{month}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2499,12 +2421,11 @@
 </tbody></table>
 
 <h2 id="get-name-market-year-month-day">GET /{name}/{market}/{year}-{month}-{day}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2571,12 +2492,11 @@
 </tbody></table>
 
 <h2 id="get-portfolios-year">GET /portfolios/{year}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/portfolios/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/portfolios/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2627,12 +2547,11 @@
 </tbody></table>
 
 <h2 id="get-portfolios-year-month">GET /portfolios/{year}-{month}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/portfolios/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/portfolios/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2687,12 +2606,11 @@
 </tbody></table>
 
 <h2 id="get-portfolios-year-month-day">GET /portfolios/{year}-{month}-{day}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/portfolios/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/portfolios/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2751,12 +2669,11 @@
 </tbody></table>
 
 <h2 id="get-capital-gain-year">GET /capital-gain/{year}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2807,12 +2724,11 @@
 </tbody></table>
 
 <h2 id="get-capital-gain-year-month">GET /capital-gain/{year}-{month}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2867,12 +2783,11 @@
 </tbody></table>
 
 <h2 id="get-capital-gain-year-month-day">GET /capital-gain/{year}-{month}-{day}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2931,12 +2846,11 @@
 </tbody></table>
 
 <h2 id="get-taxes-year">GET /taxes/{year}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -2987,12 +2901,11 @@
 </tbody></table>
 
 <h2 id="get-taxes-year-month">GET /taxes/{year}-{month}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
@@ -3047,12 +2960,11 @@
 </tbody></table>
 
 <h2 id="get-taxes-year-month-day">GET /taxes/{year}-{month}-{day}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">urllib2</span>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
-<span class="n">response</span> <span class="o">=</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
 
-<span class="k">print</span> <span class="n">response</span>
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
 <blockquote>
