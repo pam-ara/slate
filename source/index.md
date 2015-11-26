@@ -36,12 +36,11 @@ Recurso | Método | Descrição
 ##GET /clients/menu
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/clients/menu')
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/clients/menu')
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -66,12 +65,11 @@ Parâmetro | Descrição
 ##GET /accordions/{name}/{year}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/clients/accordions/{}/{}'.format(name, year))
-response = urllib2.urlopen(request).read()
+request = request.get('http://api.livecapital.com/clients/accordions/{}/{}'.format(name, year))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -103,12 +101,11 @@ Parâmetro | Descrição
 ##GET /accordions/{name}/{year}-{month}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/clients/accordions/{}/{}-{}'.format(name, year, month))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/clients/accordions/{}/{}-{}'.format(name, year, month))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -141,12 +138,11 @@ Parâmetro | Descrição
 ##GET /operations/{name}/{year}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/clients/operations/{}/{}'.format(name, year))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/clients/operations/{}/{}'.format(name, year))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -178,12 +174,11 @@ Parâmetro | Descrição
 ##GET /operations/{name}/{year}-{month}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/clients/operations/{}/{}-{}'.format(name, year, month))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/clients/operations/{}/{}-{}'.format(name, year, month))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -216,12 +211,11 @@ Parâmetro | Descrição
 ##GET /portfolios/{name}/{year}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/clients/portfolios/{}/{}'.format(name, year))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/clients/portfolios/{}/{}'.format(name, year))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -253,12 +247,11 @@ Parâmetro | Descrição
 ##GET /portfolios/{name}/{year}-{month}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/clients/portfolios/{}/{}-{}'.format(name, year, month))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/clients/portfolios/{}/{}-{}'.format(name, year, month))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -290,12 +283,11 @@ Parâmetro | Descrição
 ##GET /returns/{name}/{year}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/clients/returns/{}/{}'.format(name, year))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/clients/returns/{}/{}'.format(name, year))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -327,12 +319,11 @@ Parâmetro | Descrição
 ##GET /returns/{name}/{year}-{month}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/clients/returns/{}/{}-{}'.format(name, year, month))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/clients/returns/{}/{}-{}'.format(name, year, month))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -382,12 +373,11 @@ Recurso | Método | Descrição
 ##GET /official
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/institutions/official')
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/institutions/official')
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -439,12 +429,11 @@ category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTON
 ##GET /official/{id}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/institutions/official/{}'.format(id))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/institutions/official/{}'.format(id))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -510,12 +499,11 @@ commercial_denomination | Denominação comercial
 ##GET /custom
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/users/{}/institutions/custom'.format(username))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/users/{}/institutions/custom'.format(username))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -571,39 +559,32 @@ name | Nome da instutuição do usuário
 ##POST /custom
 
 ```python
-import urllib2
+import requests
 
-values = """
-  {
-    "id": 1,
-    "name": "BANCO SANTANDER (BRASIL) S.A.",
-    "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
-    "phone": "(11) 35535533",
-    "fax": "(11) 35535533",
-    "category": "BROKER",
-    "person_type": "LEGAL_PERSON",
-    "identifier": "90400888000142",
-    "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-    "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-    "email": "juridsocietario@santander.com.br",
-    "zip_code": "4543011",
-    "district": "VL OLIMPIA",
-    "street": "AV PRESIDENTE JUSC KUBITSCHEK",
-    "complement": "2041 E 2235",
-    "city": "SÃO PAULO",
-    "uf": "SP",
-    "ddd": "11"
-  }
-"""
+values = {
+          "id": 1,
+          "name": "BANCO SANTANDER (BRASIL) S.A.",
+          "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
+          "phone": "(11) 35535533",
+          "fax": "(11) 35535533",
+          "category": "BROKER",
+          "person_type": "LEGAL_PERSON",
+          "identifier": "90400888000142",
+          "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+          "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+          "email": "juridsocietario@santander.com.br",
+          "zip_code": "4543011",
+          "district": "VL OLIMPIA",
+          "street": "AV PRESIDENTE JUSC KUBITSCHEK",
+          "complement": "2041 E 2235",
+          "city": "SÃO PAULO",
+          "uf": "SP",
+          "ddd": "11"
+        }
 
-headers = {
-  'Content-Type': 'application/json'
-}
-request = urllib2.Request('http://api.livecapital.com/users/{}/institutions/custom'.format(username), data=values, headers=headers)
+request = requests.post('http://api.livecapital.com/users/{}/institutions/custom'.format(username), data=values)
 
-response = urllib2.urlopen(request).read()
-
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -643,12 +624,11 @@ name | Nome da instutuição do usuário
 ##GET /custom/{id}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/users/{}/institutions/custom/{}'.format(username, id))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/users/{}/institutions/custom/{}'.format(username, id))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -667,7 +647,7 @@ Este recurso retorna uma determinada instituição de um usuário autenticado.
 
 ### HTTP Request
 
-`POST http://api.livecapital.com/users/{username}/institutions/custom/{id}`
+`GET http://api.livecapital.com/users/{username}/institutions/custom/{id}`
 
 ### Parâmetros de URL
 
@@ -689,38 +669,32 @@ name | Nome da instutuição do usuário
 ##PUT /custom/{id}
 
 ```python
-import urllib2
+import requests
 
-values = """
-  {
-    "id": 1,
-    "name": "BANCO SANTANDER (BRASIL) S.A.",
-    "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
-    "phone": "(11) 35535533",
-    "fax": "(11) 35535533",
-    "category": "BROKER",
-    "person_type": "LEGAL_PERSON",
-    "identifier": "90400888000142",
-    "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-    "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-    "email": "juridsocietario@santander.com.br",
-    "zip_code": "4543011",
-    "district": "VL OLIMPIA",
-    "street": "AV PRESIDENTE JUSC KUBITSCHEK",
-    "complement": "2041 E 2235",
-    "city": "SÃO PAULO",
-    "uf": "SP",
-    "ddd": "11"
-  }
-"""
+values = {
+          "id": 1,
+          "name": "BANCO SANTANDER (BRASIL) S.A.",
+          "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
+          "phone": "(11) 35535533",
+          "fax": "(11) 35535533",
+          "category": "BROKER",
+          "person_type": "LEGAL_PERSON",
+          "identifier": "90400888000142",
+          "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+          "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+          "email": "juridsocietario@santander.com.br",
+          "zip_code": "4543011",
+          "district": "VL OLIMPIA",
+          "street": "AV PRESIDENTE JUSC KUBITSCHEK",
+          "complement": "2041 E 2235",
+          "city": "SÃO PAULO",
+          "uf": "SP",
+          "ddd": "11"
+        }
 
-opener = urllib2.build_opener(urllib2.HTTPHandler)
-request = urllib2.Request('http://api.livecapital.com/institutions/custom/{}'.format(id), data=values)
-request.add_header('Content-Type', 'application/json')
-request.get_method = lambda: 'PUT'
-response = opener.open(request)
+request = requests.put('http://api.livecapital.com/institutions/custom/{}'.format(id), data=values)
 
-print response.read()
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -761,26 +735,9 @@ name | Nome da instutuição do usuário
 ##DELETE /custom/{id}
 
 ```python
-import urllib2
+import requests
 
-values = """
-  {
-    "id": 1,
-    "broker": null,
-    "autonomous_agent": null,
-    "trading_accounts": [],
-    "name": "BANCO SANTANDER (BRASIL) S.A."
-  }
-"""
-
-opener = urllib2.build_opener(urllib2.HTTPHandler)
-request = urllib2.Request('http://api.livecapital.com/users/{}instittutions/custom/{}'.format(username, id), data=values)
-request.add_header('Content-Type', 'application/json')
-request.get_method = lambda: 'DELETE'
-response = opener.open(request)
-
-print response.read()
-
+request = requests.delete('http://api.livecapital.com/users/{}instittutions/custom/{}'.format(username, id))
 ```
 
 Este recurso apaga uma determinada instituição de um usuário autenticado.
@@ -810,12 +767,11 @@ Recurso | Método | Descrição
 ##GET /{year}-{month}/reports
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/darf/{}-{}/reports'.format(year, month))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/darf/{}-{}/reports'.format(year, month))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -847,12 +803,11 @@ Parâmetro | Descrição
 ##GET /{year}-{month}/print
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/darf/{}-{}/print'.format(year, month))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/darf/{}-{}/print'.format(year, month))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -907,12 +862,11 @@ Recurso | Método | Descrição
 ##GET /trading-account
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/bovespa/trading-account')
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/bovespa/trading-account')
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -937,21 +891,13 @@ Parâmetro | Descrição
 ##POST /trading-account
 
 ```python
-import urllib2
+import requests
 
-values = """
-  {
-  }
-"""
+values = {}
 
-headers = {
-  'Content-Type': 'application/json'
-}
-request = urllib2.Request('http://api.livecapital.com/bovespa/trading-account', data=values, headers=headers)
+request = requests.post('http://api.livecapital.com/bovespa/trading-account', data=values)
 
-response = urllib2.urlopen(request).read()
-
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -976,12 +922,11 @@ Parâmetro | Descrição
 ##GET /trading-account/{id}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/bovespa/trading-account/{}'.format(id))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/bovespa/trading-account/{}'.format(id))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1012,12 +957,11 @@ Parâmetro | Descrição
 ##GET /assets
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/assets')
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/assets')
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1042,12 +986,13 @@ Parâmetro | Descrição
 ##POST /brokerage-notes
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/bovespa/brokerage-notes')
-response = urllib2.urlopen(request).read()
+values = {}
 
-print response
+request = requests.post('http://api.livecapital.com/bovespa/brokerage-notes', data=values)
+
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1072,12 +1017,11 @@ Parâmetro | Descrição
 ##GET /brokerage-notes/{id}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/bovespa/brokerage-notes/{}'.format(id))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/bovespa/brokerage-notes/{}'.format(id))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1108,20 +1052,13 @@ Parâmetro | Descrição
 ##PUT /brokerage-notes/{id}
 
 ```python
-import urllib2
+import requests
 
-values = """
-  {
-  }
-"""
+values = {}
 
-opener = urllib2.build_opener(urllib2.HTTPHandler)
-request = urllib2.Request('http://api.livecapital.com/bovespa/brokerage-notes/{}'.format(id), data=values)
-request.add_header('Content-Type', 'application/json')
-request.get_method = lambda: 'PUT'
-response = opener.open(request)
+request = requests.put('http://api.livecapital.com/bovespa/brokerage-notes/{}'.format(id), data=values)
 
-print response.read()
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1152,16 +1089,9 @@ Parâmetro | Descrição
 ##DELETE /brokerage-notes/{id}
 
 ```python
-import urllib2
+import requests
 
-opener = urllib2.build_opener(urllib2.HTTPHandler)
-request = urllib2.Request('http://api.livecapital.com/bovespa/brokerege-notes/{}'.format(id))
-request.add_header('Content-Type', 'application/json')
-request.get_method = lambda: 'DELETE'
-response = opener.open(request)
-
-print response.read()
-
+request = requests.delete('http://api.livecapital.com/bovespa/brokerege-notes/{}'.format(id))
 ```
 
 Esse recurso apaga uma nota de corretagem.
@@ -1187,12 +1117,11 @@ Parâmetro | Descrição
 ##GET /positions/{date}/terms
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/bovespa/positions/{}/terms'.format(date))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/bovespa/positions/{}/terms'.format(date))
 
-print response
+request.json
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1223,12 +1152,11 @@ Parâmetro | Descrição
 ##GET /positions/{date}/non-terms
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/bovespa/positions/{}/non-terms'.format(date))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/bovespa/positions/{}/non-terms'.format(date))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1259,12 +1187,11 @@ Parâmetro | Descrição
 ##GET /events/{trading-account}/{date}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/bovespa/events/{}/{}'.format(trading-account, date))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/bovespa/events/{}/{}'.format(trading-account, date))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1295,12 +1222,11 @@ Parâmetro | Descrição
 ##GET /{event-type}/{id}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/bovespa/{}/{}'.format(event-type, id))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/bovespa/{}/{}'.format(event-type, id))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1332,12 +1258,13 @@ Parâmetro | Descrição
 ##PUT /{event-type}/{id}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/bovespa/{}/{}'.format(event-type, id))
-response = urllib2.urlopen(request).read()
+values = {}
 
-print response
+request = requests.put('http://api.livecapital.com/bovespa/{}/{}'.format(event-type, id), data=values)
+
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1369,12 +1296,9 @@ Parâmetro | Descrição
 ##DELETE /{event-type}/{id}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/bovespa/{}/{}'.format(event_type, id))
-response = urllib2.urlopen(request).read()
-
-print response
+request = requests.delete('http://api.livecapital.com/bovespa/{}/{}'.format(event_type, id))
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1386,7 +1310,7 @@ Esse recurso apaga um evento.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/bovespa/{event-type}/{id}`
+`DELETE http://api.livecapital.com/bovespa/{event-type}/{id}`
 
 ### Parâmetros de URL
 
@@ -1414,7 +1338,7 @@ Recurso | Método | Descrição
 [/widgets/{name}/{market}/{year}](#get-name-market-year) | GET | Retorna uma lista de widgets filtrados por um ano
 [/widgets/{name}/{market}/{year}-{month}](#get-name-market-year-month) | GET | Retorna uma lista de widgets filtrados por um mês e ano
 [/widgets/{name}/{market}/{year}-{month}-{day}](#get-name-market-year-month-day) | GET | Retorna uma lista de widgets filtrados por uma data
-[/widgets/portfolios/{year}](#get-portfolios-name-market-year47) | GET | Retorna uma lista de widgets portfolios filtrados por ano
+[/widgets/portfolios/{year}](#get-portfolios-name-market-year) | GET | Retorna uma lista de widgets portfolios filtrados por ano
 [/widgets/portfolios/{year}-{month}](#get-portfolios-year-month) | GET | Retorna uma lista de widgets portfolios filtrados por mês e ano
 [/widgets/portfolios/{year}-{month}-{day}](#get-portfolios-year-month-day) | GET | Retorna uma lista de widgets portfolios filtrados por uma data
 [/widgets/capital-gain/{year}](#get-capital-gain-year) | GET | Retorna uma lista de widgets capital-gain filtrados por um ano
@@ -1427,12 +1351,11 @@ Recurso | Método | Descrição
 ##GET /{name}/{market}/{year}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/{}/{}/{}'.format(name, market, year))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/widgets/{}/{}/{}'.format(name, market, year))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1465,12 +1388,11 @@ Parâmetro | Descrição
 ##GET /{name}/{market}/{year}-{month}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/{}/{}/{}-{}'.format(name, market, year, month))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/widgets/{}/{}/{}-{}'.format(name, market, year, month))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1504,12 +1426,11 @@ Parâmetro | Descrição
 ##GET /{name}/{market}/{year}-{month}-{day}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/{}/{}/{}-{}-{}'.format(name, market, year, month, day))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/widgets/{}/{}/{}-{}-{}'.format(name, market, year, month, day))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1544,12 +1465,11 @@ Parâmetro | Descrição
 ##GET /portfolios/{year}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/portfolios/{}'.format(year))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/widgets/portfolios/{}'.format(year))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1580,12 +1500,11 @@ Parâmetro | Descrição
 ##GET /portfolios/{year}-{month}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/portfolios/{}-{}'.format(year, month))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/widgets/portfolios/{}-{}'.format(year, month))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1617,12 +1536,11 @@ Parâmetro | Descrição
 ##GET /portfolios/{year}-{month}-{day}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/portfolios/{}-{}-{}'.format(year, month, day))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/portfolios/{}-{}-{}'.format(year, month, day))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1655,12 +1573,11 @@ Parâmetro | Descrição
 ##GET /capital-gain/{year}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/capital-gain/{}'.format(year))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/widgets/capital-gain/{}'.format(year))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1691,12 +1608,11 @@ Parâmetro | Descrição
 ##GET /capital-gain/{year}-{month}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/capital-gain/{}-{}'.format(year, month))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/widgets/capital-gain/{}-{}'.format(year, month))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1728,12 +1644,11 @@ Parâmetro | Descrição
 ##GET /capital-gain/{year}-{month}-{day}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/capital-gain/{}-{}-{}'.format(year, month, day))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/widgets/capital-gain/{}-{}-{}'.format(year, month, day))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1766,12 +1681,11 @@ Parâmetro | Descrição
 ##GET /taxes/{year}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/taxes/{}'.format(year))
-response = urllib2.urlopen(request).read()
+request = requests('http://api.livecapital.com/widgets/taxes/{}'.format(year))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1802,12 +1716,11 @@ Parâmetro | Descrição
 ##GET /taxes/{year}-{month}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/taxes/{}-{}'.format(year, month))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/widgets/taxes/{}-{}'.format(year, month))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1839,12 +1752,11 @@ Parâmetro | Descrição
 ##GET /taxes/{year}-{month}-{day}
 
 ```python
-import urllib2
+import requests
 
-request = urllib2.Request('http://api.livecapital.com/widgets/taxes/{}-{}-{}'.format(year, month, day))
-response = urllib2.urlopen(request).read()
+request = requests.get('http://api.livecapital.com/widgets/taxes/{}-{}-{}'.format(year, month, day))
 
-print response
+request.json()
 ```
 
 > Essa requisição irá retornar um JSON como este:
