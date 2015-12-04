@@ -674,7 +674,7 @@
 <tr>
 <td><a href="#put-custom-id">/institutions/custom/{id}</a></td>
 <td>PUT</td>
-<td>Atualiza/Altera dados de uma instituição</td>
+<td>Altera dados de uma instituição</td>
 </tr>
 <tr>
 <td><a href="#delete-custom-id">/institutions/custom/{id}</a></td>
@@ -779,8 +779,7 @@
   </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV PRESIDENTE JUSC KUBITSCHEK"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2041 E 2235"</span><span class="p">,</span><span class="w">
   </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SÃO PAULO"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"ddd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"11"</span><span class="w">
+  </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -849,10 +848,6 @@
 <td>Código do Estado - Unidade Federativa</td>
 </tr>
 <tr>
-<td>ddd</td>
-<td>DDD da institutição</td>
-</tr>
-<tr>
 <td>phone</td>
 <td>Telefone da instituição</td>
 </tr>
@@ -899,21 +894,100 @@
 </blockquote>
 <pre class="highlight json"><code><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">318</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC BANK BRASIL S.A. - BANCO MULTIPLO"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRAVESSA OLIVEIRA BELO, Nº 34, 4º ANDAR, CENTRO, CURITIBA, PR, 80020030"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(41) 37775384"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(41) 37775732"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BROKER"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1701201000189"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC BANK BRASIL S.A. - BANCO MULTIPLO"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC BANK BRASIL S.A. - BANCO MULTIPLO"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"davieira@hsbc.com.br"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"80020030"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CENTRO"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRAVESSA OLIVEIRA BELO, Nº 34"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4º ANDAR"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CURITIBA"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PR"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC BANK BRASIL S.A. - BANCO MULTIPLO"</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">319</span><span class="p">,</span><span class="w">
     </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1295</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNITY AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUTONOMOUS_AGENT"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7491320000130"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNITY AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sandro.marques@prospercorretora.com.br"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"C.S.MENDES AGENTE AUTÔNOMO DE INVESTIMENTOS LTDA"</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNITY"</span><span class="w">
   </span><span class="p">},</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(11) 35535533"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(11) 35535533"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BROKER"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90400888000142"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"juridsocietario@santander.com.br"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4543011"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VL OLIMPIA"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV PRESIDENTE JUSC KUBITSCHEK"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2041 E 2235"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SÃO PAULO"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUTONOMOUS_AGENT"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9168994000124"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"latomia@yahoo.com"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">321</span><span class="p">,</span><span class="w">
     </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
@@ -956,15 +1030,15 @@
 </tr>
 <tr>
 <td>broker</td>
-<td></td>
+<td>Instituição do tipo &ldquo;BROKER&rdquo;</td>
 </tr>
 <tr>
 <td>autonomous_agent</td>
-<td></td>
+<td>Instituição do tipo &ldquo;AUTONOMOUS_AGENT&rdquo;</td>
 </tr>
 <tr>
 <td>trading_accounts</td>
-<td></td>
+<td>Contas relacionadas a instituição</td>
 </tr>
 <tr>
 <td>name</td>
@@ -972,31 +1046,96 @@
 </tr>
 </tbody></table>
 
+<h3 id="parâmetros-de-broker-autonomous_agent">Parâmetros de BROKER/AUTONOMOUS_AGENT</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da instituição</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Endereço da instutição</td>
+</tr>
+<tr>
+<td>zip_code</td>
+<td>CEP da instituição</td>
+</tr>
+<tr>
+<td>district</td>
+<td>Distrito da instituição</td>
+</tr>
+<tr>
+<td>street</td>
+<td>Rua da instituição</td>
+</tr>
+<tr>
+<td>complement</td>
+<td>Complemento do endereço</td>
+</tr>
+<tr>
+<td>city</td>
+<td>Cidade da instituição</td>
+</tr>
+<tr>
+<td>uf</td>
+<td>Código do Estado - Unidade Federativa</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>Telefone da instituição</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>Fax da instituição</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Email da instituição</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
+</tr>
+<tr>
+<td>person_type</td>
+<td>Tipo de pessoa</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador</td>
+</tr>
+<tr>
+<td>social_denomination</td>
+<td>Denominação social</td>
+</tr>
+<tr>
+<td>commercial_denomination</td>
+<td>Denominação comercial</td>
+</tr>
+</tbody></table>
+
 <h2 id="post-custom">POST /custom</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
-          <span class="s">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
           <span class="s">"name"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
-          <span class="s">"address"</span><span class="p">:</span> <span class="s">"AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011"</span><span class="p">,</span>
-          <span class="s">"phone"</span><span class="p">:</span> <span class="s">"(11) 35535533"</span><span class="p">,</span>
-          <span class="s">"fax"</span><span class="p">:</span> <span class="s">"(11) 35535533"</span><span class="p">,</span>
-          <span class="s">"category"</span><span class="p">:</span> <span class="s">"BROKER"</span><span class="p">,</span>
-          <span class="s">"person_type"</span><span class="p">:</span> <span class="s">"LEGAL_PERSON"</span><span class="p">,</span>
-          <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"90400888000142"</span><span class="p">,</span>
-          <span class="s">"social_denomination"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
-          <span class="s">"commercial_denomination"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
-          <span class="s">"email"</span><span class="p">:</span> <span class="s">"juridsocietario@santander.com.br"</span><span class="p">,</span>
-          <span class="s">"zip_code"</span><span class="p">:</span> <span class="s">"4543011"</span><span class="p">,</span>
-          <span class="s">"district"</span><span class="p">:</span> <span class="s">"VL OLIMPIA"</span><span class="p">,</span>
-          <span class="s">"street"</span><span class="p">:</span> <span class="s">"AV PRESIDENTE JUSC KUBITSCHEK"</span><span class="p">,</span>
-          <span class="s">"complement"</span><span class="p">:</span> <span class="s">"2041 E 2235"</span><span class="p">,</span>
-          <span class="s">"city"</span><span class="p">:</span> <span class="s">"SÃO PAULO"</span><span class="p">,</span>
-          <span class="s">"uf"</span><span class="p">:</span> <span class="s">"SP"</span><span class="p">,</span>
-          <span class="s">"ddd"</span><span class="p">:</span> <span class="s">"11"</span>
+          <span class="s">"broker"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="s">"autonomous_agent"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+          <span class="s">"trading_accounts"</span><span class="p">:[]</span>
         <span class="p">}</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -1006,8 +1145,44 @@
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(11) 35535533"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(11) 35535533"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BROKER"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90400888000142"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"juridsocietario@santander.com.br"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4543011"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VL OLIMPIA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV PRESIDENTE JUSC KUBITSCHEK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2041 E 2235"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SÃO PAULO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUTONOMOUS_AGENT"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9168994000124"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"latomia@yahoo.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">},</span><span class="w">
   </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
   </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -1047,19 +1222,97 @@
 </tr>
 <tr>
 <td>broker</td>
-<td></td>
+<td>Instutição do tipo BROKER</td>
 </tr>
 <tr>
 <td>autonomous_agent</td>
-<td></td>
+<td>Instutição do tipo AUUTONOMOUS_AGENT</td>
 </tr>
 <tr>
 <td>trading_accounts</td>
-<td></td>
+<td>Contas relacioandas a instituição</td>
 </tr>
 <tr>
 <td>name</td>
 <td>Nome da instutuição do usuário</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-broker-autonomous_agent">Parâmetros de BROKER/AUTONOMOUS_AGENT</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da instituição</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Endereço da instutição</td>
+</tr>
+<tr>
+<td>zip_code</td>
+<td>CEP da instituição</td>
+</tr>
+<tr>
+<td>district</td>
+<td>Distrito da instituição</td>
+</tr>
+<tr>
+<td>street</td>
+<td>Rua da instituição</td>
+</tr>
+<tr>
+<td>complement</td>
+<td>Complemento do endereço</td>
+</tr>
+<tr>
+<td>city</td>
+<td>Cidade da instituição</td>
+</tr>
+<tr>
+<td>uf</td>
+<td>Código do Estado - Unidade Federativa</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>Telefone da instituição</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>Fax da instituição</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Email da instituição</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
+</tr>
+<tr>
+<td>person_type</td>
+<td>Tipo de pessoa</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador</td>
+</tr>
+<tr>
+<td>social_denomination</td>
+<td>Denominação social</td>
+</tr>
+<tr>
+<td>commercial_denomination</td>
+<td>Denominação comercial</td>
 </tr>
 </tbody></table>
 
@@ -1076,8 +1329,44 @@
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(11) 35535533"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(11) 35535533"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BROKER"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90400888000142"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"juridsocietario@santander.com.br"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4543011"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">"VL OLIMPIA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AV PRESIDENTE JUSC KUBITSCHEK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2041 E 2235"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SÃO PAULO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUTONOMOUS_AGENT"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9168994000124"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"latomia@yahoo.com"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">},</span><span class="w">
   </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
   </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -1121,15 +1410,15 @@
 </tr>
 <tr>
 <td>broker</td>
-<td></td>
+<td>Institutição do tipo BROKER</td>
 </tr>
 <tr>
 <td>autonomous_agent</td>
-<td></td>
+<td>Institutição do tipo AUTONOMOUS_AGENT</td>
 </tr>
 <tr>
 <td>trading_accounts</td>
-<td></td>
+<td>Contas relacionadas a instituição</td>
 </tr>
 <tr>
 <td>name</td>
@@ -1137,28 +1426,92 @@
 </tr>
 </tbody></table>
 
+<h3 id="parâmetros-de-broker-autonomous_agent">Parâmetros de BROKER/AUTONOMOUS_AGENT</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da instituição</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Endereço da instutição</td>
+</tr>
+<tr>
+<td>zip_code</td>
+<td>CEP da instituição</td>
+</tr>
+<tr>
+<td>district</td>
+<td>Distrito da instituição</td>
+</tr>
+<tr>
+<td>street</td>
+<td>Rua da instituição</td>
+</tr>
+<tr>
+<td>complement</td>
+<td>Complemento do endereço</td>
+</tr>
+<tr>
+<td>city</td>
+<td>Cidade da instituição</td>
+</tr>
+<tr>
+<td>uf</td>
+<td>Código do Estado - Unidade Federativa</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>Telefone da instituição</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>Fax da instituição</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Email da instituição</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
+</tr>
+<tr>
+<td>person_type</td>
+<td>Tipo de pessoa</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador</td>
+</tr>
+<tr>
+<td>social_denomination</td>
+<td>Denominação social</td>
+</tr>
+<tr>
+<td>commercial_denomination</td>
+<td>Denominação comercial</td>
+</tr>
+</tbody></table>
+
 <h2 id="put-custom-id">PUT /custom/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
-          <span class="s">"id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-          <span class="s">"name"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
-          <span class="s">"address"</span><span class="p">:</span> <span class="s">"AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011"</span><span class="p">,</span>
-          <span class="s">"phone"</span><span class="p">:</span> <span class="s">"(11) 35535533"</span><span class="p">,</span>
-          <span class="s">"fax"</span><span class="p">:</span> <span class="s">"(11) 35535533"</span><span class="p">,</span>
-          <span class="s">"category"</span><span class="p">:</span> <span class="s">"BROKER"</span><span class="p">,</span>
-          <span class="s">"person_type"</span><span class="p">:</span> <span class="s">"LEGAL_PERSON"</span><span class="p">,</span>
-          <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"90400888000142"</span><span class="p">,</span>
-          <span class="s">"social_denomination"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
-          <span class="s">"commercial_denomination"</span><span class="p">:</span> <span class="s">"BANCO SANTANDER (BRASIL) S.A."</span><span class="p">,</span>
-          <span class="s">"email"</span><span class="p">:</span> <span class="s">"juridsocietario@santander.com.br"</span><span class="p">,</span>
-          <span class="s">"zip_code"</span><span class="p">:</span> <span class="s">"4543011"</span><span class="p">,</span>
-          <span class="s">"district"</span><span class="p">:</span> <span class="s">"VL OLIMPIA"</span><span class="p">,</span>
-          <span class="s">"street"</span><span class="p">:</span> <span class="s">"AV PRESIDENTE JUSC KUBITSCHEK"</span><span class="p">,</span>
-          <span class="s">"complement"</span><span class="p">:</span> <span class="s">"2041 E 2235"</span><span class="p">,</span>
-          <span class="s">"city"</span><span class="p">:</span> <span class="s">"SÃO PAULO"</span><span class="p">,</span>
-          <span class="s">"uf"</span><span class="p">:</span> <span class="s">"SP"</span><span class="p">,</span>
-          <span class="s">"ddd"</span><span class="p">:</span> <span class="s">"11"</span>
+          <span class="s">"name"</span><span class="p">:</span> <span class="s">"HSBC BANK BRASIL S.A."</span><span class="p">,</span>
+          <span class="s">"broker"</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span>
+          <span class="s">"autonomous_agent"</span><span class="p">:</span> <span class="mi">1295</span><span class="p">,</span>
+          <span class="s">"trading_accounts"</span><span class="p">:</span> <span class="p">[],</span>
         <span class="p">}</span>
 
 <span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
@@ -1171,10 +1524,46 @@
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-  </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"broker"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC BANK BRASIL S.A. - BANCO MULTIPLO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRAVESSA OLIVEIRA BELO, Nº 34, 4º ANDAR, CENTRO, CURITIBA, PR, 80020030"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(41) 37775384"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(41) 37775732"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BROKER"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1701201000189"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC BANK BRASIL S.A. - BANCO MULTIPLO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC BANK BRASIL S.A. - BANCO MULTIPLO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"davieira@hsbc.com.br"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"80020030"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CENTRO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TRAVESSA OLIVEIRA BELO, Nº 34"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4º ANDAR"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CURITIBA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PR"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nt">"autonomous_agent"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1295</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNITY AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"fax"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AUTONOMOUS_AGENT"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"person_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL_PERSON"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7491320000130"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"social_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">"UNITY AGENTES AUTONOMOS DE INVESTIMENTOS LTDA"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"commercial_denomination"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sandro.marques@prospercorretora.com.br"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"district"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"complement"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">},</span><span class="w">
   </span><span class="nt">"trading_accounts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BANCO SANTANDER (BRASIL) S.A."</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC BANK BRASIL S.A."</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -1216,19 +1605,97 @@
 </tr>
 <tr>
 <td>broker</td>
-<td></td>
+<td>Institutição do tipo BROKER</td>
 </tr>
 <tr>
 <td>autonomous_agent</td>
-<td></td>
+<td>Institutição do tipo AUTONOMOUS_AGENT</td>
 </tr>
 <tr>
 <td>trading_accounts</td>
-<td></td>
+<td>Contas relacionadas a instituição</td>
 </tr>
 <tr>
 <td>name</td>
 <td>Nome da instutuição do usuário</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-broker-autonomous_agent">Parâmetros de BROKER/AUTONOMOUS_AGENT</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da instituição</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da instituição</td>
+</tr>
+<tr>
+<td>address</td>
+<td>Endereço da instutição</td>
+</tr>
+<tr>
+<td>zip_code</td>
+<td>CEP da instituição</td>
+</tr>
+<tr>
+<td>district</td>
+<td>Distrito da instituição</td>
+</tr>
+<tr>
+<td>street</td>
+<td>Rua da instituição</td>
+</tr>
+<tr>
+<td>complement</td>
+<td>Complemento do endereço</td>
+</tr>
+<tr>
+<td>city</td>
+<td>Cidade da instituição</td>
+</tr>
+<tr>
+<td>uf</td>
+<td>Código do Estado - Unidade Federativa</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>Telefone da instituição</td>
+</tr>
+<tr>
+<td>fax</td>
+<td>Fax da instituição</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Email da instituição</td>
+</tr>
+<tr>
+<td>category</td>
+<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
+</tr>
+<tr>
+<td>person_type</td>
+<td>Tipo de pessoa</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador</td>
+</tr>
+<tr>
+<td>social_denomination</td>
+<td>Denominação social</td>
+</tr>
+<tr>
+<td>commercial_denomination</td>
+<td>Denominação comercial</td>
 </tr>
 </tbody></table>
 
