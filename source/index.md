@@ -366,7 +366,7 @@ Recurso | Método | Descrição
 [/institutions/custom](#get-custom) | GET | Lista todas as instituições de um usuário autenticado
 [/institutions/custom](#post-custom) | POST | Cria uma instituição para um usuário
 [/institutions/custom/{id}](#get-custom-id) | GET | Retorna uma determinada instituição de um usuário
-[/institutions/custom/{id}](#put-custom-id) | PUT | Atualiza/Altera dados de uma instituição
+[/institutions/custom/{id}](#put-custom-id) | PUT | Altera dados de uma instituição
 [/institutions/custom/{id}](#delete-custom-id) | DELETE | Apaga uma instituição
 
 
@@ -456,8 +456,7 @@ request.json()
   "street": "AV PRESIDENTE JUSC KUBITSCHEK",
   "complement": "2041 E 2235",
   "city": "SÃO PAULO",
-  "uf": "SP",
-  "ddd": "11"
+  "uf": "SP"
 }
 ```
 
@@ -486,7 +485,6 @@ street | Rua da instituição
 complement | Complemento do endereço
 city | Cidade da instituição
 uf | Código do Estado - Unidade Federativa
-ddd | DDD da institutição
 phone | Telefone da instituição
 fax | Fax da instituição
 email | Email da instituição
@@ -511,21 +509,100 @@ request.json()
 ```json
 [
   {
-    "id": 1,
-    "broker": null,
+    "id": 318,
+    "broker": {
+        "id": 28,
+        "name": "HSBC BANK BRASIL S.A. - BANCO MULTIPLO",
+        "address": "TRAVESSA OLIVEIRA BELO, Nº 34, 4º ANDAR, CENTRO, CURITIBA, PR, 80020030",
+        "phone": "(41) 37775384",
+        "fax": "(41) 37775732",
+        "category": "BROKER",
+        "person_type": "LEGAL_PERSON",
+        "identifier": "1701201000189",
+        "social_denomination": "HSBC BANK BRASIL S.A. - BANCO MULTIPLO",
+        "commercial_denomination": "HSBC BANK BRASIL S.A. - BANCO MULTIPLO",
+        "email": "davieira@hsbc.com.br",
+        "zip_code": "80020030",
+        "district": "CENTRO",
+        "street": "TRAVESSA OLIVEIRA BELO, Nº 34",
+        "complement": "4º ANDAR",
+        "city": "CURITIBA",
+        "uf": "PR"
+    },
     "autonomous_agent": null,
     "trading_accounts": [],
-    "name": "HSBC BANK BRASIL S.A. - BANCO MULTIPLO"
+    "name": "HSBC"
   },
   {
-    "id": 2,
+    "id": 319,
     "broker": null,
-    "autonomous_agent": null,
+    "autonomous_agent": {
+        "id": 1295,
+        "name": "UNITY AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+        "address": "",
+        "phone": "",
+        "fax": "",
+        "category": "AUTONOMOUS_AGENT",
+        "person_type": "LEGAL_PERSON",
+        "identifier": "7491320000130",
+        "social_denomination": "UNITY AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+        "commercial_denomination": "",
+        "email": "sandro.marques@prospercorretora.com.br",
+        "zip_code": "",
+        "district": "",
+        "street": "",
+        "complement": "",
+        "city": "",
+        "uf": ""
+    },
     "trading_accounts": [],
-    "name": "C.S.MENDES AGENTE AUTÔNOMO DE INVESTIMENTOS LTDA"
+    "name": "UNITY"
   },
   {
-    "id": 3,
+    "id": 320,
+    "broker": {
+      "id": 1,
+      "name": "BANCO SANTANDER (BRASIL) S.A.",
+      "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
+      "phone": "(11) 35535533",
+      "fax": "(11) 35535533",
+      "category": "BROKER",
+      "person_type": "LEGAL_PERSON",
+      "identifier": "90400888000142",
+      "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+      "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+      "email": "juridsocietario@santander.com.br",
+      "zip_code": "4543011",
+      "district": "VL OLIMPIA",
+      "street": "AV PRESIDENTE JUSC KUBITSCHEK",
+      "complement": "2041 E 2235",
+      "city": "SÃO PAULO",
+      "uf": "SP"
+    },
+    "autonomous_agent": {
+      "id": 2,
+      "name": "LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+      "address": "",
+      "phone": "",
+      "fax": "",
+      "category": "AUTONOMOUS_AGENT",
+      "person_type": "LEGAL_PERSON",
+      "identifier": "9168994000124",
+      "social_denomination": "LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+      "commercial_denomination": "LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+      "email": "latomia@yahoo.com",
+      "zip_code": "",
+      "district": "",
+      "street": "",
+      "complement": "",
+      "city": "",
+      "uf": ""
+    },
+    "trading_accounts": [],
+    "name": "LATOMIA"
+  },
+  {
+    "id": 321,
     "broker": null,
     "autonomous_agent": null,
     "trading_accounts": [],
@@ -551,10 +628,32 @@ username | Nome de um usuário autenticado
 Parâmetro | Descrição
 --------- | ---------
 id | Id da instituição do usuário
-broker |
-autonomous_agent |
-trading_accounts |
+broker | Instituição do tipo "BROKER"
+autonomous_agent | Instituição do tipo "AUTONOMOUS_AGENT"
+trading_accounts | Contas relacionadas a instituição
 name | Nome da instutuição do usuário
+
+### Parâmetros de BROKER/AUTONOMOUS_AGENT
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição
+name | Nome da instituição
+address | Endereço da instutição
+zip_code | CEP da instituição
+district | Distrito da instituição
+street | Rua da instituição
+complement | Complemento do endereço
+city | Cidade da instituição
+uf | Código do Estado - Unidade Federativa
+phone | Telefone da instituição
+fax | Fax da instituição
+email | Email da instituição
+category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
+person_type | Tipo de pessoa
+identifier | Número identificador
+social_denomination | Denominação social
+commercial_denomination | Denominação comercial
 
 ##POST /custom
 
@@ -562,27 +661,14 @@ name | Nome da instutuição do usuário
 import requests
 
 values = {
-          "id": 1,
           "name": "BANCO SANTANDER (BRASIL) S.A.",
-          "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
-          "phone": "(11) 35535533",
-          "fax": "(11) 35535533",
-          "category": "BROKER",
-          "person_type": "LEGAL_PERSON",
-          "identifier": "90400888000142",
-          "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-          "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-          "email": "juridsocietario@santander.com.br",
-          "zip_code": "4543011",
-          "district": "VL OLIMPIA",
-          "street": "AV PRESIDENTE JUSC KUBITSCHEK",
-          "complement": "2041 E 2235",
-          "city": "SÃO PAULO",
-          "uf": "SP",
-          "ddd": "11"
+          "broker": 1,
+          "autonomous_agent": 2,
+          "trading_accounts":[]
         }
 
-request = requests.post('http://api.livecapital.com/users/{}/institutions/custom'.format(username), data=values)
+request = requests.post('http://api.livecapital.com/users/{}/institutions/custom'\
+  .format(username), data=values)
 
 request.json()
 ```
@@ -592,8 +678,44 @@ request.json()
 ```json
 {
   "id": 1,
-  "broker": null,
-  "autonomous_agent": null,
+  "broker": {
+    "id": 1,
+    "name": "BANCO SANTANDER (BRASIL) S.A.",
+    "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
+    "phone": "(11) 35535533",
+    "fax": "(11) 35535533",
+    "category": "BROKER",
+    "person_type": "LEGAL_PERSON",
+    "identifier": "90400888000142",
+    "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "email": "juridsocietario@santander.com.br",
+    "zip_code": "4543011",
+    "district": "VL OLIMPIA",
+    "street": "AV PRESIDENTE JUSC KUBITSCHEK",
+    "complement": "2041 E 2235",
+    "city": "SÃO PAULO",
+    "uf": "SP"
+  },
+  "autonomous_agent": {
+    "id": 2,
+    "name": "LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+    "address": "",
+    "phone": "",
+    "fax": "",
+    "category": "AUTONOMOUS_AGENT",
+    "person_type": "LEGAL_PERSON",
+    "identifier": "9168994000124",
+    "social_denomination": "LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+    "commercial_denomination": "LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+    "email": "latomia@yahoo.com",
+    "zip_code": "",
+    "district": "",
+    "street": "",
+    "complement": "",
+    "city": "",
+    "uf": ""
+  },
   "trading_accounts": [],
   "name": "BANCO SANTANDER (BRASIL) S.A."
 }
@@ -616,10 +738,32 @@ username | Nome de um usuário autenticado
 Parâmetro | Descrição
 --------- | ---------
 id | Id da instituição do usuário
-broker |
-autonomous_agent |
-trading_accounts |
+broker | Instutição do tipo BROKER
+autonomous_agent | Instutição do tipo AUUTONOMOUS_AGENT
+trading_accounts | Contas relacioandas a instituição
 name | Nome da instutuição do usuário
+
+### Parâmetros de BROKER/AUTONOMOUS_AGENT
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição
+name | Nome da instituição
+address | Endereço da instutição
+zip_code | CEP da instituição
+district | Distrito da instituição
+street | Rua da instituição
+complement | Complemento do endereço
+city | Cidade da instituição
+uf | Código do Estado - Unidade Federativa
+phone | Telefone da instituição
+fax | Fax da instituição
+email | Email da instituição
+category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
+person_type | Tipo de pessoa
+identifier | Número identificador
+social_denomination | Denominação social
+commercial_denomination | Denominação comercial
 
 ##GET /custom/{id}
 
@@ -636,8 +780,44 @@ request.json()
 ```json
 {
   "id": 1,
-  "broker": null,
-  "autonomous_agent": null,
+  "broker": {
+    "id": 1,
+    "name": "BANCO SANTANDER (BRASIL) S.A.",
+    "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
+    "phone": "(11) 35535533",
+    "fax": "(11) 35535533",
+    "category": "BROKER",
+    "person_type": "LEGAL_PERSON",
+    "identifier": "90400888000142",
+    "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
+    "email": "juridsocietario@santander.com.br",
+    "zip_code": "4543011",
+    "district": "VL OLIMPIA",
+    "street": "AV PRESIDENTE JUSC KUBITSCHEK",
+    "complement": "2041 E 2235",
+    "city": "SÃO PAULO",
+    "uf": "SP"
+  },
+  "autonomous_agent": {
+    "id": 2,
+    "name": "LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+    "address": "",
+    "phone": "",
+    "fax": "",
+    "category": "AUTONOMOUS_AGENT",
+    "person_type": "LEGAL_PERSON",
+    "identifier": "9168994000124",
+    "social_denomination": "LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+    "commercial_denomination": "LATOMIA AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+    "email": "latomia@yahoo.com",
+    "zip_code": "",
+    "district": "",
+    "street": "",
+    "complement": "",
+    "city": "",
+    "uf": ""
+  },
   "trading_accounts": [],
   "name": "BANCO SANTANDER (BRASIL) S.A."
 }
@@ -661,10 +841,32 @@ id | Id de uma instituição de usuário
 Parâmetro | Descrição
 --------- | ---------
 id | Id da instituição do usuário
-broker |
-autonomous_agent |
-trading_accounts |
+broker | Institutição do tipo BROKER
+autonomous_agent | Institutição do tipo AUTONOMOUS_AGENT
+trading_accounts | Contas relacionadas a instituição
 name | Nome da instutuição do usuário
+
+### Parâmetros de BROKER/AUTONOMOUS_AGENT
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição
+name | Nome da instituição
+address | Endereço da instutição
+zip_code | CEP da instituição
+district | Distrito da instituição
+street | Rua da instituição
+complement | Complemento do endereço
+city | Cidade da instituição
+uf | Código do Estado - Unidade Federativa
+phone | Telefone da instituição
+fax | Fax da instituição
+email | Email da instituição
+category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
+person_type | Tipo de pessoa
+identifier | Número identificador
+social_denomination | Denominação social
+commercial_denomination | Denominação comercial
 
 ##PUT /custom/{id}
 
@@ -672,24 +874,10 @@ name | Nome da instutuição do usuário
 import requests
 
 values = {
-          "id": 1,
-          "name": "BANCO SANTANDER (BRASIL) S.A.",
-          "address": "AV PRESIDENTE JUSC KUBITSCHEK, 2041 E 2235, VL OLIMPIA, SÃO PAULO, SP, 4543011",
-          "phone": "(11) 35535533",
-          "fax": "(11) 35535533",
-          "category": "BROKER",
-          "person_type": "LEGAL_PERSON",
-          "identifier": "90400888000142",
-          "social_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-          "commercial_denomination": "BANCO SANTANDER (BRASIL) S.A.",
-          "email": "juridsocietario@santander.com.br",
-          "zip_code": "4543011",
-          "district": "VL OLIMPIA",
-          "street": "AV PRESIDENTE JUSC KUBITSCHEK",
-          "complement": "2041 E 2235",
-          "city": "SÃO PAULO",
-          "uf": "SP",
-          "ddd": "11"
+          "name": "HSBC BANK BRASIL S.A.",
+          "broker": 28,
+          "autonomous_agent": 1295,
+          "trading_accounts": [],
         }
 
 request = requests.put('http://api.livecapital.com/institutions/custom/{}'.format(id), data=values)
@@ -702,10 +890,46 @@ request.json()
 ```json
 {
   "id": 1,
-  "broker": null,
-  "autonomous_agent": null,
+  "broker": {
+    "id": 28,
+    "name": "HSBC BANK BRASIL S.A. - BANCO MULTIPLO",
+    "address": "TRAVESSA OLIVEIRA BELO, Nº 34, 4º ANDAR, CENTRO, CURITIBA, PR, 80020030",
+    "phone": "(41) 37775384",
+    "fax": "(41) 37775732",
+    "category": "BROKER",
+    "person_type": "LEGAL_PERSON",
+    "identifier": "1701201000189",
+    "social_denomination": "HSBC BANK BRASIL S.A. - BANCO MULTIPLO",
+    "commercial_denomination": "HSBC BANK BRASIL S.A. - BANCO MULTIPLO",
+    "email": "davieira@hsbc.com.br",
+    "zip_code": "80020030",
+    "district": "CENTRO",
+    "street": "TRAVESSA OLIVEIRA BELO, Nº 34",
+    "complement": "4º ANDAR",
+    "city": "CURITIBA",
+    "uf": "PR"
+  },
+  "autonomous_agent": {
+    "id": 1295,
+    "name": "UNITY AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+    "address": "",
+    "phone": "",
+    "fax": "",
+    "category": "AUTONOMOUS_AGENT",
+    "person_type": "LEGAL_PERSON",
+    "identifier": "7491320000130",
+    "social_denomination": "UNITY AGENTES AUTONOMOS DE INVESTIMENTOS LTDA",
+    "commercial_denomination": "",
+    "email": "sandro.marques@prospercorretora.com.br",
+    "zip_code": "",
+    "district": "",
+    "street": "",
+    "complement": "",
+    "city": "",
+    "uf": ""
+  },
   "trading_accounts": [],
-  "name": "BANCO SANTANDER (BRASIL) S.A."
+  "name": "HSBC BANK BRASIL S.A."
 }
 ```
 
@@ -727,10 +951,32 @@ id | Id de uma instituição de usuário
 Parâmetro | Descrição
 --------- | ---------
 id | Id da instituição do usuário
-broker |
-autonomous_agent |
-trading_accounts |
+broker | Institutição do tipo BROKER
+autonomous_agent | Institutição do tipo AUTONOMOUS_AGENT
+trading_accounts | Contas relacionadas a instituição
 name | Nome da instutuição do usuário
+
+### Parâmetros de BROKER/AUTONOMOUS_AGENT
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da instituição
+name | Nome da instituição
+address | Endereço da instutição
+zip_code | CEP da instituição
+district | Distrito da instituição
+street | Rua da instituição
+complement | Complemento do endereço
+city | Cidade da instituição
+uf | Código do Estado - Unidade Federativa
+phone | Telefone da instituição
+fax | Fax da instituição
+email | Email da instituição
+category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
+person_type | Tipo de pessoa
+identifier | Número identificador
+social_denomination | Denominação social
+commercial_denomination | Denominação comercial
 
 ##DELETE /custom/{id}
 
