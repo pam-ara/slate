@@ -33,12 +33,13 @@ Recurso | Método | Descrição
 [/returns/{name}/{year}](#get-returns-name-year) | GET | Lista
 [/returns/{name}/{year}-{month}](#get-returns-name-year-month) | GET | Lista
 
+
 ##GET /clients/menu
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/clients/menu')
+request = requests.get('http://api.livecapital.com/clients/menu/')
 
 request.json()
 ```
@@ -52,7 +53,7 @@ Esse recurso retorna uma lista de todas as instituições e suas contas.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/clients/menu`
+`GET http://api.livecapital.com/clients/menu/`
 
 ### Parâmetros de resposta
 
@@ -61,13 +62,15 @@ Parâmetro | Descrição
  |
  |
  |
+
 
 ##GET /accordions/{name}/{year}
 
 ```python
 import requests
 
-request = request.get('http://api.livecapital.com/clients/accordions/{}/{}'.format(name, year))
+request = request.get(
+  'http://api.livecapital.com/clients/accordions/{}/{}/'.format(name, year))
 
 request.json()
 ```
@@ -81,7 +84,7 @@ Esse recurso retorna uma lista
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/clients/accordions/{name}/{year}`
+`GET http://api.livecapital.com/clients/accordions/{name}/{year}/`
 
 ### Parâmetros de URL
 
@@ -97,13 +100,17 @@ Parâmetro | Descrição
  |
  |
  |
+
 
 ##GET /accordions/{name}/{year}-{month}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/clients/accordions/{}/{}-{}'.format(name, year, month))
+request = requests.get(
+  'http://api.livecapital.com/clients/accordions/{}/{}-{}/'\
+  .format(name, year, month)
+)
 
 request.json()
 ```
@@ -117,7 +124,7 @@ Esse recurso retorna uma lista
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/clients/accordions/{name}/{year}-{month}`
+`GET http://api.livecapital.com/clients/accordions/{name}/{year}-{month}/`
 
 ### Parâmetros de URL
 
@@ -134,13 +141,15 @@ Parâmetro | Descrição
  |
  |
  |
+
 
 ##GET /operations/{name}/{year}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/clients/operations/{}/{}'.format(name, year))
+request = requests.get(
+  'http://api.livecapital.com/clients/operations/{}/{}/'.format(name, year))
 
 request.json()
 ```
@@ -154,7 +163,7 @@ Esse recurso retorna uma lista
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/clients/operations/{name}/{year}`
+`GET http://api.livecapital.com/clients/operations/{name}/{year}/`
 
 ### Parâmetros de URL
 
@@ -170,13 +179,17 @@ Parâmetro | Descrição
  |
  |
  |
+
 
 ##GET /operations/{name}/{year}-{month}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/clients/operations/{}/{}-{}'.format(name, year, month))
+request = requests.get(
+  'http://api.livecapital.com/clients/operations/{}/{}-{}/'\
+  .format(name, year, month)
+)
 
 request.json()
 ```
@@ -190,7 +203,7 @@ Esse recurso retorna uma lista
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/clients/operations/{name}/{year}-{month}`
+`GET http://api.livecapital.com/clients/operations/{name}/{year}-{month}/`
 
 ### Parâmetros de URL
 
@@ -207,13 +220,15 @@ Parâmetro | Descrição
  |
  |
  |
+
 
 ##GET /portfolios/{name}/{year}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/clients/portfolios/{}/{}'.format(name, year))
+request = requests.get(
+  'http://api.livecapital.com/clients/portfolios/{}/{}/'.format(name, year))
 
 request.json()
 ```
@@ -227,7 +242,7 @@ Esse recurso retorna uma lista
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/clients/portfolios/{name}/{year}`
+`GET http://api.livecapital.com/clients/portfolios/{name}/{year}/`
 
 ### Parâmetros de URL
 
@@ -243,13 +258,17 @@ Parâmetro | Descrição
  |
  |
  |
+
 
 ##GET /portfolios/{name}/{year}-{month}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/clients/portfolios/{}/{}-{}'.format(name, year, month))
+request = requests.get(
+  'http://api.livecapital.com/clients/portfolios/{}/{}-{}/'\
+  .format(name, year, month)
+)
 
 request.json()
 ```
@@ -263,7 +282,7 @@ Esse recurso retorna uma lista
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/clients/portfolios/{name}/{year}-{month}`
+`GET http://api.livecapital.com/clients/portfolios/{name}/{year}-{month}/`
 
 ### Parâmetros de URL
 
@@ -279,13 +298,15 @@ Parâmetro | Descrição
  |
  |
  |
+
 
 ##GET /returns/{name}/{year}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/clients/returns/{}/{}'.format(name, year))
+request = requests.get(
+  'http://api.livecapital.com/clients/returns/{}/{}/'.format(name, year))
 
 request.json()
 ```
@@ -299,7 +320,7 @@ Esse recurso retorna uma lista
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/clients/returns/{name}/{year}`
+`GET http://api.livecapital.com/clients/returns/{name}/{year}/`
 
 ### Parâmetros de URL
 
@@ -316,12 +337,16 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /returns/{name}/{year}-{month}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/clients/returns/{}/{}-{}'.format(name, year, month))
+request = requests.get(
+  'http://api.livecapital.com/clients/returns/{}/{}-{}/'\
+  .format(name, year, month)
+)
 
 request.json()
 ```
@@ -335,7 +360,7 @@ Esse recurso retorna uma lista
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/clients/returns/{name}/{year}-{month}`
+`GET http://api.livecapital.com/clients/returns/{name}/{year}-{month}/`
 
 ### Parâmetros de URL
 
@@ -353,7 +378,10 @@ Parâmetro | Descrição
  |
  |
 
+
+
 #Instituições
+
 
 ## Recursos
 
@@ -361,21 +389,21 @@ Esses são todos os recursos de instituições disponíveis.
 
 Recurso | Método | Descrição
 ------- | ------ | ---------
-[/institutions/official](#get-official) | GET | Lista todas as instituinções oficiais
-[/institutions/official/{id}](#get-official-id) | GET | Retorna uma instituição oficial específica
-[/institutions/custom](#get-custom) | GET | Lista todas as instituições de um usuário autenticado
-[/institutions/custom](#post-custom) | POST | Cria uma instituição para um usuário
-[/institutions/custom/{id}](#get-custom-id) | GET | Retorna uma determinada instituição de um usuário
-[/institutions/custom/{id}](#put-custom-id) | PUT | Altera dados de uma instituição
-[/institutions/custom/{id}](#delete-custom-id) | DELETE | Apaga uma instituição
+[/institutions/official](#get-institutions-official) | GET | Lista todas as instituinções oficiais
+[/institutions/official/{id}](#get-institutions-official-id) | GET | Retorna uma instituição oficial específica
+[/institutions/custom](#get-institutions-custom) | GET | Lista todas as instituições de um usuário autenticado
+[/institutions/custom](#post-institutions-custom) | POST | Cria uma instituição para um usuário
+[/institutions/custom/{id}](#get-institutions-custom-id) | GET | Retorna uma determinada instituição de um usuário
+[/institutions/custom/{id}](#put-institutions-custom-id) | PUT | Altera dados de uma instituição
+[/institutions/custom/{id}](#delete-institutions-custom-id) | DELETE | Apaga uma instituição
 
 
-##GET /official
+##GET /institutions/official
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/institutions/official')
+request = requests.get('http://api.livecapital.com/institutions/official/')
 
 request.json()
 ```
@@ -416,7 +444,7 @@ Esse recurso retorna uma lista com todas as instituições oficiais.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/institutions/official`
+`GET http://api.livecapital.com/institutions/official/`
 
 ### Parâmetros de resposta
 
@@ -424,14 +452,16 @@ Parâmetro | Descrição
 --------- | ---------
 id | Id da instituição
 name | Nome da instituição
-category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
+category | Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)
 
-##GET /official/{id}
+
+##GET /institutions/official/{id}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/institutions/official/{}'.format(id))
+request = requests.get(
+  'http://api.livecapital.com/institutions/official/{}/'.format(id))
 
 request.json()
 ```
@@ -464,7 +494,7 @@ Esse recurso retorna uma instituição específica.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/institutions/official/{id}`
+`GET http://api.livecapital.com/institutions/official/{id}/`
 
 ### Parâmetros de URL
 
@@ -488,18 +518,20 @@ uf | Código do Estado - Unidade Federativa
 phone | Telefone da instituição
 fax | Fax da instituição
 email | Email da instituição
-category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
+category | Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)
 person_type | Tipo de pessoa
 identifier | Número identificador
 social_denomination | Denominação social
 commercial_denomination | Denominação comercial
 
-##GET /custom
+
+##GET /institutions/custom
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/users/{}/institutions/custom'.format(username))
+request = requests.get(
+  'http://api.livecapital.com/users/{}/institutions/custom/'.format(username))
 
 request.json()
 ```
@@ -615,7 +647,7 @@ Este recurso lista todas as instituições de um usuário autenticado.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/users/{username}/institutions/custom`
+`GET http://api.livecapital.com/users/{username}/institutions/custom/`
 
 ### Parâmetros de URL
 
@@ -649,13 +681,14 @@ uf | Código do Estado - Unidade Federativa
 phone | Telefone da instituição
 fax | Fax da instituição
 email | Email da instituição
-category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
+category | Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)
 person_type | Tipo de pessoa
 identifier | Número identificador
 social_denomination | Denominação social
 commercial_denomination | Denominação comercial
 
-##POST /custom
+
+##POST /institutions/custom
 
 ```python
 import requests
@@ -667,8 +700,10 @@ values = {
           "trading_accounts":[]
         }
 
-request = requests.post('http://api.livecapital.com/users/{}/institutions/custom'\
-  .format(username), data=values)
+request = requests.post(
+  'http://api.livecapital.com/users/{}/institutions/custom/'.format(username),
+  data=values
+)
 
 request.json()
 ```
@@ -725,7 +760,7 @@ Este recurso cria uma instituição para um determinado usuário autenticado.
 
 ### HTTP Request
 
-`POST http://api.livecapital.com/users/{username}/institutions/custom`
+`POST http://api.livecapital.com/users/{username}/institutions/custom/`
 
 ### Parâmetros de URL
 
@@ -759,18 +794,22 @@ uf | Código do Estado - Unidade Federativa
 phone | Telefone da instituição
 fax | Fax da instituição
 email | Email da instituição
-category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
+category | Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)
 person_type | Tipo de pessoa
 identifier | Número identificador
 social_denomination | Denominação social
 commercial_denomination | Denominação comercial
 
-##GET /custom/{id}
+
+##GET /institutions/custom/{id}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/users/{}/institutions/custom/{}'.format(username, id))
+request = requests.get(
+  'http://api.livecapital.com/users/{}/institutions/custom/{}/'\
+  .format(username, id)
+)
 
 request.json()
 ```
@@ -827,7 +866,7 @@ Este recurso retorna uma determinada instituição de um usuário autenticado.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/users/{username}/institutions/custom/{id}`
+`GET http://api.livecapital.com/users/{username}/institutions/custom/{id}/`
 
 ### Parâmetros de URL
 
@@ -862,13 +901,14 @@ uf | Código do Estado - Unidade Federativa
 phone | Telefone da instituição
 fax | Fax da instituição
 email | Email da instituição
-category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
+category | Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)
 person_type | Tipo de pessoa
 identifier | Número identificador
 social_denomination | Denominação social
 commercial_denomination | Denominação comercial
 
-##PUT /custom/{id}
+
+##PUT /institutions/custom/{id}
 
 ```python
 import requests
@@ -880,7 +920,8 @@ values = {
           "trading_accounts": [],
         }
 
-request = requests.put('http://api.livecapital.com/institutions/custom/{}'.format(id), data=values)
+request = requests.put(
+  'http://api.livecapital.com/institutions/custom/{}/'.format(id), json=values)
 
 request.json()
 ```
@@ -937,7 +978,7 @@ Este recurso altera uma determinada instituição de um usuário autenticado.
 
 ### HTTP Request
 
-`PUT http://api.livecapital.com/users/{username}/institutions/custom/{id}`
+`PUT http://api.livecapital.com/users/{username}/institutions/custom/{id}/`
 
 ### Parâmetros de URL
 
@@ -972,25 +1013,29 @@ uf | Código do Estado - Unidade Federativa
 phone | Telefone da instituição
 fax | Fax da instituição
 email | Email da instituição
-category | Tipo de instituição. Existem apenas as categorias "BROKER" e "AUTONOMOUS_AGENT".
+category | Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)
 person_type | Tipo de pessoa
 identifier | Número identificador
 social_denomination | Denominação social
 commercial_denomination | Denominação comercial
 
-##DELETE /custom/{id}
+
+##DELETE /institutions/custom/{id}
 
 ```python
 import requests
 
-request = requests.delete('http://api.livecapital.com/users/{}instittutions/custom/{}'.format(username, id))
+request = requests.delete(
+  'http://api.livecapital.com/users/{}/institutions/custom/{}/'\
+  .format(username, id)
+)
 ```
 
 Este recurso apaga uma determinada instituição de um usuário autenticado.
 
 ### HTTP Request
 
-`DELETE http://api.livecapital.com/users/{username}/institutions/custom/{id}`
+`DELETE http://api.livecapital.com/users/{username}/institutions/custom/{id}/`
 
 ### Parâmetros de URL
 
@@ -1015,7 +1060,8 @@ Recurso | Método | Descrição
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/darf/{}-{}/reports'.format(year, month))
+request = requests.get(
+  'http://api.livecapital.com/darf/{}-{}/reports/'.format(year, month))
 
 request.json()
 ```
@@ -1029,7 +1075,7 @@ Esse recurso exibe um relatório filtrado por mês e ano.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/darf/{year}-{month}/reports`
+`GET http://api.livecapital.com/darf/{year}-{month}/reports/`
 
 ### Parâmetros de URL
 
@@ -1046,12 +1092,14 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /{year}-{month}/print
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/darf/{}-{}/print'.format(year, month))
+request = requests.get(
+  'http://api.livecapital.com/darf/{}-{}/print/'.format(year, month))
 
 request.json()
 ```
@@ -1065,7 +1113,7 @@ Esse recurso exibe uma DARF filtrada por mês e ano.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/darf/{year}-{month}/print`
+`GET http://api.livecapital.com/darf/{year}-{month}/print/`
 
 ### Parâmetros de URL
 
@@ -1082,7 +1130,10 @@ Parâmetro | Descrição
  |
  |
 
+
+
 #Bovespa
+
 
 ##Recursos
 
@@ -1090,27 +1141,31 @@ Esses são todos os recursos de Bovespa disponíveis.
 
 Recurso | Método | Descrição
 ------- | ------ | ---------
-[/bovespa/trading-account](#get-trading-account) | GET | Lista todas as contas de um usuário autenticado
-[/bovespa/trading-account](#post-trading-account) | POST | Cria uma conta de Bovesta para um usuário autenticado
-[/bovespa/trading-account/{id}](#get-trading-account-id) | GET | Exibe os dados de uma conta
-[/bovespa/assets](#get-assets) | GET | Retorna uma lista de ativos
-[/bovespa/brokerage-notes](#post-brokerage-notes) | POST | Cria uma nota de corretagem
-[/bovespa/brokerage-notes/{id}](#get-brokerage-notes-id) | GET | Exibe dados da nota de corretagem
-[/bovespa/brokerage-notes/{id}](#put-brokerage-notes-id) | PUT | Altera dados da nota de corretagem
-[/bovespa/brokerage-notes/{id}](#delete-brokerage-notes-id) | DELETE | Apaga uma nota de corretagem
-[/bovespa/positions/{date}/terms](#get-positions-date-terms) | GET | Retorna a posição da conta na data informada apenas por termos
-[/bovespa/positions/{date}/non-terms](#get-positions-date-non-terms) | GET | Retorna a posição da conta na data informada sem termos
-[/bovespa/events/{trading-account}/{date}](#get-events-trading-account-date) | GET | Lista todos os eventos de uma conta filtrados por data
-[/bovespa/{event-type}/{id}](#get-event-type-id) | GET | Exibe dados de um evento
-[/bovespa/{event-type}/{id}](#put-event-type-id) | PUT | Altera dados de um evento
-[/bovespa/{event-type}/{id}](#delete-event-type-id) | DELETE | Apaga um evento
+[/bovespa/{custom-institution}/trading-accounts](#get-bovespa-custom-institution-trading-accounts) | GET | Lista todas as contas de Bovespa de uma determinada instituição de um usuário autenticado
+[/bovespa/{custom-institution}/trading-accounts](#post-bovespa-custom-institution-trading-accounts) | POST | Cria uma conta de Bovespa para uma instituição de um usuário autenticado
+[/bovespa/{custom-institution}/trading-accounts/{id}](#get-bovespa-custom-institution-trading-accounts-id) | GET | Exibe os dados de uma conta Bovespa
+[/bovespa/{custom-institution}/trading-accounts/{id}](#put-bovespa-custom-institution-trading-accounts-id) | PUT | Altera os dados de uma conta Bovespa
+[/bovespa/{custom-institution}/trading-accounts/{id}](#delete-bovespa-custom-institution-trading-accounts-id) | DELETE | Apaga uma conta Bovespa
+[/bovespa/assets](#get-bovespa-assets) | GET | Retorna uma lista de ativos
+[/bovespa/brokerage-notes](#post-bovespa-brokerage-notes) | POST | Cria uma nota de corretagem
+[/bovespa/brokerage-notes/{id}](#get-bovespa-brokerage-notes-id) | GET | Exibe dados da nota de corretagem
+[/bovespa/brokerage-notes/{id}](#put-bovespa-brokerage-notes-id) | PUT | Altera dados da nota de corretagem
+[/bovespa/brokerage-notes/{id}](#delete-bovespa-brokerage-notes-id) | DELETE | Apaga uma nota de corretagem
+[/bovespa/positions/{date}/terms](#get-bovespa-positions-date-terms) | GET | Retorna a posição da conta na data informada apenas por termos
+[/bovespa/positions/{date}/non-terms](#get-bovespa-positions-date-non-terms) | GET | Retorna a posição da conta na data informada sem termos
+[/bovespa/events/{trading-account}/{date}](#get-bovespa-events-trading-account-date) | GET | Lista todos os eventos de uma conta filtrados por data
+[/bovespa/{event-type}/{id}](#get-bovespa-event-type-id) | GET | Exibe dados de um evento
+[/bovespa/{event-type}/{id}](#put-bovespa-event-type-id) | PUT | Altera dados de um evento
+[/bovespa/{event-type}/{id}](#delete-bovespa-event-type-id) | DELETE | Apaga um evento
 
-##GET /trading-account
+
+##GET /bovespa/{custom-institution}/trading-accounts
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/bovespa/trading-account')
+request = requests.get(
+  'http://api.livecapital.com/bovespa/{}/trading-accounts/'.format(custom_institution))
 
 request.json()
 ```
@@ -1118,30 +1173,77 @@ request.json()
 > Essa requisição irá retornar um JSON como este:
 
 ```json
+[
+  {
+    "id": 1,
+    "account_type": "STOCK",
+    "linked_account_identifier": "04678321",
+    "linked_account_name": "HSBC",
+    "identifier": "17263580",
+    "name": "Bovespa",
+    "linked_account": 4
+  },
+  {
+    "id": 2,
+    "account_type": "STOCK",
+    "linked_account_identifier": null,
+    "linked_account_name": null,
+    "identifier": "00385230",
+    "name": "Bov",
+    "linked_account": null
+  },
+  {
+    "id": 3,
+    "account_type": "STOCK",
+    "linked_account_identifier": "00573283",
+    "linked_account_name": "Itau",
+    "identifier": "05830151",
+    "name": "Global bovespa",
+    "linked_account": 40
+  }
+]
 ```
 
-Esse recurso lista todas as contas de um usuário autenticado.
+Esse recurso lista todas as contas de Bovespa de um usuário autenticado.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/bovespa/trading-account`
+`GET http://api.livecapital.com/bovespa/{custom-institution}/trading-accounts/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
 
 ### Parâmetros de resposta
 
 Parâmetro | Descrição
 --------- | ---------
- |
- |
- |
+id | Id da conta de Bovespa
+account_type | Tipo da conta. Será sempre Bovespa(STOCK), pois não pode ser alterado
+linked_account_identifier | Número identificador de uma conta corrente associada
+linked_account_name | Nome de uma conta corrente associada
+identifier | Número identificador da conta
+name | Nome da conta
+linked_account | Id da uma conta corrente associada
 
-##POST /trading-account
+
+##POST /bovespa/{custom-institution}/trading-accounts
 
 ```python
 import requests
 
-values = {}
+values = {
+  "name": "Bovespa",
+  "identifier": "09343260",
+  "linked_account": 4
+}
 
-request = requests.post('http://api.livecapital.com/bovespa/trading-account', data=values)
+request = requests.post(
+  'http://api.livecapital.com/bovespa/{}/trading-accounts/'.format(custom_institution),
+  json=values
+)
 
 request.json()
 ```
@@ -1149,28 +1251,49 @@ request.json()
 > Essa requisição irá retornar um JSON como este:
 
 ```json
+{
+  "id": 6,
+  "account_type": "STOCK",
+  "linked_account_identifier": "04678321",
+  "linked_account_name": "HSBC",
+  "identifier": "09343260",
+  "name": "Bovespa",
+  "linked_account": 4
+}
 ```
 
 Esse recurso cria uma conta Bovespa para um usuário autenticado.
 
 ### HTTP Request
 
-`POST http://api.livecapital.com/bovespa/trading-account`
+`POST http://api.livecapital.com/bovespa/{custom-institution}/trading-accounts/`
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
 
 ### Parâmetros de resposta
 
 Parâmetro | Descrição
 --------- | ---------
- |
- |
- |
+id | Id da conta de Bovespa
+account_type | Tipo da conta. Será sempre Bovespa(STOCK), pois não pode ser alterado
+linked_account_identifier | Número identificador de uma conta corrente associada
+linked_account_name | Nome de uma conta corrente associada
+identifier | Número identificador da conta
+name | Nome da conta
+linked_account | Id da uma conta corrente associada
 
-##GET /trading-account/{id}
+
+##GET /bovespa/{custom-institution}/trading-accounts/{id}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/bovespa/trading-account/{}'.format(id))
+request = requests.get(
+  'http://api.livecapital.com/bovespa/{}/trading-accounts/{}/'\
+  .format(custom_institution, id)
+)
 
 request.json()
 ```
@@ -1178,34 +1301,131 @@ request.json()
 > Essa requisição irá retornar um JSON como este:
 
 ```json
+{
+  "id": 6,
+  "account_type": "STOCK",
+  "linked_account_identifier": "04678321",
+  "linked_account_name": "HSBC",
+  "identifier": "09343260",
+  "name": "Bovespa",
+  "linked_account": 4
+}
 ```
 
-Esse recurso retorna dados de uma conta bovespa.
+Esse recurso retorna dados de uma determinada conta bovespa.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/bovespa/trading-account/{id}`
+`GET http://api.livecapital.com/bovespa/{custom-institution}/trading-accounts/{id}/`
 
 ### Parâmetros de URL
 
 Parâmetro | Descrição
 --------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
 id | Id de uma conta
 
 ### Parâmetros de resposta
 
 Parâmetro | Descrição
 --------- | ---------
- |
- |
- |
+id | Id da conta de Bovespa
+account_type | Tipo da conta. Será sempre Bovespa(STOCK), pois não pode ser alterado
+linked_account_identifier | Número identificador de uma conta corrente associada
+linked_account_name | Nome de uma conta corrente associada
+identifier | Número identificador da conta
+name | Nome da conta
+linked_account | Id da uma conta corrente associada
 
-##GET /assets
+
+##PUT /bovespa/{custom-institution}/trading-accounts/{id}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/assets')
+values = {
+          "name": "Global Bov",
+          "identifier": "00347501",
+          "linked_account": 40
+        }
+
+request = requests.put('http://api.livecapital.com/bovespa/{}/trading-accounts/'\
+  .format(custom_institution), json=values)
+
+request.json()
+```
+
+> Essa requisição irá retornar um JSON como este:
+
+```json
+{
+  "id": 8,
+  "account_type": "STOCK",
+  "linked_account_identifier": "00573283",
+  "linked_account_name": "Itau",
+  "identifier": "00347501",
+  "name": "Global Bov",
+  "linked_account": 40
+}
+```
+
+Esse recurso retorna dados de uma determinada conta bovespa.
+
+### HTTP Request
+
+`PUT http://api.livecapital.com/bovespa/{custom-institution}/trading-accounts/{id}/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+id | Id de uma conta
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da conta de Bovespa
+account_type | Tipo da conta. Será sempre Bovespa(STOCK), pois não pode ser alterado
+linked_account_identifier | Número identificador de uma conta corrente associada
+linked_account_name | Nome de uma conta corrente associada
+identifier | Número identificador da conta
+name | Nome da conta
+linked_account | Id da uma conta corrente associada
+
+
+##DELETE /bovespa/{custom-institution}/trading-accounts/{id}
+
+```python
+import requests
+
+request = requests.delete('http://api.livecapital.com/bovespa/{}/trading-accounts/{}/'\
+  .format(custom_institution, id))
+
+request.json()
+```
+
+Este recurso apaga uma determinada conta bovespa de uma instituição de um usuário autenticado.
+
+### HTTP Request
+
+`DELETE http://api.livecapital.com/bovespa/{custom-institution}/trading-accounts/{id}/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+id | Id de uma conta bovespa
+
+
+##GET /bovespa/assets
+
+```python
+import requests
+
+request = requests.get('http://api.livecapital.com/bovespa/assets/')
 
 request.json()
 ```
@@ -1219,7 +1439,7 @@ Esse recurso retorna uma lista de ativos.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/bovespa/assets`
+`GET http://api.livecapital.com/bovespa/assets/`
 
 ### Parâmetros de resposta
 
@@ -1229,14 +1449,16 @@ Parâmetro | Descrição
  |
  |
 
-##POST /brokerage-notes
+
+##POST /bovespa/brokerage-notes
 
 ```python
 import requests
 
 values = {}
 
-request = requests.post('http://api.livecapital.com/bovespa/brokerage-notes', data=values)
+request = requests.post(
+  'http://api.livecapital.com/bovespa/brokerage-notes/', data=values)
 
 request.json()
 ```
@@ -1250,7 +1472,7 @@ Esse recurso cria uma nota de corretagem.
 
 ### HTTP Request
 
-`POST http://api.livecapital.com/bovespa/brokerage-notes`
+`POST http://api.livecapital.com/bovespa/brokerage-notes/`
 
 ### Parâmetros de resposta
 
@@ -1260,12 +1482,14 @@ Parâmetro | Descrição
  |
  |
 
-##GET /brokerage-notes/{id}
+
+##GET /bovespa/brokerage-notes/{id}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/bovespa/brokerage-notes/{}'.format(id))
+request = requests.get(
+  'http://api.livecapital.com/bovespa/brokerage-notes/{}/'.format(id))
 
 request.json()
 ```
@@ -1279,7 +1503,7 @@ Esse recurso retorna os dados de uma nota de corretagem.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/bovespa/brokerage-notes/{id}`
+`GET http://api.livecapital.com/bovespa/brokerage-notes/{id}/`
 
 ### Parâmetros de URL
 
@@ -1295,14 +1519,18 @@ Parâmetro | Descrição
  |
  |
 
-##PUT /brokerage-notes/{id}
+
+##PUT /bovespa/brokerage-notes/{id}
 
 ```python
 import requests
 
 values = {}
 
-request = requests.put('http://api.livecapital.com/bovespa/brokerage-notes/{}'.format(id), data=values)
+request = requests.put(
+  'http://api.livecapital.com/bovespa/brokerage-notes/{}/'.format(id),
+  json=values
+)
 
 request.json()
 ```
@@ -1316,7 +1544,7 @@ Esse recurso altera dados de uma nota de corretagem.
 
 ### HTTP Request
 
-`PUT http://api.livecapital.com/bovespa/brokerage-notes/{id}`
+`PUT http://api.livecapital.com/bovespa/brokerage-notes/{id}/`
 
 ### Parâmetros de URL
 
@@ -1332,19 +1560,21 @@ Parâmetro | Descrição
  |
  |
 
-##DELETE /brokerage-notes/{id}
+
+##DELETE /bovespa/brokerage-notes/{id}
 
 ```python
 import requests
 
-request = requests.delete('http://api.livecapital.com/bovespa/brokerege-notes/{}'.format(id))
+request = requests.delete(
+  'http://api.livecapital.com/bovespa/brokerege-notes/{}/'.format(id))
 ```
 
 Esse recurso apaga uma nota de corretagem.
 
 ### HTTP Request
 
-`DELETE http://api.livecapital.com/bovespa/brokerage-notes/{id}`
+`DELETE http://api.livecapital.com/bovespa/brokerage-notes/{id}/`
 
 ### Parâmetros de URL
 
@@ -1360,12 +1590,14 @@ Parâmetro | Descrição
  |
  |
 
-##GET /positions/{date}/terms
+
+##GET /bovespa/positions/{date}/terms
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/bovespa/positions/{}/terms'.format(date))
+request = requests.get(
+  'http://api.livecapital.com/bovespa/positions/{}/terms/'.format(date))
 
 request.json
 ```
@@ -1379,7 +1611,7 @@ Esse recurso retorna a posição da conta na data informada exibindo apenas os t
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/bovespa/positions/{date}/terms`
+`GET http://api.livecapital.com/bovespa/positions/{date}/terms/`
 
 ### Parâmetros de URL
 
@@ -1395,12 +1627,14 @@ Parâmetro | Descrição
  |
  |
 
-##GET /positions/{date}/non-terms
+
+##GET /bovespa/positions/{date}/non-terms
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/bovespa/positions/{}/non-terms'.format(date))
+request = requests.get(
+  'http://api.livecapital.com/bovespa/positions/{}/non-terms/'.format(date))
 
 request.json()
 ```
@@ -1414,7 +1648,7 @@ Esse recurso retorna a posição da conta na data informada, mas não exibe os t
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/bovespa/positions/{date}/non-terms`
+`GET http://api.livecapital.com/bovespa/positions/{date}/non-terms/`
 
 ### Parâmetros de URL
 
@@ -1430,12 +1664,15 @@ Parâmetro | Descrição
  |
  |
 
-##GET /events/{trading-account}/{date}
+
+##GET /bovespa/events/{trading-account}/{date}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/bovespa/events/{}/{}'.format(trading-account, date))
+request = requests.get('http://api.livecapital.com/bovespa/events/{}/{}/'\
+  .format(trading-account, date)
+)
 
 request.json()
 ```
@@ -1449,7 +1686,7 @@ Esse recurso lista todos os eventos de uma conta filtrando por data.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/bovespa/events/{trading-account}/{date}`
+`GET http://api.livecapital.com/bovespa/events/{trading-account}/{date}/`
 
 ### Parâmetros de URL
 
@@ -1465,12 +1702,14 @@ Parâmetro | Descrição
  |
  |
 
-##GET /{event-type}/{id}
+
+##GET /bovespa/{event-type}/{id}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/bovespa/{}/{}'.format(event-type, id))
+request = requests.get(
+  'http://api.livecapital.com/bovespa/{}/{}/'.format(event-type, id))
 
 request.json()
 ```
@@ -1484,7 +1723,7 @@ Esse recurso retorna dados de um evento.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/bovespa/{event-type}/{id}`
+`GET http://api.livecapital.com/bovespa/{event-type}/{id}/`
 
 ### Parâmetros de URL
 
@@ -1501,14 +1740,17 @@ Parâmetro | Descrição
  |
  |
 
-##PUT /{event-type}/{id}
+
+##PUT /bovespa/{event-type}/{id}
 
 ```python
 import requests
 
 values = {}
 
-request = requests.put('http://api.livecapital.com/bovespa/{}/{}'.format(event-type, id), data=values)
+request = requests.put('http://api.livecapital.com/bovespa/{}/{}/'\
+  .format(event-type, id), json=values
+)
 
 request.json()
 ```
@@ -1522,7 +1764,7 @@ Esse recurso altera dados de um evento.
 
 ### HTTP Request
 
-`PUT http://api.livecapital.com/bovespa/{event-type}/{id}`
+`PUT http://api.livecapital.com/bovespa/{event-type}/{id}/`
 
 ### Parâmetros de URL
 
@@ -1539,12 +1781,14 @@ Parâmetro | Descrição
  |
  |
 
-##DELETE /{event-type}/{id}
+
+##DELETE /bovespa/{event-type}/{id}
 
 ```python
 import requests
 
-request = requests.delete('http://api.livecapital.com/bovespa/{}/{}'.format(event_type, id))
+request = requests.delete(
+  'http://api.livecapital.com/bovespa/{}/{}/'.format(event_type, id))
 ```
 
 > Essa requisição irá retornar um JSON como este:
@@ -1556,7 +1800,7 @@ Esse recurso apaga um evento.
 
 ### HTTP Request
 
-`DELETE http://api.livecapital.com/bovespa/{event-type}/{id}`
+`DELETE http://api.livecapital.com/bovespa/{event-type}/{id}/`
 
 ### Parâmetros de URL
 
@@ -1572,6 +1816,287 @@ Parâmetro | Descrição
  |
  |
  |
+
+
+
+#BTC
+
+##Recursos
+
+Esses são todos os recursos de BTC disponíveis.
+
+Recurso | Método | Descrição
+------- | ------ | ---------
+[/btc/{custom-institution}/trading-accounts](#get-btc-custom-institution-trading-accounts) | GET | Lista todas as contas de BTC de uma determinada instituição de um usuário autenticado
+[/btc/{custom-institution}/trading-accounts](#post-btc-custom-institution-trading-accounts) | POST | Cria uma conta de BTC para uma instituição de um usuário autenticado
+[/btc/{custom-institution}/trading-accounts/{id}](#get-btc-custom-institution-trading-accounts-id) | GET | Exibe os dados de uma conta BTC
+[/btc/{custom-institution}/trading-accounts/{id}](#put-btc-custom-institution-trading-accounts-id) | PUT | Altera os dados de uma conta BTC
+[/btc/{custom-institution}/trading-accounts/{id}](#delete-btc-custom-institution-trading-accounts-id) | DELETE | Apaga uma conta BTC
+
+
+##GET /btc/{custom-institution}/trading-accounts
+
+```python
+import requests
+
+request = requests.get(
+  'http://api.livecapital.com/btc/{}/trading-accounts/'.format(custom_institution))
+
+request.json()
+```
+
+> Essa requisição irá retornar um JSON como este:
+
+```json
+[
+  {
+    "id": 10,
+    "account_type": "BTC",
+    "linked_account_identifier": "17263580",
+    "linked_account_name": "Bovespa",
+    "identifier": "17263580",
+    "name": "Btc",
+    "linked_account": 1
+  },
+  {
+    "id": 4,
+    "account_type": "BTC",
+    "linked_account_identifier": null,
+    "linked_account_name": null,
+    "identifier": "00762301",
+    "name": "Nova btc",
+    "linked_account": null
+  },
+  {
+    "id": 3,
+    "account_type": "BTC",
+    "linked_account_identifier": "05830151",
+    "linked_account_name": "Global bovespa",
+    "identifier": "08845900",
+    "name": "Global btc",
+    "linked_account": 3
+  }
+]
+```
+
+Esse recurso lista todas as contas de BTC de um usuário autenticado.
+
+### HTTP Request
+
+`GET http://api.livecapital.com/btc/{custom-institution}/trading-accounts/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da conta de BTC
+account_type | Tipo da conta. Será sempre BTC, pois não pode ser alterado
+linked_account_identifier | Número identificador de uma conta bovespa associada
+linked_account_name | Nome de uma conta bovespa associada
+identifier | Número identificador da conta
+name | Nome da conta
+linked_account | Id da uma conta bovespa associada
+
+
+##POST /btc/{custom-institution}/trading-accounts
+
+```python
+import requests
+
+values = {
+  "name": "btc",
+  "identifier": "09343260",
+  "linked_account": 4
+}
+
+request = requests.post(
+  'http://api.livecapital.com/btc/{}/trading-accounts/'.format(custom_institution),
+  json=values
+)
+
+request.json()
+```
+
+> Essa requisição irá retornar um JSON como este:
+
+```json
+{
+  "id": 10,
+  "account_type": "BTC",
+  "linked_account_identifier": "17263580",
+  "linked_account_name": "Bovespa",
+  "identifier": "17263580",
+  "name": "Btc",
+  "linked_account": 1
+}
+```
+
+Esse recurso cria uma conta BTC para um usuário autenticado.
+
+### HTTP Request
+
+`POST http://api.livecapital.com/btc/{custom-institution}/trading-accounts/`
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da conta de BTC
+account_type | Tipo da conta. Será sempre BTC, pois não pode ser alterado
+linked_account_identifier | Número identificador de uma conta bovespa associada
+linked_account_name | Nome de uma conta bovespa associada
+identifier | Número identificador da conta
+name | Nome da conta
+linked_account | Id da uma conta bovespa associada
+
+
+##GET /btc/{custom-institution}/trading-accounts/{id}
+
+```python
+import requests
+
+request = requests.get(
+  'http://api.livecapital.com/btc/{}/trading-accounts/{}/'\
+  .format(custom_institution, id)
+)
+
+request.json()
+```
+
+> Essa requisição irá retornar um JSON como este:
+
+```json
+{
+  "id": 10,
+  "account_type": "BTC",
+  "linked_account_identifier": "17263580",
+  "linked_account_name": "Bovespa",
+  "identifier": "17263580",
+  "name": "Btc",
+  "linked_account": 1
+}
+```
+
+Esse recurso retorna dados de uma determinada conta btc.
+
+### HTTP Request
+
+`GET http://api.livecapital.com/btc/{custom-institution}/trading-accounts/{id}/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+id | Id de uma conta
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da conta de BTC
+account_type | Tipo da conta. Será sempre BTC, pois não pode ser alterado
+linked_account_identifier | Número identificador de uma conta bovespa associada
+linked_account_name | Nome de uma conta bovespa associada
+identifier | Número identificador da conta
+name | Nome da conta
+linked_account | Id da uma conta bovespa associada
+
+
+##PUT /btc/{custom-institution}/trading-accounts/{id}
+
+```python
+import requests
+
+values = {
+          "name": "Global btc",
+          "identifier": "12398500",
+          "linked_account": 3
+        }
+
+request = requests.put('http://api.livecapital.com/btc/{}/trading-accounts/{id}'\
+  .format(custom_institution), json=values)
+
+request.json()
+```
+
+> Essa requisição irá retornar um JSON como este:
+
+```json
+{
+  "id": 10,
+  "account_type": "BTC",
+  "linked_account_identifier": "00573283",
+  "linked_account_name": "Itau",
+  "identifier": "12398500",
+  "name": "Global btc",
+  "linked_account": 3
+}
+```
+
+Esse recurso retorna dados de uma determinada conta btc.
+
+### HTTP Request
+
+`PUT http://api.livecapital.com/btc/{custom-institution}/trading-accounts/{id}/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+id | Id de uma conta
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da conta de BTC
+account_type | Tipo da conta. Será sempre BTC, pois não pode ser alterado
+linked_account_identifier | Número identificador de uma conta bovespa associada
+linked_account_name | Nome de uma conta bovespa associada
+identifier | Número identificador da conta
+name | Nome da conta
+linked_account | Id da uma conta bovespa associada
+
+
+##DELETE /btc/{custom-institution}/trading-accounts/{id}
+
+```python
+import requests
+
+request = requests.delete('http://api.livecapital.com/btc/{}/trading-accounts/{}/'\
+  .format(custom_institution, id))
+
+request.json()
+```
+
+Este recurso apaga uma determinada conta btc de uma instituição de um usuário autenticado.
+
+### HTTP Request
+
+`DELETE http://api.livecapital.com/btc/{custom-institution}/trading-accounts/{id}/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+id | Id de uma conta bovespa
+
+
+
+#Conta Corrente
 
 #Widgets
 
@@ -1594,12 +2119,14 @@ Recurso | Método | Descrição
 [/widgets/taxes/{year}-{month}](#get-taxes-year-month) | GET | Retorna uma lista de widgets taxes filtrados por um mês e ano
 [/widgets/taxes/{year}-{month}-{day}](#get-taxes-year-month-day) | GET | Retorna uma lista de widgets taxes filtrados por uma data
 
+
 ##GET /{name}/{market}/{year}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/widgets/{}/{}/{}'.format(name, market, year))
+request = requests.get(
+  'http://api.livecapital.com/widgets/{}/{}/{}/'.format(name, market, year))
 
 request.json()
 ```
@@ -1613,7 +2140,7 @@ Esse recurso retorna uma lista de widgets de determinado nome filtrados por um a
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/{name}/{market}/{year}`
+`GET http://api.livecapital.com/widgets/{name}/{market}/{year}/`
 
 ### Parâmetros de URL
 
@@ -1631,12 +2158,15 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /{name}/{market}/{year}-{month}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/widgets/{}/{}/{}-{}'.format(name, market, year, month))
+request = requests.get('http://api.livecapital.com/widgets/{}/{}/{}-{}/'\
+  .format(name, market, year, month)
+)
 
 request.json()
 ```
@@ -1650,7 +2180,7 @@ Esse recurso retorna uma lista de widgets de determinado nome filtrados por mês
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/{name}/{market}/{year}-{month}`
+`GET http://api.livecapital.com/widgets/{name}/{market}/{year}-{month}/`
 
 ### Parâmetros de URL
 
@@ -1669,12 +2199,15 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /{name}/{market}/{year}-{month}-{day}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/widgets/{}/{}/{}-{}-{}'.format(name, market, year, month, day))
+request = requests.get('http://api.livecapital.com/widgets/{}/{}/{}-{}-{}/'\
+  .format(name, market, year, month, day)
+)
 
 request.json()
 ```
@@ -1688,7 +2221,7 @@ Esse recurso retorna uma lista de widgets de determinado nome filtrados por uma 
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/{name}/{market}/{year}-{month}-{day}`
+`GET http://api.livecapital.com/widgets/{name}/{market}/{year}-{month}-{day}/`
 
 ### Parâmetros de URL
 
@@ -1708,12 +2241,14 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /portfolios/{year}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/widgets/portfolios/{}'.format(year))
+request = requests.get(
+  'http://api.livecapital.com/widgets/portfolios/{}/'.format(year))
 
 request.json()
 ```
@@ -1727,7 +2262,7 @@ Esse recurso retorna uma lista de widgets portfolio filtrados por um ano.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/portfolios/{year}`
+`GET http://api.livecapital.com/widgets/portfolios/{year}/`
 
 ### Parâmetros de URL
 
@@ -1743,12 +2278,14 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /portfolios/{year}-{month}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/widgets/portfolios/{}-{}'.format(year, month))
+request = requests.get(
+  'http://api.livecapital.com/widgets/portfolios/{}-{}/'.format(year, month))
 
 request.json()
 ```
@@ -1762,7 +2299,7 @@ Esse recurso retorna uma lista de widgets portfolio filtrados por um mês e ano.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/portfolios/{year}-{month}`
+`GET http://api.livecapital.com/widgets/portfolios/{year}-{month}/`
 
 ### Parâmetros de URL
 
@@ -1779,12 +2316,14 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /portfolios/{year}-{month}-{day}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/portfolios/{}-{}-{}'.format(year, month, day))
+request = requests.get(
+  'http://api.livecapital.com/portfolios/{}-{}-{}/'.format(year, month, day))
 
 request.json()
 ```
@@ -1798,7 +2337,7 @@ Esse recurso retorna uma lista de widgets portfolio filtrados por uma data.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/portfolios/{year}-{month}-{day}`
+`GET http://api.livecapital.com/widgets/portfolios/{year}-{month}-{day}/`
 
 ### Parâmetros de URL
 
@@ -1816,12 +2355,14 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /capital-gain/{year}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/widgets/capital-gain/{}'.format(year))
+request = requests.get(
+  'http://api.livecapital.com/widgets/capital-gain/{}/'.format(year))
 
 request.json()
 ```
@@ -1835,7 +2376,7 @@ Esse recurso retorna uma lista de widgets capital-gain filtrados por um ano.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/wigets/capital-gain/{year}`
+`GET http://api.livecapital.com/wigets/capital-gain/{year}/`
 
 ### Parâmetros de URL
 
@@ -1851,12 +2392,14 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /capital-gain/{year}-{month}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/widgets/capital-gain/{}-{}'.format(year, month))
+request = requests.get(
+  'http://api.livecapital.com/widgets/capital-gain/{}-{}/'.format(year, month))
 
 request.json()
 ```
@@ -1870,7 +2413,7 @@ Esse recurso retorna uma lista de widgets capital-gain filtrados por um mês e a
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/capital-gain/{year}-{month}`
+`GET http://api.livecapital.com/widgets/capital-gain/{year}-{month}/`
 
 ### Parâmetros de URL
 
@@ -1887,12 +2430,16 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /capital-gain/{year}-{month}-{day}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/widgets/capital-gain/{}-{}-{}'.format(year, month, day))
+request = requests.get(
+  'http://api.livecapital.com/widgets/capital-gain/{}-{}-{}/'\
+  .format(year, month, day)
+)
 
 request.json()
 ```
@@ -1906,7 +2453,7 @@ Esse recurso retorna uma lista de widgets capital-gain filtrados por uma data.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/capital-gain/{year}-{month}-{day}`
+`GET http://api.livecapital.com/widgets/capital-gain/{year}-{month}-{day}/`
 
 ### Parâmetros de URL
 
@@ -1924,12 +2471,14 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /taxes/{year}
 
 ```python
 import requests
 
-request = requests('http://api.livecapital.com/widgets/taxes/{}'.format(year))
+request = requests(
+  'http://api.livecapital.com/widgets/taxes/{}/'.format(year))
 
 request.json()
 ```
@@ -1943,7 +2492,7 @@ Esse recurso retorna uma lista de widgets taxes filtrados por um ano.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/taxes/{year}`
+`GET http://api.livecapital.com/widgets/taxes/{year}/`
 
 ### Parâmetros de URL
 
@@ -1959,12 +2508,14 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /taxes/{year}-{month}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/widgets/taxes/{}-{}'.format(year, month))
+request = requests.get(
+  'http://api.livecapital.com/widgets/taxes/{}-{}/'.format(year, month))
 
 request.json()
 ```
@@ -1978,7 +2529,7 @@ Esse recurso retorna uma lista de widgets taxes filtrados por um mês e ano.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/taxes/{year}-{month}`
+`GET http://api.livecapital.com/widgets/taxes/{year}-{month}/`
 
 ### Parâmetros de URL
 
@@ -1995,12 +2546,15 @@ Parâmetro | Descrição
  |
  |
 
+
 ##GET /taxes/{year}-{month}-{day}
 
 ```python
 import requests
 
-request = requests.get('http://api.livecapital.com/widgets/taxes/{}-{}-{}'.format(year, month, day))
+request = requests.get('http://api.livecapital.com/widgets/taxes/{}-{}-{}/'\
+  .format(year, month, day)
+)
 
 request.json()
 ```
@@ -2014,7 +2568,7 @@ Esse recurso retorna uma lista de widgets taxes filtrados por uma data.
 
 ### HTTP Request
 
-`GET http://api.livecapital.com/widgets/taxes/{year}-{month}-{day}`
+`GET http://api.livecapital.com/widgets/taxes/{year}-{month}-{day}/`
 
 ### Parâmetros de URL
 
