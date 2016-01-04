@@ -111,7 +111,7 @@
 <h2 id="get-clients-menu">GET /clients/menu</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/menu'</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/menu/'</span><span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -125,7 +125,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/clients/menu</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/menu/</code></p>
 
 <h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
 
@@ -152,7 +152,8 @@
 <h2 id="get-accordions-name-year">GET /accordions/{name}/{year}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/accordions/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/clients/accordions/{}/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -166,7 +167,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/clients/accordions/{name}/{year}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/accordions/{name}/{year}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -211,7 +212,10 @@
 <h2 id="get-accordions-name-year-month">GET /accordions/{name}/{year}-{month}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/accordions/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/clients/accordions/{}/{}-{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -225,7 +229,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/clients/accordions/{name}/{year}-{month}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/accordions/{name}/{year}-{month}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -274,7 +278,8 @@
 <h2 id="get-operations-name-year">GET /operations/{name}/{year}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/operations/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/clients/operations/{}/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -288,7 +293,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/clients/operations/{name}/{year}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/operations/{name}/{year}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -333,7 +338,10 @@
 <h2 id="get-operations-name-year-month">GET /operations/{name}/{year}-{month}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/operations/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/clients/operations/{}/{}-{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -347,7 +355,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/clients/operations/{name}/{year}-{month}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/operations/{name}/{year}-{month}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -396,7 +404,8 @@
 <h2 id="get-portfolios-name-year">GET /portfolios/{name}/{year}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/portfolios/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/clients/portfolios/{}/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -410,7 +419,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/clients/portfolios/{name}/{year}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/portfolios/{name}/{year}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -455,7 +464,10 @@
 <h2 id="get-portfolios-name-year-month">GET /portfolios/{name}/{year}-{month}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/portfolios/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/clients/portfolios/{}/{}-{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -469,7 +481,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/clients/portfolios/{name}/{year}-{month}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/portfolios/{name}/{year}-{month}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -514,7 +526,8 @@
 <h2 id="get-returns-name-year">GET /returns/{name}/{year}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/returns/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/clients/returns/{}/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -528,7 +541,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/clients/returns/{name}/{year}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/returns/{name}/{year}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -573,7 +586,10 @@
 <h2 id="get-returns-name-year-month">GET /returns/{name}/{year}-{month}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/clients/returns/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/clients/returns/{}/{}-{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -587,7 +603,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/clients/returns/{name}/{year}-{month}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/clients/returns/{name}/{year}-{month}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -647,46 +663,46 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><a href="#get-official">/institutions/official</a></td>
+<td><a href="#get-institutions-official">/institutions/official</a></td>
 <td>GET</td>
 <td>Lista todas as instituinções oficiais</td>
 </tr>
 <tr>
-<td><a href="#get-official-id">/institutions/official/{id}</a></td>
+<td><a href="#get-institutions-official-id">/institutions/official/{id}</a></td>
 <td>GET</td>
 <td>Retorna uma instituição oficial específica</td>
 </tr>
 <tr>
-<td><a href="#get-custom">/institutions/custom</a></td>
+<td><a href="#get-institutions-custom">/institutions/custom</a></td>
 <td>GET</td>
 <td>Lista todas as instituições de um usuário autenticado</td>
 </tr>
 <tr>
-<td><a href="#post-custom">/institutions/custom</a></td>
+<td><a href="#post-institutions-custom">/institutions/custom</a></td>
 <td>POST</td>
 <td>Cria uma instituição para um usuário</td>
 </tr>
 <tr>
-<td><a href="#get-custom-id">/institutions/custom/{id}</a></td>
+<td><a href="#get-institutions-custom-id">/institutions/custom/{id}</a></td>
 <td>GET</td>
 <td>Retorna uma determinada instituição de um usuário</td>
 </tr>
 <tr>
-<td><a href="#put-custom-id">/institutions/custom/{id}</a></td>
+<td><a href="#put-institutions-custom-id">/institutions/custom/{id}</a></td>
 <td>PUT</td>
 <td>Altera dados de uma instituição</td>
 </tr>
 <tr>
-<td><a href="#delete-custom-id">/institutions/custom/{id}</a></td>
+<td><a href="#delete-institutions-custom-id">/institutions/custom/{id}</a></td>
 <td>DELETE</td>
 <td>Apaga uma instituição</td>
 </tr>
 </tbody></table>
 
-<h2 id="get-official">GET /official</h2>
+<h2 id="get-institutions-official">GET /institutions/official</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/official'</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/official/'</span><span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -727,7 +743,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/institutions/official</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/institutions/official/</code></p>
 
 <h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
 
@@ -747,14 +763,15 @@
 </tr>
 <tr>
 <td>category</td>
-<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
+<td>Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)</td>
 </tr>
 </tbody></table>
 
-<h2 id="get-official-id">GET /official/{id}</h2>
+<h2 id="get-institutions-official-id">GET /institutions/official/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/official/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/institutions/official/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -787,7 +804,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/institutions/official/{id}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/institutions/official/{id}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -861,7 +878,7 @@
 </tr>
 <tr>
 <td>category</td>
-<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
+<td>Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)</td>
 </tr>
 <tr>
 <td>person_type</td>
@@ -881,10 +898,11 @@
 </tr>
 </tbody></table>
 
-<h2 id="get-custom">GET /custom</h2>
+<h2 id="get-institutions-custom">GET /institutions/custom</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/users/{}/institutions/custom/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -1000,7 +1018,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/users/{username}/institutions/custom</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/users/{username}/institutions/custom/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -1104,7 +1122,7 @@
 </tr>
 <tr>
 <td>category</td>
-<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
+<td>Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)</td>
 </tr>
 <tr>
 <td>person_type</td>
@@ -1124,7 +1142,7 @@
 </tr>
 </tbody></table>
 
-<h2 id="post-custom">POST /custom</h2>
+<h2 id="post-institutions-custom">POST /institutions/custom</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
@@ -1134,8 +1152,10 @@
           <span class="s">"trading_accounts"</span><span class="p">:[]</span>
         <span class="p">}</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom'</span>\
-  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/users/{}/institutions/custom/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">),</span>
+  <span class="n">data</span><span class="o">=</span><span class="n">values</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -1192,7 +1212,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://api.livecapital.com/users/{username}/institutions/custom</code></p>
+<p><code class="prettyprint">POST http://api.livecapital.com/users/{username}/institutions/custom/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -1296,7 +1316,7 @@
 </tr>
 <tr>
 <td>category</td>
-<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
+<td>Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)</td>
 </tr>
 <tr>
 <td>person_type</td>
@@ -1316,10 +1336,13 @@
 </tr>
 </tbody></table>
 
-<h2 id="get-custom-id">GET /custom/{id}</h2>
+<h2 id="get-institutions-custom-id">GET /institutions/custom/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/users/{}/institutions/custom/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -1376,7 +1399,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/users/{username}/institutions/custom/{id}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/users/{username}/institutions/custom/{id}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -1484,7 +1507,7 @@
 </tr>
 <tr>
 <td>category</td>
-<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
+<td>Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)</td>
 </tr>
 <tr>
 <td>person_type</td>
@@ -1504,7 +1527,7 @@
 </tr>
 </tbody></table>
 
-<h2 id="put-custom-id">PUT /custom/{id}</h2>
+<h2 id="put-institutions-custom-id">PUT /institutions/custom/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
@@ -1514,7 +1537,8 @@
           <span class="s">"trading_accounts"</span><span class="p">:</span> <span class="p">[],</span>
         <span class="p">}</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/institutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/institutions/custom/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -1571,7 +1595,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">PUT http://api.livecapital.com/users/{username}/institutions/custom/{id}</code></p>
+<p><code class="prettyprint">PUT http://api.livecapital.com/users/{username}/institutions/custom/{id}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -1679,7 +1703,7 @@
 </tr>
 <tr>
 <td>category</td>
-<td>Tipo de instituição. Existem apenas as categorias &ldquo;BROKER&rdquo; e &ldquo;AUTONOMOUS_AGENT&rdquo;.</td>
+<td>Categoria da institutição. Podendo ser seguradora (BROKER), ou agente autonomo (AUTONOMOUS_AGENT)</td>
 </tr>
 <tr>
 <td>person_type</td>
@@ -1699,17 +1723,20 @@
 </tr>
 </tbody></table>
 
-<h2 id="delete-custom-id">DELETE /custom/{id}</h2>
+<h2 id="delete-institutions-custom-id">DELETE /institutions/custom/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'http://api.livecapital.com/users/{}instittutions/custom/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/users/{}/institutions/custom/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
+<span class="p">)</span>
 </code></pre>
 
 <p>Este recurso apaga uma determinada instituição de um usuário autenticado.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">DELETE http://api.livecapital.com/users/{username}/institutions/custom/{id}</code></p>
+<p><code class="prettyprint">DELETE http://api.livecapital.com/users/{username}/institutions/custom/{id}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -1757,7 +1784,8 @@
 <h2 id="get-year-month-reports">GET /{year}-{month}/reports</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/darf/{}-{}/reports'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/darf/{}-{}/reports/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -1771,7 +1799,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/darf/{year}-{month}/reports</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/darf/{year}-{month}/reports/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -1816,7 +1844,8 @@
 <h2 id="get-year-month-print">GET /{year}-{month}/print</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/darf/{}-{}/print'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/darf/{}-{}/print/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -1830,7 +1859,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/darf/{year}-{month}/print</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/darf/{year}-{month}/print/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -1886,81 +1915,92 @@
 </tr>
 </thead><tbody>
 <tr>
-<td><a href="#get-trading-account">/bovespa/trading-account</a></td>
+<td><a href="#get-bovespa-custom-institution-trading-accounts">/bovespa/{custom-institution}/trading-accounts</a></td>
 <td>GET</td>
-<td>Lista todas as contas de um usuário autenticado</td>
+<td>Lista todas as contas de Bovespa de uma determinada instituição de um usuário autenticado</td>
 </tr>
 <tr>
-<td><a href="#post-trading-account">/bovespa/trading-account</a></td>
+<td><a href="#post-bovespa-custom-institution-trading-accounts">/bovespa/{custom-institution}/trading-accounts</a></td>
 <td>POST</td>
-<td>Cria uma conta de Bovesta para um usuário autenticado</td>
+<td>Cria uma conta de Bovespa para uma instituição de um usuário autenticado</td>
 </tr>
 <tr>
-<td><a href="#get-trading-account-id">/bovespa/trading-account/{id}</a></td>
+<td><a href="#get-bovespa-custom-institution-trading-accounts-id">/bovespa/{custom-institution}/trading-accounts/{id}</a></td>
 <td>GET</td>
-<td>Exibe os dados de uma conta</td>
+<td>Exibe os dados de uma conta Bovespa</td>
 </tr>
 <tr>
-<td><a href="#get-assets">/bovespa/assets</a></td>
+<td><a href="#put-bovespa-custom-institution-trading-accounts-id">/bovespa/{custom-institution}/trading-accounts/{id}</a></td>
+<td>PUT</td>
+<td>Altera os dados de uma conta Bovespa</td>
+</tr>
+<tr>
+<td><a href="#delete-bovespa-custom-institution-trading-accounts-id">/bovespa/{custom-institution}/trading-accounts/{id}</a></td>
+<td>DELETE</td>
+<td>Apaga uma conta Bovespa</td>
+</tr>
+<tr>
+<td><a href="#get-bovespa-assets">/bovespa/assets</a></td>
 <td>GET</td>
 <td>Retorna uma lista de ativos</td>
 </tr>
 <tr>
-<td><a href="#post-brokerage-notes">/bovespa/brokerage-notes</a></td>
+<td><a href="#post-bovespa-brokerage-notes">/bovespa/brokerage-notes</a></td>
 <td>POST</td>
 <td>Cria uma nota de corretagem</td>
 </tr>
 <tr>
-<td><a href="#get-brokerage-notes-id">/bovespa/brokerage-notes/{id}</a></td>
+<td><a href="#get-bovespa-brokerage-notes-id">/bovespa/brokerage-notes/{id}</a></td>
 <td>GET</td>
 <td>Exibe dados da nota de corretagem</td>
 </tr>
 <tr>
-<td><a href="#put-brokerage-notes-id">/bovespa/brokerage-notes/{id}</a></td>
+<td><a href="#put-bovespa-brokerage-notes-id">/bovespa/brokerage-notes/{id}</a></td>
 <td>PUT</td>
 <td>Altera dados da nota de corretagem</td>
 </tr>
 <tr>
-<td><a href="#delete-brokerage-notes-id">/bovespa/brokerage-notes/{id}</a></td>
+<td><a href="#delete-bovespa-brokerage-notes-id">/bovespa/brokerage-notes/{id}</a></td>
 <td>DELETE</td>
 <td>Apaga uma nota de corretagem</td>
 </tr>
 <tr>
-<td><a href="#get-positions-date-terms">/bovespa/positions/{date}/terms</a></td>
+<td><a href="#get-bovespa-positions-date-terms">/bovespa/positions/{date}/terms</a></td>
 <td>GET</td>
 <td>Retorna a posição da conta na data informada apenas por termos</td>
 </tr>
 <tr>
-<td><a href="#get-positions-date-non-terms">/bovespa/positions/{date}/non-terms</a></td>
+<td><a href="#get-bovespa-positions-date-non-terms">/bovespa/positions/{date}/non-terms</a></td>
 <td>GET</td>
 <td>Retorna a posição da conta na data informada sem termos</td>
 </tr>
 <tr>
-<td><a href="#get-events-trading-account-date">/bovespa/events/{trading-account}/{date}</a></td>
+<td><a href="#get-bovespa-events-trading-account-date">/bovespa/events/{trading-account}/{date}</a></td>
 <td>GET</td>
 <td>Lista todos os eventos de uma conta filtrados por data</td>
 </tr>
 <tr>
-<td><a href="#get-event-type-id">/bovespa/{event-type}/{id}</a></td>
+<td><a href="#get-bovespa-event-type-id">/bovespa/{event-type}/{id}</a></td>
 <td>GET</td>
 <td>Exibe dados de um evento</td>
 </tr>
 <tr>
-<td><a href="#put-event-type-id">/bovespa/{event-type}/{id}</a></td>
+<td><a href="#put-bovespa-event-type-id">/bovespa/{event-type}/{id}</a></td>
 <td>PUT</td>
 <td>Altera dados de um evento</td>
 </tr>
 <tr>
-<td><a href="#delete-event-type-id">/bovespa/{event-type}/{id}</a></td>
+<td><a href="#delete-bovespa-event-type-id">/bovespa/{event-type}/{id}</a></td>
 <td>DELETE</td>
 <td>Apaga um evento</td>
 </tr>
 </tbody></table>
 
-<h2 id="get-trading-account">GET /trading-account</h2>
+<h2 id="get-bovespa-custom-institution-trading-accounts">GET /bovespa/{custom-institution}/trading-accounts</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account'</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/{}/trading-accounts/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -1968,97 +2008,42 @@
 <blockquote>
 <p>Essa requisição irá retornar um JSON como este:</p>
 </blockquote>
-<pre class="highlight json"><code></code></pre>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STOCK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04678321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17263580"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bovespa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STOCK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00385230"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bov"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STOCK"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00573283"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Itau"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"05830151"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Global bovespa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
 
-<p>Esse recurso lista todas as contas de um usuário autenticado.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/trading-account</code></p>
-
-<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
-
-<table><thead>
-<tr>
-<th>Parâmetro</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-
-<h2 id="post-trading-account">POST /trading-account</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">values</span> <span class="o">=</span> <span class="p">{}</span>
-
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
-
-<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-</code></pre>
-
-<blockquote>
-<p>Essa requisição irá retornar um JSON como este:</p>
-</blockquote>
-<pre class="highlight json"><code></code></pre>
-
-<p>Esse recurso cria uma conta Bovespa para um usuário autenticado.</p>
+<p>Esse recurso lista todas as contas de Bovespa de um usuário autenticado.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://api.livecapital.com/bovespa/trading-account</code></p>
-
-<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
-
-<table><thead>
-<tr>
-<th>Parâmetro</th>
-<th>Descrição</th>
-</tr>
-</thead><tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-
-<h2 id="get-trading-account-id">GET /trading-account/{id}</h2>
-<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
-
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/trading-account/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
-
-<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-</code></pre>
-
-<blockquote>
-<p>Essa requisição irá retornar um JSON como este:</p>
-</blockquote>
-<pre class="highlight json"><code></code></pre>
-
-<p>Esse recurso retorna dados de uma conta bovespa.</p>
-
-<h3 id="http-request">HTTP Request</h3>
-
-<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/trading-account/{id}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/{custom-institution}/trading-accounts/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2068,6 +2053,180 @@
 <th>Descrição</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta de Bovespa</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre Bovespa(STOCK), pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>linked_account_identifier</td>
+<td>Número identificador de uma conta corrente associada</td>
+</tr>
+<tr>
+<td>linked_account_name</td>
+<td>Nome de uma conta corrente associada</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+<tr>
+<td>linked_account</td>
+<td>Id da uma conta corrente associada</td>
+</tr>
+</tbody></table>
+
+<h2 id="post-bovespa-custom-institution-trading-accounts">POST /bovespa/{custom-institution}/trading-accounts</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">"name"</span><span class="p">:</span> <span class="s">"Bovespa"</span><span class="p">,</span>
+  <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"09343260"</span><span class="p">,</span>
+  <span class="s">"linked_account"</span><span class="p">:</span> <span class="mi">4</span>
+<span class="p">}</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/{}/trading-accounts/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">),</span>
+  <span class="n">json</span><span class="o">=</span><span class="n">values</span>
+<span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STOCK"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04678321"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09343260"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bovespa"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso cria uma conta Bovespa para um usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://api.livecapital.com/bovespa/{custom-institution}/trading-accounts/</code></p>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta de Bovespa</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre Bovespa(STOCK), pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>linked_account_identifier</td>
+<td>Número identificador de uma conta corrente associada</td>
+</tr>
+<tr>
+<td>linked_account_name</td>
+<td>Nome de uma conta corrente associada</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+<tr>
+<td>linked_account</td>
+<td>Id da uma conta corrente associada</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-bovespa-custom-institution-trading-accounts-id">GET /bovespa/{custom-institution}/trading-accounts/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/{}/trading-accounts/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STOCK"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04678321"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"09343260"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bovespa"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso retorna dados de uma determinada conta bovespa.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/{custom-institution}/trading-accounts/{id}/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
 <tr>
 <td>id</td>
 <td>Id de uma conta</td>
@@ -2083,23 +2242,163 @@
 </tr>
 </thead><tbody>
 <tr>
-<td></td>
-<td></td>
+<td>id</td>
+<td>Id da conta de Bovespa</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre Bovespa(STOCK), pois não pode ser alterado</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>linked_account_identifier</td>
+<td>Número identificador de uma conta corrente associada</td>
+</tr>
+<tr>
+<td>linked_account_name</td>
+<td>Nome de uma conta corrente associada</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+<tr>
+<td>linked_account</td>
+<td>Id da uma conta corrente associada</td>
 </tr>
 </tbody></table>
 
-<h2 id="get-assets">GET /assets</h2>
+<h2 id="put-bovespa-custom-institution-trading-accounts-id">PUT /bovespa/{custom-institution}/trading-accounts/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/assets'</span><span class="p">)</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="s">"name"</span><span class="p">:</span> <span class="s">"Global Bov"</span><span class="p">,</span>
+          <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"00347501"</span><span class="p">,</span>
+          <span class="s">"linked_account"</span><span class="p">:</span> <span class="mi">40</span>
+        <span class="p">}</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/trading-accounts/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"STOCK"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00573283"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Itau"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00347501"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Global Bov"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso retorna dados de uma determinada conta bovespa.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PUT http://api.livecapital.com/bovespa/{custom-institution}/trading-accounts/{id}/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma conta</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta de Bovespa</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre Bovespa(STOCK), pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>linked_account_identifier</td>
+<td>Número identificador de uma conta corrente associada</td>
+</tr>
+<tr>
+<td>linked_account_name</td>
+<td>Nome de uma conta corrente associada</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+<tr>
+<td>linked_account</td>
+<td>Id da uma conta corrente associada</td>
+</tr>
+</tbody></table>
+
+<h2 id="delete-bovespa-custom-institution-trading-accounts-id">DELETE /bovespa/{custom-institution}/trading-accounts/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/trading-accounts/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<p>Este recurso apaga uma determinada conta bovespa de uma instituição de um usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">DELETE http://api.livecapital.com/bovespa/{custom-institution}/trading-accounts/{id}/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma conta bovespa</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-bovespa-assets">GET /bovespa/assets</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/assets/'</span><span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2113,7 +2412,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/assets</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/assets/</code></p>
 
 <h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
 
@@ -2137,12 +2436,13 @@
 </tr>
 </tbody></table>
 
-<h2 id="post-brokerage-notes">POST /brokerage-notes</h2>
+<h2 id="post-bovespa-brokerage-notes">POST /bovespa/brokerage-notes</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">values</span> <span class="o">=</span> <span class="p">{}</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2156,7 +2456,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">POST http://api.livecapital.com/bovespa/brokerage-notes</code></p>
+<p><code class="prettyprint">POST http://api.livecapital.com/bovespa/brokerage-notes/</code></p>
 
 <h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
 
@@ -2180,10 +2480,11 @@
 </tr>
 </tbody></table>
 
-<h2 id="get-brokerage-notes-id">GET /brokerage-notes/{id}</h2>
+<h2 id="get-bovespa-brokerage-notes-id">GET /bovespa/brokerage-notes/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2197,7 +2498,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/brokerage-notes/{id}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/brokerage-notes/{id}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2235,12 +2536,15 @@
 </tr>
 </tbody></table>
 
-<h2 id="put-brokerage-notes-id">PUT /brokerage-notes/{id}</h2>
+<h2 id="put-bovespa-brokerage-notes-id">PUT /bovespa/brokerage-notes/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">values</span> <span class="o">=</span> <span class="p">{}</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/brokerage-notes/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">),</span>
+  <span class="n">json</span><span class="o">=</span><span class="n">values</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2254,7 +2558,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">PUT http://api.livecapital.com/bovespa/brokerage-notes/{id}</code></p>
+<p><code class="prettyprint">PUT http://api.livecapital.com/bovespa/brokerage-notes/{id}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2292,17 +2596,18 @@
 </tr>
 </tbody></table>
 
-<h2 id="delete-brokerage-notes-id">DELETE /brokerage-notes/{id}</h2>
+<h2 id="delete-bovespa-brokerage-notes-id">DELETE /bovespa/brokerage-notes/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/brokerege-notes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/brokerege-notes/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
 </code></pre>
 
 <p>Esse recurso apaga uma nota de corretagem.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">DELETE http://api.livecapital.com/bovespa/brokerage-notes/{id}</code></p>
+<p><code class="prettyprint">DELETE http://api.livecapital.com/bovespa/brokerage-notes/{id}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2340,10 +2645,11 @@
 </tr>
 </tbody></table>
 
-<h2 id="get-positions-date-terms">GET /positions/{date}/terms</h2>
+<h2 id="get-bovespa-positions-date-terms">GET /bovespa/positions/{date}/terms</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/positions/{}/terms'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/positions/{}/terms/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span>
 </code></pre>
@@ -2357,7 +2663,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/positions/{date}/terms</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/positions/{date}/terms/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2395,10 +2701,11 @@
 </tr>
 </tbody></table>
 
-<h2 id="get-positions-date-non-terms">GET /positions/{date}/non-terms</h2>
+<h2 id="get-bovespa-positions-date-non-terms">GET /bovespa/positions/{date}/non-terms</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/positions/{}/non-terms'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/positions/{}/non-terms/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">date</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2412,7 +2719,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/positions/{date}/non-terms</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/positions/{date}/non-terms/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2450,10 +2757,12 @@
 </tr>
 </tbody></table>
 
-<h2 id="get-events-trading-account-date">GET /events/{trading-account}/{date}</h2>
+<h2 id="get-bovespa-events-trading-account-date">GET /bovespa/events/{trading-account}/{date}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/events/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trading</span><span class="o">-</span><span class="n">account</span><span class="p">,</span> <span class="n">date</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/events/{}/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">trading</span><span class="o">-</span><span class="n">account</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2467,7 +2776,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/events/{trading-account}/{date}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/events/{trading-account}/{date}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2505,10 +2814,11 @@
 </tr>
 </tbody></table>
 
-<h2 id="get-event-type-id">GET /{event-type}/{id}</h2>
+<h2 id="get-bovespa-event-type-id">GET /bovespa/{event-type}/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/{}/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2522,7 +2832,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/{event-type}/{id}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/bovespa/{event-type}/{id}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2564,12 +2874,14 @@
 </tr>
 </tbody></table>
 
-<h2 id="put-event-type-id">PUT /{event-type}/{id}</h2>
+<h2 id="put-bovespa-event-type-id">PUT /bovespa/{event-type}/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">values</span> <span class="o">=</span> <span class="p">{}</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">),</span> <span class="n">data</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="o">-</span><span class="nb">type</span><span class="p">,</span> <span class="nb">id</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">values</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2583,7 +2895,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">PUT http://api.livecapital.com/bovespa/{event-type}/{id}</code></p>
+<p><code class="prettyprint">PUT http://api.livecapital.com/bovespa/{event-type}/{id}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2625,10 +2937,11 @@
 </tr>
 </tbody></table>
 
-<h2 id="delete-event-type-id">DELETE /{event-type}/{id}</h2>
+<h2 id="delete-bovespa-event-type-id">DELETE /bovespa/{event-type}/{id}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/bovespa/{}/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event_type</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
 </code></pre>
 
 <blockquote>
@@ -2640,7 +2953,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">DELETE http://api.livecapital.com/bovespa/{event-type}/{id}</code></p>
+<p><code class="prettyprint">DELETE http://api.livecapital.com/bovespa/{event-type}/{id}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2681,6 +2994,447 @@
 <td></td>
 </tr>
 </tbody></table>
+
+<h1 id="btc">BTC</h1>
+
+<h2 id="recursos">Recursos</h2>
+
+<p>Esses são todos os recursos de BTC disponíveis.</p>
+
+<table><thead>
+<tr>
+<th>Recurso</th>
+<th>Método</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#get-btc-custom-institution-trading-accounts">/btc/{custom-institution}/trading-accounts</a></td>
+<td>GET</td>
+<td>Lista todas as contas de BTC de uma determinada instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td><a href="#post-btc-custom-institution-trading-accounts">/btc/{custom-institution}/trading-accounts</a></td>
+<td>POST</td>
+<td>Cria uma conta de BTC para uma instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td><a href="#get-btc-custom-institution-trading-accounts-id">/btc/{custom-institution}/trading-accounts/{id}</a></td>
+<td>GET</td>
+<td>Exibe os dados de uma conta BTC</td>
+</tr>
+<tr>
+<td><a href="#put-btc-custom-institution-trading-accounts-id">/btc/{custom-institution}/trading-accounts/{id}</a></td>
+<td>PUT</td>
+<td>Altera os dados de uma conta BTC</td>
+</tr>
+<tr>
+<td><a href="#delete-btc-custom-institution-trading-accounts-id">/btc/{custom-institution}/trading-accounts/{id}</a></td>
+<td>DELETE</td>
+<td>Apaga uma conta BTC</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-btc-custom-institution-trading-accounts">GET /btc/{custom-institution}/trading-accounts</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/btc/{}/trading-accounts/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">))</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17263580"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bovespa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17263580"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Btc"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00762301"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nova btc"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"05830151"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Global bovespa"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08845900"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Global btc"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso lista todas as contas de BTC de um usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/btc/{custom-institution}/trading-accounts/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta de BTC</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre BTC, pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>linked_account_identifier</td>
+<td>Número identificador de uma conta bovespa associada</td>
+</tr>
+<tr>
+<td>linked_account_name</td>
+<td>Nome de uma conta bovespa associada</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+<tr>
+<td>linked_account</td>
+<td>Id da uma conta bovespa associada</td>
+</tr>
+</tbody></table>
+
+<h2 id="post-btc-custom-institution-trading-accounts">POST /btc/{custom-institution}/trading-accounts</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">"name"</span><span class="p">:</span> <span class="s">"btc"</span><span class="p">,</span>
+  <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"09343260"</span><span class="p">,</span>
+  <span class="s">"linked_account"</span><span class="p">:</span> <span class="mi">4</span>
+<span class="p">}</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/btc/{}/trading-accounts/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">),</span>
+  <span class="n">json</span><span class="o">=</span><span class="n">values</span>
+<span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17263580"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bovespa"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17263580"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Btc"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso cria uma conta BTC para um usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://api.livecapital.com/btc/{custom-institution}/trading-accounts/</code></p>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta de BTC</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre BTC, pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>linked_account_identifier</td>
+<td>Número identificador de uma conta bovespa associada</td>
+</tr>
+<tr>
+<td>linked_account_name</td>
+<td>Nome de uma conta bovespa associada</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+<tr>
+<td>linked_account</td>
+<td>Id da uma conta bovespa associada</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-btc-custom-institution-trading-accounts-id">GET /btc/{custom-institution}/trading-accounts/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/btc/{}/trading-accounts/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17263580"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bovespa"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17263580"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Btc"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso retorna dados de uma determinada conta btc.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/btc/{custom-institution}/trading-accounts/{id}/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma conta</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta de BTC</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre BTC, pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>linked_account_identifier</td>
+<td>Número identificador de uma conta bovespa associada</td>
+</tr>
+<tr>
+<td>linked_account_name</td>
+<td>Nome de uma conta bovespa associada</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+<tr>
+<td>linked_account</td>
+<td>Id da uma conta bovespa associada</td>
+</tr>
+</tbody></table>
+
+<h2 id="put-btc-custom-institution-trading-accounts-id">PUT /btc/{custom-institution}/trading-accounts/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
+          <span class="s">"name"</span><span class="p">:</span> <span class="s">"Global btc"</span><span class="p">,</span>
+          <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"12398500"</span><span class="p">,</span>
+          <span class="s">"linked_account"</span><span class="p">:</span> <span class="mi">3</span>
+        <span class="p">}</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/btc/{}/trading-accounts/{id}'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BTC"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00573283"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Itau"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12398500"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Global btc"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"linked_account"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso retorna dados de uma determinada conta btc.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PUT http://api.livecapital.com/btc/{custom-institution}/trading-accounts/{id}/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma conta</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta de BTC</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre BTC, pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>linked_account_identifier</td>
+<td>Número identificador de uma conta bovespa associada</td>
+</tr>
+<tr>
+<td>linked_account_name</td>
+<td>Nome de uma conta bovespa associada</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+<tr>
+<td>linked_account</td>
+<td>Id da uma conta bovespa associada</td>
+</tr>
+</tbody></table>
+
+<h2 id="delete-btc-custom-institution-trading-accounts-id">DELETE /btc/{custom-institution}/trading-accounts/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'http://api.livecapital.com/btc/{}/trading-accounts/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<p>Este recurso apaga uma determinada conta btc de uma instituição de um usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">DELETE http://api.livecapital.com/btc/{custom-institution}/trading-accounts/{id}/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma conta bovespa</td>
+</tr>
+</tbody></table>
+
+<h1 id="conta-corrente">Conta Corrente</h1>
 
 <h1 id="widgets">Widgets</h1>
 
@@ -2760,7 +3514,8 @@
 <h2 id="get-name-market-year">GET /{name}/{market}/{year}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/widgets/{}/{}/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2774,7 +3529,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/{name}/{market}/{year}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/{name}/{market}/{year}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2823,7 +3578,9 @@
 <h2 id="get-name-market-year-month">GET /{name}/{market}/{year}-{month}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}-{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2837,7 +3594,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/{name}/{market}/{year}-{month}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/{name}/{market}/{year}-{month}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2890,7 +3647,9 @@
 <h2 id="get-name-market-year-month-day">GET /{name}/{market}/{year}-{month}-{day}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/{}/{}/{}-{}-{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">market</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2904,7 +3663,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/{name}/{market}/{year}-{month}-{day}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/{name}/{market}/{year}-{month}-{day}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -2961,7 +3720,8 @@
 <h2 id="get-portfolios-year">GET /portfolios/{year}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/portfolios/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/widgets/portfolios/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2975,7 +3735,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/portfolios/{year}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/portfolios/{year}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -3016,7 +3776,8 @@
 <h2 id="get-portfolios-year-month">GET /portfolios/{year}-{month}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/portfolios/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/widgets/portfolios/{}-{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -3030,7 +3791,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/portfolios/{year}-{month}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/portfolios/{year}-{month}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -3075,7 +3836,8 @@
 <h2 id="get-portfolios-year-month-day">GET /portfolios/{year}-{month}-{day}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/portfolios/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/portfolios/{}-{}-{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -3089,7 +3851,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/portfolios/{year}-{month}-{day}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/portfolios/{year}-{month}-{day}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -3138,7 +3900,8 @@
 <h2 id="get-capital-gain-year">GET /capital-gain/{year}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/widgets/capital-gain/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -3152,7 +3915,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/wigets/capital-gain/{year}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/wigets/capital-gain/{year}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -3193,7 +3956,8 @@
 <h2 id="get-capital-gain-year-month">GET /capital-gain/{year}-{month}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/widgets/capital-gain/{}-{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -3207,7 +3971,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/capital-gain/{year}-{month}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/capital-gain/{year}-{month}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -3252,7 +4016,10 @@
 <h2 id="get-capital-gain-year-month-day">GET /capital-gain/{year}-{month}-{day}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/capital-gain/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/widgets/capital-gain/{}-{}-{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -3266,7 +4033,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/capital-gain/{year}-{month}-{day}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/capital-gain/{year}-{month}-{day}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -3315,7 +4082,8 @@
 <h2 id="get-taxes-year">GET /taxes/{year}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/widgets/taxes/{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -3329,7 +4097,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/taxes/{year}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/taxes/{year}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -3370,7 +4138,8 @@
 <h2 id="get-taxes-year-month">GET /taxes/{year}-{month}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/widgets/taxes/{}-{}/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -3384,7 +4153,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/taxes/{year}-{month}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/taxes/{year}-{month}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
@@ -3429,7 +4198,9 @@
 <h2 id="get-taxes-year-month-day">GET /taxes/{year}-{month}-{day}</h2>
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}-{}-{}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">))</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'http://api.livecapital.com/widgets/taxes/{}-{}-{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+<span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -3443,7 +4214,7 @@
 
 <h3 id="http-request">HTTP Request</h3>
 
-<p><code class="prettyprint">GET http://api.livecapital.com/widgets/taxes/{year}-{month}-{day}</code></p>
+<p><code class="prettyprint">GET http://api.livecapital.com/widgets/taxes/{year}-{month}-{day}/</code></p>
 
 <h3 id="parâmetros-de-url">Parâmetros de URL</h3>
 
