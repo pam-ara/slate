@@ -490,7 +490,7 @@ request.json()
 }
 ```
 
-Esse recurso retorna uma instituição específica.
+Esse recurso retorna dados de uma determinada instituição.
 
 ### HTTP Request
 
@@ -774,7 +774,7 @@ Parâmetro | Descrição
 --------- | ---------
 id | Id da instituição do usuário
 broker | Instutição do tipo BROKER
-autonomous_agent | Instutição do tipo AUUTONOMOUS_AGENT
+autonomous_agent | Instutição do tipo "AUTONOMOUS_AGENT
 trading_accounts | Contas relacioandas a instituição
 name | Nome da instutuição do usuário
 
@@ -1204,7 +1204,7 @@ request.json()
 ]
 ```
 
-Esse recurso lista todas as contas de Bovespa de um usuário autenticado.
+Esse recurso lista todas as contas de Bovespa de uma instituição de um usuário autenticado.
 
 ### HTTP Request
 
@@ -1262,7 +1262,7 @@ request.json()
 }
 ```
 
-Esse recurso cria uma conta Bovespa para um usuário autenticado.
+Esse recurso cria uma conta Bovespa para uma instituição de um usuário autenticado.
 
 ### HTTP Request
 
@@ -1349,8 +1349,8 @@ values = {
           "linked_account": 40
         }
 
-request = requests.put('http://api.livecapital.com/bovespa/{}/trading-accounts/'\
-  .format(custom_institution), json=values)
+request = requests.put('http://api.livecapital.com/bovespa/{}/trading-accounts/{}/'\
+  .format(custom_institution, id), json=values)
 
 request.json()
 ```
@@ -1369,7 +1369,7 @@ request.json()
 }
 ```
 
-Esse recurso retorna dados de uma determinada conta bovespa.
+Esse recurso altera dados de uma determinada conta bovespa.
 
 ### HTTP Request
 
@@ -1406,7 +1406,7 @@ request = requests.delete('http://api.livecapital.com/bovespa/{}/trading-account
 request.json()
 ```
 
-Este recurso apaga uma determinada conta bovespa de uma instituição de um usuário autenticado.
+Este recurso apaga uma determinada conta bovespa.
 
 ### HTTP Request
 
@@ -1879,7 +1879,7 @@ request.json()
 ]
 ```
 
-Esse recurso lista todas as contas de BTC de um usuário autenticado.
+Esse recurso lista todas as contas de BTC de uma instituição de um usuário autenticado.
 
 ### HTTP Request
 
@@ -1910,9 +1910,9 @@ linked_account | Id da uma conta bovespa associada
 import requests
 
 values = {
-  "name": "btc",
-  "identifier": "09343260",
-  "linked_account": 4
+  "name": "Btc",
+  "identifier": "17263580",
+  "linked_account": 1
 }
 
 request = requests.post(
@@ -1937,7 +1937,7 @@ request.json()
 }
 ```
 
-Esse recurso cria uma conta BTC para um usuário autenticado.
+Esse recurso cria uma conta BTC para uma instituição de um usuário autenticado.
 
 ### HTTP Request
 
@@ -2024,7 +2024,7 @@ values = {
           "linked_account": 3
         }
 
-request = requests.put('http://api.livecapital.com/btc/{}/trading-accounts/{id}'\
+request = requests.put('http://api.livecapital.com/btc/{}/trading-accounts/{id}/'\
   .format(custom_institution), json=values)
 
 request.json()
@@ -2081,7 +2081,7 @@ request = requests.delete('http://api.livecapital.com/btc/{}/trading-accounts/{}
 request.json()
 ```
 
-Este recurso apaga uma determinada conta btc de uma instituição de um usuário autenticado.
+Este recurso apaga uma determinada conta btc.
 
 ### HTTP Request
 
@@ -2097,6 +2097,250 @@ id | Id de uma conta bovespa
 
 
 #Conta Corrente
+
+##Recursos
+
+Esses são todos os recursos de BTC disponíveis.
+
+Recurso | Método | Descrição
+------- | ------ | ---------
+[/checking-account/{custom-institution}/trading-accounts](#get-checking-account-custom-institution-trading-accounts) | GET | Lista todas as contas correntes de uma determinada instituição de um usuário autenticado
+[/checking-account/{custom-institution}/trading-accounts](#post-checking-account-custom-institution-trading-accounts) | POST | Cria uma conta corrente para uma instituição de um usuário autenticado
+[/checking-account/{custom-institution}/trading-accounts/{id}](#get-checking-account-custom-institution-trading-accounts-id) | GET | Exibe os dados de uma conta corrente
+[/checking-account/{custom-institution}/trading-accounts/{id}](#put-checking-account-custom-institution-trading-accounts-id) | PUT | Altera os dados de uma conta corrente
+[/checking-account/{custom-institution}/trading-accounts/{id}](#delete-checking-account-custom-institution-trading-accounts-id) | DELETE | Apaga uma conta corrente
+
+
+##GET /checking-account/{custom-institution}/trading-accounts
+
+```python
+import requests
+
+request = requests.get(
+  'http://api.livecapital.com/checking-account/{}/trading-accounts/'.format(custom_institution))
+
+request.json()
+```
+
+> Essa requisição irá retornar um JSON como este:
+
+```json
+[
+  {
+    "id": 40,
+    "account_type": "CHECKING_ACCOUNT",
+    "identifier": "00573283",
+    "name": "Itau"
+  },
+  {
+    "id": 4,
+    "account_type": "CHECKING_ACCOUNT",
+    "identifier": "04678321",
+    "name": "HSBC"
+  },
+  {
+    "id": 3,
+    "account_type": "CHECKING_ACCOUNT",
+    "identifier": "17643301",
+    "name": "Bradesco"
+  }
+]
+```
+
+Esse recurso lista todas as contas corrente de uma instituição de um usuário autenticado.
+
+### HTTP Request
+
+`GET http://api.livecapital.com/checking-account/{custom-institution}/trading-accounts/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da conta corrente
+account_type | Tipo da conta. Será sempre conta corrente(CHECKING_ACCOUNT), pois não pode ser alterado
+identifier | Número identificador da conta
+name | Nome da conta
+
+
+##POST /checking-account/{custom-institution}/trading-accounts
+
+```python
+import requests
+
+values = {
+  "name": "Santander",
+  "identifier": "00345234"
+}
+
+request = requests.post(
+  'http://api.livecapital.com/checking-account/{}/trading-accounts/'\
+  .format(custom_institution), json=values)
+
+request.json()
+```
+
+> Essa requisição irá retornar um JSON como este:
+
+```json
+{
+  "id": 7,
+  "account_type": "CHECKING_ACCOUNT",
+  "identifier": "00345234",
+  "name": "Santander"
+}
+```
+
+Esse recurso cria uma conta corrente para uma instituição de um usuário autenticado.
+
+### HTTP Request
+
+`POST http://api.livecapital.com/checking-account/{custom-institution}/trading-accounts/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da conta corrente
+account_type | Tipo da conta. Será sempre conta corrente(CHECKING_ACCOUNT), pois não pode ser alterado
+identifier | Número identificador da conta
+name | Nome da conta
+
+
+##GET /checking-account/{custom-institution}/trading-accounts/{id}
+
+```python
+import requests
+
+request = requests.get(
+  'http://api.livecapital.com/checking-account/{}/trading-accounts/{}/'\
+  .format(custom_institution, id))
+
+request.json()
+```
+
+> Essa requisição irá retornar um JSON como este:
+
+```json
+{
+  "id": 7,
+  "account_type": "CHECKING_ACCOUNT",
+  "identifier": "00345234",
+  "name": "Santander"
+}
+```
+
+Esse recurso retorna dados de uma conta corrente.
+
+### HTTP Request
+
+`GET http://api.livecapital.com/checking-account/{custom-institution}/trading-accounts/{id}/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+id | Id de uma conta
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da conta corrente
+account_type | Tipo da conta. Será sempre conta corrente(CHECKING_ACCOUNT), pois não pode ser alterado
+identifier | Número identificador da conta
+name | Nome da conta
+
+
+##PUT /checking-account/{custom-institution}/trading-accounts/{id}
+
+```python
+import requests
+
+values = {
+  "name": "Safra",
+  "identifier": "00873451"
+}
+
+request = requests.put(
+  'http://api.livecapital.com/checking-account/{}/trading-accounts/{}/'\
+  .format(custom_institution, id), json=values)
+
+request.json()
+```
+
+> Essa requisição irá retornar um JSON como este:
+
+```json
+{
+  "id": 7,
+  "account_type": "CHECKING_ACCOUNT",
+  "identifier": "00873451",
+  "name": "Safra"
+}
+```
+
+Esse recurso altera dados de uma conta corrente.
+
+### HTTP Request
+
+`PUT http://api.livecapital.com/checking-account/{custom-institution}/trading-accounts/{id}/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+id | Id de uma conta
+
+### Parâmetros de resposta
+
+Parâmetro | Descrição
+--------- | ---------
+id | Id da conta corrente
+account_type | Tipo da conta. Será sempre conta corrente(CHECKING_ACCOUNT), pois não pode ser alterado
+identifier | Número identificador da conta
+name | Nome da conta
+
+
+##DELETE /checking-account/{custom-institution}/trading-accounts/{id}
+
+```python
+import requests
+
+request = requests.delete('http://api.livecapital.com/checking-account/{}/trading-accounts/{}/'\
+  .format(custom_institution, id))
+
+request.json()
+```
+
+Este recurso apaga uma determinada conta corrente.
+
+### HTTP Request
+
+`DELETE http://api.livecapital.com/checking-account/{custom-institution}/trading-accounts/{id}/`
+
+### Parâmetros de URL
+
+Parâmetro | Descrição
+--------- | ---------
+custom-institution | Id de uma instituição de um usuário autenticado
+id | Id de uma conta corrente
+
+
 
 #Widgets
 
