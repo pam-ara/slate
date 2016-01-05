@@ -800,7 +800,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Esse recurso retorna uma instituição específica.</p>
+<p>Esse recurso retorna dados de uma determinada instituição.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -1246,7 +1246,7 @@
 </tr>
 <tr>
 <td>autonomous_agent</td>
-<td>Instutição do tipo AUUTONOMOUS_AGENT</td>
+<td>Instutição do tipo &ldquo;AUTONOMOUS_AGENT</td>
 </tr>
 <tr>
 <td>trading_accounts</td>
@@ -2039,7 +2039,7 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 
-<p>Esse recurso lista todas as contas de Bovespa de um usuário autenticado.</p>
+<p>Esse recurso lista todas as contas de Bovespa de uma instituição de um usuário autenticado.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -2128,7 +2128,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Esse recurso cria uma conta Bovespa para um usuário autenticado.</p>
+<p>Esse recurso cria uma conta Bovespa para uma instituição de um usuário autenticado.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -2280,8 +2280,8 @@
           <span class="s">"linked_account"</span><span class="p">:</span> <span class="mi">40</span>
         <span class="p">}</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/trading-accounts/'</span>\
-  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/bovespa/{}/trading-accounts/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">,</span> <span class="nb">id</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
@@ -2300,7 +2300,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Esse recurso retorna dados de uma determinada conta bovespa.</p>
+<p>Esse recurso altera dados de uma determinada conta bovespa.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -2371,7 +2371,7 @@
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
-<p>Este recurso apaga uma determinada conta bovespa de uma instituição de um usuário autenticado.</p>
+<p>Este recurso apaga uma determinada conta bovespa.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -3078,7 +3078,7 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 
-<p>Esse recurso lista todas as contas de BTC de um usuário autenticado.</p>
+<p>Esse recurso lista todas as contas de BTC de uma instituição de um usuário autenticado.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -3140,9 +3140,9 @@
 <pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
 
 <span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="s">"name"</span><span class="p">:</span> <span class="s">"btc"</span><span class="p">,</span>
-  <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"09343260"</span><span class="p">,</span>
-  <span class="s">"linked_account"</span><span class="p">:</span> <span class="mi">4</span>
+  <span class="s">"name"</span><span class="p">:</span> <span class="s">"Btc"</span><span class="p">,</span>
+  <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"17263580"</span><span class="p">,</span>
+  <span class="s">"linked_account"</span><span class="p">:</span> <span class="mi">1</span>
 <span class="p">}</span>
 
 <span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
@@ -3167,7 +3167,7 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>Esse recurso cria uma conta BTC para um usuário autenticado.</p>
+<p>Esse recurso cria uma conta BTC para uma instituição de um usuário autenticado.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -3319,7 +3319,7 @@
           <span class="s">"linked_account"</span><span class="p">:</span> <span class="mi">3</span>
         <span class="p">}</span>
 
-<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/btc/{}/trading-accounts/{id}'</span>\
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="s">'http://api.livecapital.com/btc/{}/trading-accounts/{id}/'</span>\
   <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
 
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
@@ -3410,7 +3410,7 @@
 <span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 </code></pre>
 
-<p>Este recurso apaga uma determinada conta btc de uma instituição de um usuário autenticado.</p>
+<p>Este recurso apaga uma determinada conta btc.</p>
 
 <h3 id="http-request">HTTP Request</h3>
 
@@ -3435,6 +3435,376 @@
 </tbody></table>
 
 <h1 id="conta-corrente">Conta Corrente</h1>
+
+<h2 id="recursos">Recursos</h2>
+
+<p>Esses são todos os recursos de BTC disponíveis.</p>
+
+<table><thead>
+<tr>
+<th>Recurso</th>
+<th>Método</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="#get-checking-account-custom-institution-trading-accounts">/checking-account/{custom-institution}/trading-accounts</a></td>
+<td>GET</td>
+<td>Lista todas as contas correntes de uma determinada instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td><a href="#post-checking-account-custom-institution-trading-accounts">/checking-account/{custom-institution}/trading-accounts</a></td>
+<td>POST</td>
+<td>Cria uma conta corrente para uma instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td><a href="#get-checking-account-custom-institution-trading-accounts-id">/checking-account/{custom-institution}/trading-accounts/{id}</a></td>
+<td>GET</td>
+<td>Exibe os dados de uma conta corrente</td>
+</tr>
+<tr>
+<td><a href="#put-checking-account-custom-institution-trading-accounts-id">/checking-account/{custom-institution}/trading-accounts/{id}</a></td>
+<td>PUT</td>
+<td>Altera os dados de uma conta corrente</td>
+</tr>
+<tr>
+<td><a href="#delete-checking-account-custom-institution-trading-accounts-id">/checking-account/{custom-institution}/trading-accounts/{id}</a></td>
+<td>DELETE</td>
+<td>Apaga uma conta corrente</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-checking-account-custom-institution-trading-accounts">GET /checking-account/{custom-institution}/trading-accounts</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/checking-account/{}/trading-accounts/'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">))</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CHECKING_ACCOUNT"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00573283"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Itau"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CHECKING_ACCOUNT"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04678321"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HSBC"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CHECKING_ACCOUNT"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"17643301"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bradesco"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso lista todas as contas corrente de uma instituição de um usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/checking-account/{custom-institution}/trading-accounts/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta corrente</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre conta corrente(CHECKING_ACCOUNT), pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+</tbody></table>
+
+<h2 id="post-checking-account-custom-institution-trading-accounts">POST /checking-account/{custom-institution}/trading-accounts</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">"name"</span><span class="p">:</span> <span class="s">"Santander"</span><span class="p">,</span>
+  <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"00345234"</span>
+<span class="p">}</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/checking-account/{}/trading-accounts/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CHECKING_ACCOUNT"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00345234"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Santander"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso cria uma conta corrente para uma instituição de um usuário autenticado.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">POST http://api.livecapital.com/checking-account/{custom-institution}/trading-accounts/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta corrente</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre conta corrente(CHECKING_ACCOUNT), pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+</tbody></table>
+
+<h2 id="get-checking-account-custom-institution-trading-accounts-id">GET /checking-account/{custom-institution}/trading-accounts/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/checking-account/{}/trading-accounts/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CHECKING_ACCOUNT"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00345234"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Santander"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso retorna dados de uma conta corrente.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">GET http://api.livecapital.com/checking-account/{custom-institution}/trading-accounts/{id}/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma conta</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta corrente</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre conta corrente(CHECKING_ACCOUNT), pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+</tbody></table>
+
+<h2 id="put-checking-account-custom-institution-trading-accounts-id">PUT /checking-account/{custom-institution}/trading-accounts/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">values</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">"name"</span><span class="p">:</span> <span class="s">"Safra"</span><span class="p">,</span>
+  <span class="s">"identifier"</span><span class="p">:</span> <span class="s">"00873451"</span>
+<span class="p">}</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">put</span><span class="p">(</span>
+  <span class="s">'http://api.livecapital.com/checking-account/{}/trading-accounts/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">,</span> <span class="nb">id</span><span class="p">),</span> <span class="n">json</span><span class="o">=</span><span class="n">values</span><span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<blockquote>
+<p>Essa requisição irá retornar um JSON como este:</p>
+</blockquote>
+<pre class="highlight json"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"account_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CHECKING_ACCOUNT"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"identifier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00873451"</span><span class="p">,</span><span class="w">
+  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Safra"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Esse recurso altera dados de uma conta corrente.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">PUT http://api.livecapital.com/checking-account/{custom-institution}/trading-accounts/{id}/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma conta</td>
+</tr>
+</tbody></table>
+
+<h3 id="parâmetros-de-resposta">Parâmetros de resposta</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id da conta corrente</td>
+</tr>
+<tr>
+<td>account_type</td>
+<td>Tipo da conta. Será sempre conta corrente(CHECKING_ACCOUNT), pois não pode ser alterado</td>
+</tr>
+<tr>
+<td>identifier</td>
+<td>Número identificador da conta</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome da conta</td>
+</tr>
+</tbody></table>
+
+<h2 id="delete-checking-account-custom-institution-trading-accounts-id">DELETE /checking-account/{custom-institution}/trading-accounts/{id}</h2>
+<pre class="highlight python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="s">'http://api.livecapital.com/checking-account/{}/trading-accounts/{}/'</span>\
+  <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">custom_institution</span><span class="p">,</span> <span class="nb">id</span><span class="p">))</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</code></pre>
+
+<p>Este recurso apaga uma determinada conta corrente.</p>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code class="prettyprint">DELETE http://api.livecapital.com/checking-account/{custom-institution}/trading-accounts/{id}/</code></p>
+
+<h3 id="parâmetros-de-url">Parâmetros de URL</h3>
+
+<table><thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>custom-institution</td>
+<td>Id de uma instituição de um usuário autenticado</td>
+</tr>
+<tr>
+<td>id</td>
+<td>Id de uma conta corrente</td>
+</tr>
+</tbody></table>
 
 <h1 id="widgets">Widgets</h1>
 
